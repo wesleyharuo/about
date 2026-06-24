@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia das IAs — o que cada uma faz de melhor</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+  :root{
+    --paper:#0d0d12;--card:#16161e;--card-hi:#1d1d28;--line:#2a2a38;--text:#e9e9f0;--muted:#9a9aae;
+    --pop:#c6ff3a;--violet:#9b7cff;--cyan:#4fd6e8;--rose:#ff7a9c;--amber:#ffba4d;--mint:#7affb0;--sky:#5aa8ff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--text);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  header{position:relative;padding:84px 0 48px;border-bottom:1px solid var(--line);overflow:hidden}
+  header::before{content:"";position:absolute;top:-40%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(155,124,255,.22),transparent 60%);filter:blur(20px);pointer-events:none}
+  header::after{content:"";position:absolute;bottom:-50%;left:-15%;width:560px;height:560px;background:radial-gradient(circle,rgba(198,255,58,.12),transparent 60%);filter:blur(20px);pointer-events:none}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--pop);display:inline-flex;align-items:center;gap:10px;margin-bottom:24px}
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--pop);box-shadow:0 0 12px var(--pop)}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(38px,7vw,76px);line-height:1.02;letter-spacing:-.02em;max-width:15ch}
+  h1 em{font-style:normal;color:var(--pop)}
+  .sub{margin-top:22px;font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:56ch}
+  .controls{position:sticky;top:0;z-index:30;background:rgba(13,13,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:16px 0}
+  .controls-inner{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .search{flex:1;min-width:220px;position:relative}
+  .search input{width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;padding:12px 16px 12px 42px;border-radius:100px;outline:none;transition:border-color .2s}
+  .search input:focus{border-color:var(--pop)}
+  .search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);stroke:var(--muted)}
+  .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:12.5px;background:var(--card);border:1px solid var(--line);color:var(--muted);padding:9px 15px;border-radius:100px;cursor:pointer;transition:.18s;white-space:nowrap}
+  .chip:hover{color:var(--text);border-color:var(--muted)}
+  .chip.on{background:var(--pop);color:#0d0d12;border-color:var(--pop);font-weight:600}
+  .count{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);margin-left:auto}
+  .section{padding:56px 0 8px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:30px;flex-wrap:wrap}
+  .sec-num{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent,var(--pop));border:1px solid var(--line);padding:5px 11px;border-radius:8px}
+  .sec-head h2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(24px,3.5vw,36px);letter-spacing:-.015em}
+  .sec-head .tag{font-size:15px;color:var(--muted);margin-left:auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+  .card{position:relative;display:block;text-decoration:none;color:inherit;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .22s,border-color .22s,background .22s;overflow:hidden}
+  .card::after{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;background:linear-gradient(140deg,var(--accent,var(--pop)),transparent 45%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .22s;pointer-events:none}
+  .card:hover{transform:translateY(-4px);background:var(--card-hi);border-color:transparent}
+  .card:hover::after{opacity:1}
+  .card-top{display:flex;align-items:center;gap:13px;margin-bottom:13px}
+  .logo{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:#0d0d12;flex-shrink:0;background:var(--accent,var(--pop))}
+  .name-block{min-width:0;flex:1}
+  .card h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.01em}
+  .maker{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .price{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:4px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+  .price.free{background:rgba(122,255,176,.12);color:var(--mint);border:1px solid rgba(122,255,176,.3)}
+  .price.freemium{background:rgba(90,168,255,.12);color:var(--sky);border:1px solid rgba(90,168,255,.3)}
+  .price.paid{background:rgba(255,186,77,.12);color:var(--amber);border:1px solid rgba(255,186,77,.3)}
+  .card p{font-size:14.5px;color:var(--muted);line-height:1.5}
+  .card .go{position:absolute;top:18px;right:18px;font-size:15px;color:var(--accent,var(--pop));opacity:0;transform:translate(-3px,3px);transition:.2s}
+  .card:hover .go{opacity:1;transform:translate(0,0)}
+  .best{display:inline-block;margin-top:13px;font-size:12px;font-weight:600;color:var(--accent,var(--pop));background:color-mix(in srgb,var(--accent,var(--pop)) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent,var(--pop)) 30%,transparent);padding:5px 11px;border-radius:100px}
+  .s-chat{--accent:var(--pop)} .s-agent{--accent:var(--violet)} .s-code{--accent:var(--sky)}
+  .s-social{--accent:var(--rose)} .s-image{--accent:var(--cyan)} .s-video{--accent:var(--amber)}
+  .s-audio{--accent:var(--mint)} .s-work{--accent:#ff9d5c}
+  .no-results{text-align:center;padding:80px 0;color:var(--muted);font-size:17px;display:none}
+  .section.hidden{display:none}
+  footer{margin-top:80px;border-top:1px solid var(--line);padding:46px 0 70px;text-align:center}
+  footer .big{font-family:'Space Grotesk',sans-serif;color:var(--text);font-size:22px;margin-bottom:10px}
+  footer p.s{color:var(--muted);font-size:14px}
+  .legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .legend span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:7px}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+  @media (max-width:560px){header{padding:60px 0 40px}.grid{grid-template-columns:1fr}.count{display:none}}
+  @media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Guia atualizado · 2026</span>
+    <h1>Todas as <em>IAs</em> que importam, e o que cada uma faz melhor.</h1>
+    <p class="sub">Chatbot, agente que trabalha sozinho, código, imagem, vídeo, voz, produtividade e conteúdo pra redes. Com preço e filtro pra você achar a certa em segundos.</p>
+  </div>
+</header>
+<div class="controls">
+  <div class="wrap controls-inner">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+      <input id="q" type="text" placeholder="Buscar IA... (ex: vídeo, código, grátis)" autocomplete="off">
+    </div>
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="all">Tudo</button>
+      <button class="chip" data-f="s-chat">Conversa</button>
+      <button class="chip" data-f="s-agent">Agentes</button>
+      <button class="chip" data-f="s-code">Código</button>
+      <button class="chip" data-f="s-social">Redes</button>
+      <button class="chip" data-f="s-image">Imagem</button>
+      <button class="chip" data-f="s-video">Vídeo</button>
+      <button class="chip" data-f="s-audio">Voz</button>
+      <button class="chip" data-f="s-work">Trabalho</button>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+<main class="wrap">
+
+  <section class="section s-chat" data-cat="s-chat">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Conversa e trabalho geral</h2><span class="tag">os modelos que respondem, escrevem e raciocinam</span></div>
+    <div class="grid">
+      <a class="card" href="https://chatgpt.com" target="_blank" rel="noopener" data-name="chatgpt openai conversa código"><div class="card-top"><div class="logo" style="background:#10a37f;color:#fff">GP</div><div class="name-block"><h3>ChatGPT</h3><span class="maker">OpenAI</span></div><span class="price freemium">grátis + R$</span></div><p>A mais completa de todas. Conversa, brainstorm, código e um mundo de GPTs e plugins.</p><span class="best">★ a mais versátil</span><span class="go">↗</span></a>
+      <a class="card" href="https://claude.ai" target="_blank" rel="noopener" data-name="claude anthropic escrita documento"><div class="card-top"><div class="logo" style="background:#d97757;color:#fff">Cl</div><div class="name-block"><h3>Claude</h3><span class="maker">Anthropic</span></div><span class="price freemium">grátis + R$</span></div><p>Documentos longos, escrita natural e análise cuidadosa. Lê textos enormes sem perder o fio.</p><span class="best">★ melhor escrita</span><span class="go">↗</span></a>
+      <a class="card" href="https://gemini.google.com" target="_blank" rel="noopener" data-name="gemini google busca"><div class="card-top"><div class="logo" style="background:#4285f4;color:#fff">Ge</div><div class="name-block"><h3>Gemini</h3><span class="maker">Google</span></div><span class="price freemium">grátis + R$</span></div><p>Imbatível dentro do mundo Google: Gmail, Docs, Drive e busca em tempo real.</p><span class="best">★ ecossistema Google</span><span class="go">↗</span></a>
+      <a class="card" href="https://copilot.microsoft.com" target="_blank" rel="noopener" data-name="copilot microsoft office"><div class="card-top"><div class="logo" style="background:#0078d4;color:#fff">Co</div><div class="name-block"><h3>Copilot</h3><span class="maker">Microsoft</span></div><span class="price freemium">grátis + R$</span></div><p>Rei dentro do Office. Word, fórmulas de Excel e resumo de Outlook e Teams.</p><span class="best">★ vive no Office</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.perplexity.ai" target="_blank" rel="noopener" data-name="perplexity pesquisa fonte busca"><div class="card-top"><div class="logo" style="background:#20b8cd;color:#fff">Px</div><div class="name-block"><h3>Perplexity</h3><span class="maker">Perplexity</span></div><span class="price freemium">grátis + R$</span></div><p>Pesquisa e fato rápido. Busca na web ao vivo e mostra as fontes de tudo.</p><span class="best">★ pesquisa com fonte</span><span class="go">↗</span></a>
+      <a class="card" href="https://grok.com" target="_blank" rel="noopener" data-name="grok xai twitter x"><div class="card-top"><div class="logo" style="background:#000;color:#fff">Gk</div><div class="name-block"><h3>Grok</h3><span class="maker">xAI</span></div><span class="price freemium">grátis + R$</span></div><p>Conectado ao X (Twitter). Bom pra assunto do momento e tom mais solto.</p><span class="best">★ tempo real no X</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.deepseek.com" target="_blank" rel="noopener" data-name="deepseek raciocínio matemática barato"><div class="card-top"><div class="logo" style="background:#4d6bfe;color:#fff">Ds</div><div class="name-block"><h3>DeepSeek</h3><span class="maker">DeepSeek</span></div><span class="price free">grátis</span></div><p>Modelo chinês forte em raciocínio e matemática, e custa muito barato.</p><span class="best">★ barato e esperto</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.kimi.com" target="_blank" rel="noopener" data-name="kimi moonshot código open source"><div class="card-top"><div class="logo" style="background:#8b5cf6;color:#fff">Ki</div><div class="name-block"><h3>Kimi (K2.6)</h3><span class="maker">Moonshot AI</span></div><span class="price free">grátis</span></div><p>Líder open-source em código e tarefas complexas. Aguenta projetos longos sem cansar.</p><span class="best">★ código open-source</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.llama.com" target="_blank" rel="noopener" data-name="llama meta open source local"><div class="card-top"><div class="logo" style="background:#0866ff;color:#fff">Ll</div><div class="name-block"><h3>Llama</h3><span class="maker">Meta</span></div><span class="price free">grátis</span></div><p>Open-source pra rodar a IA na sua própria máquina e personalizar do seu jeito.</p><span class="best">★ roda local</span><span class="go">↗</span></a>
+      <a class="card" href="https://mistral.ai" target="_blank" rel="noopener" data-name="mistral europa dados open source"><div class="card-top"><div class="logo" style="background:#ff7000;color:#fff">Mi</div><div class="name-block"><h3>Mistral</h3><span class="maker">Mistral AI</span></div><span class="price freemium">grátis + R$</span></div><p>Europeia, leve e open-source. Boa pra empresa que quer controle dos próprios dados.</p><span class="best">★ controle de dados</span><span class="go">↗</span></a>
+      <a class="card" href="https://chat.qwen.ai" target="_blank" rel="noopener" data-name="qwen alibaba multilíngue"><div class="card-top"><div class="logo" style="background:#615ced;color:#fff">Qw</div><div class="name-block"><h3>Qwen</h3><span class="maker">Alibaba</span></div><span class="price free">grátis</span></div><p>Forte em multilíngue e bem capaz em código. Outra potência chinesa.</p><span class="best">★ multilíngue</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-agent" data-cat="s-agent">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Agentes que trabalham sozinhos</h2><span class="tag">você manda a tarefa e ela faz do começo ao fim</span></div>
+    <div class="grid">
+      <a class="card" href="https://manus.im" target="_blank" rel="noopener" data-name="manus agente autônomo tarefa"><div class="card-top"><div class="logo" style="background:#1a1a2e;color:#fff">Ma</div><div class="name-block"><h3>Manus</h3><span class="maker">Monica</span></div><span class="price paid">R$</span></div><p>Executa a tarefa inteira sozinho: pesquisa, monta relatório, cria site e planilha, sem você mandar passo a passo.</p><span class="best">★ faz tudo sozinho</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.kimi.com" target="_blank" rel="noopener" data-name="kimi work moonshot agente local arquivo"><div class="card-top"><div class="logo" style="background:#8b5cf6;color:#fff">Kw</div><div class="name-block"><h3>Kimi Work</h3><span class="maker">Moonshot AI</span></div><span class="price freemium">grátis + R$</span></div><p>Roda na sua máquina, mexe nos seus arquivos reais e usa o navegador onde você já está logado.</p><span class="best">★ agente local</span><span class="go">↗</span></a>
+      <a class="card" href="https://claude.ai" target="_blank" rel="noopener" data-name="claude cowork code anthropic projeto"><div class="card-top"><div class="logo" style="background:#d97757;color:#fff">Cc</div><div class="name-block"><h3>Cowork / Code</h3><span class="maker">Anthropic</span></div><span class="price paid">R$</span></div><p>Delega trabalho ou programação direto e ele toca um projeto inteiro sozinho.</p><span class="best">★ projeto inteiro</span><span class="go">↗</span></a>
+      <a class="card" href="https://operator.chatgpt.com" target="_blank" rel="noopener" data-name="operator openai navega web clica"><div class="card-top"><div class="logo" style="background:#10a37f;color:#fff">Op</div><div class="name-block"><h3>Operator</h3><span class="maker">OpenAI</span></div><span class="price paid">R$</span></div><p>Navega na web e clica nas coisas por você, tipo reservar, preencher e comprar.</p><span class="best">★ navega e clica</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-code" data-cat="s-code">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Programação</h2><span class="tag">pra quem escreve código no dia a dia</span></div>
+    <div class="grid">
+      <a class="card" href="https://cursor.com" target="_blank" rel="noopener" data-name="cursor editor código ide"><div class="card-top"><div class="logo" style="background:#000;color:#fff">Cu</div><div class="name-block"><h3>Cursor</h3><span class="maker">Anysphere</span></div><span class="price freemium">grátis + R$</span></div><p>Editor de código com IA embutida. Edita o projeto inteiro com você no comando.</p><span class="best">★ editor com IA</span><span class="go">↗</span></a>
+      <a class="card" href="https://github.com/features/copilot" target="_blank" rel="noopener" data-name="github copilot autocomplete código"><div class="card-top"><div class="logo" style="background:#000;color:#fff">Gh</div><div class="name-block"><h3>GitHub Copilot</h3><span class="maker">GitHub</span></div><span class="price paid">R$</span></div><p>Completa seu código enquanto você digita. O mais usado dentro do VS Code.</p><span class="best">★ autocomplete</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener" data-name="claude code terminal anthropic"><div class="card-top"><div class="logo" style="background:#d97757;color:#fff">Cd</div><div class="name-block"><h3>Claude Code</h3><span class="maker">Anthropic</span></div><span class="price paid">R$</span></div><p>Programador no terminal. Resolve tarefa difícil sozinho do começo ao fim.</p><span class="best">★ tarefa complexa</span><span class="go">↗</span></a>
+      <a class="card" href="https://windsurf.com" target="_blank" rel="noopener" data-name="windsurf editor código agente"><div class="card-top"><div class="logo" style="background:#0bb;color:#fff">Ws</div><div class="name-block"><h3>Windsurf</h3><span class="maker">Codeium</span></div><span class="price freemium">grátis + R$</span></div><p>Editor estilo agente que entende o projeto todo e age sozinho nas mudanças.</p><span class="best">★ fluxo agente</span><span class="go">↗</span></a>
+      <a class="card" href="https://replit.com" target="_blank" rel="noopener" data-name="replit app site sem instalar"><div class="card-top"><div class="logo" style="background:#f26207;color:#fff">Re</div><div class="name-block"><h3>Replit</h3><span class="maker">Replit</span></div><span class="price freemium">grátis + R$</span></div><p>Cria e roda app direto no navegador, sem instalar nada. Bom pra começar do zero.</p><span class="best">★ app no navegador</span><span class="go">↗</span></a>
+      <a class="card" href="https://v0.app" target="_blank" rel="noopener" data-name="v0 lovable site interface frontend"><div class="card-top"><div class="logo" style="background:#111;color:#fff">v0</div><div class="name-block"><h3>v0 / Lovable</h3><span class="maker">Vercel / Lovable</span></div><span class="price freemium">grátis + R$</span></div><p>Você descreve a tela e ele monta o site funcionando, sem você saber programar.</p><span class="best">★ site por descrição</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-social" data-cat="s-social">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Conteúdo pra redes sociais</h2><span class="tag">post, legenda, design e cortes de vídeo</span></div>
+    <div class="grid">
+      <a class="card" href="https://www.canva.com" target="_blank" rel="noopener" data-name="canva design template post"><div class="card-top"><div class="logo" style="background:#8b3dff;color:#fff">Cv</div><div class="name-block"><h3>Canva</h3><span class="maker">Magic Studio</span></div><span class="price freemium">grátis + R$</span></div><p>Pra quem não é designer. Template + IA de texto e imagem, tudo no mesmo lugar.</p><span class="best">★ design fácil</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.jasper.ai" target="_blank" rel="noopener" data-name="jasper marketing copy marca"><div class="card-top"><div class="logo" style="background:#ff6b35;color:#fff">Ja</div><div class="name-block"><h3>Jasper</h3><span class="maker">Jasper AI</span></div><span class="price paid">R$</span></div><p>Copy de marketing em escala, mantendo o tom da sua marca em tudo.</p><span class="best">★ copy de marca</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.copy.ai" target="_blank" rel="noopener" data-name="copyai legenda gancho texto"><div class="card-top"><div class="logo" style="background:#2563eb;color:#fff">Cp</div><div class="name-block"><h3>Copy.ai</h3><span class="maker">Copy.ai</span></div><span class="price freemium">grátis + R$</span></div><p>Legenda curta, gancho e texto rápido pra post quando você trava na ideia.</p><span class="best">★ legendas e ganchos</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.opus.pro" target="_blank" rel="noopener" data-name="opus clip corte vídeo reels shorts tiktok"><div class="card-top"><div class="logo" style="background:#ff4d4d;color:#fff">Oc</div><div class="name-block"><h3>Opus Clip</h3><span class="maker">Opus</span></div><span class="price freemium">grátis + R$</span></div><p>Pega um vídeo longo e corta em vários clipes curtos automáticos pra Reels, Shorts e TikTok.</p><span class="best">★ cortes automáticos</span><span class="go">↗</span></a>
+      <a class="card" href="https://buffer.com" target="_blank" rel="noopener" data-name="buffer hootsuite agendar post"><div class="card-top"><div class="logo" style="background:#168eea;color:#fff">Bf</div><div class="name-block"><h3>Buffer / Hootsuite</h3><span class="maker">scheduling</span></div><span class="price freemium">grátis + R$</span></div><p>Agenda os posts e dá ideia de legenda em vários perfis de uma vez só.</p><span class="best">★ agendar tudo</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-image" data-cat="s-image">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Geração de imagem</h2><span class="tag">arte, foto e edição por comando de texto</span></div>
+    <div class="grid">
+      <a class="card" href="https://www.midjourney.com" target="_blank" rel="noopener" data-name="midjourney arte imagem bonita"><div class="card-top"><div class="logo" style="background:#000;color:#fff">Mj</div><div class="name-block"><h3>Midjourney</h3><span class="maker">Midjourney</span></div><span class="price paid">R$</span></div><p>Imagem artística e bonita. O estilo dela é difícil de qualquer outra igualar.</p><span class="best">★ mais bonita</span><span class="go">↗</span></a>
+      <a class="card" href="https://openai.com/dall-e-3" target="_blank" rel="noopener" data-name="dalle openai imagem texto"><div class="card-top"><div class="logo" style="background:#10a37f;color:#fff">D3</div><div class="name-block"><h3>DALL·E 3</h3><span class="maker">OpenAI</span></div><span class="price freemium">grátis + R$</span></div><p>Segue o que você pede ao pé da letra e escreve texto legível dentro da imagem.</p><span class="best">★ segue o pedido</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener" data-name="firefly adobe comercial photoshop"><div class="card-top"><div class="logo" style="background:#ff0000;color:#fff">Ff</div><div class="name-block"><h3>Adobe Firefly</h3><span class="maker">Adobe</span></div><span class="price freemium">grátis + R$</span></div><p>Imagem segura pra uso comercial, sem dor de cabeça com direito autoral, e dentro do Photoshop.</p><span class="best">★ uso comercial</span><span class="go">↗</span></a>
+      <a class="card" href="https://leonardo.ai" target="_blank" rel="noopener" data-name="leonardo jogo personagem arte"><div class="card-top"><div class="logo" style="background:#7c3aed;color:#fff">Le</div><div class="name-block"><h3>Leonardo AI</h3><span class="maker">Leonardo</span></div><span class="price freemium">grátis + R$</span></div><p>Arte de jogo, personagem consistente e controle fino de cada detalhe.</p><span class="best">★ arte de jogo</span><span class="go">↗</span></a>
+      <a class="card" href="https://stability.ai" target="_blank" rel="noopener" data-name="stable diffusion open source local"><div class="card-top"><div class="logo" style="background:#111;color:#fff">Sd</div><div class="name-block"><h3>Stable Diffusion</h3><span class="maker">Stability AI</span></div><span class="price free">grátis</span></div><p>Open-source, roda local e dá liberdade total pra customizar do jeito que quiser.</p><span class="best">★ liberdade total</span><span class="go">↗</span></a>
+      <a class="card" href="https://gemini.google.com" target="_blank" rel="noopener" data-name="nano banana google edição rosto"><div class="card-top"><div class="logo" style="background:#fbbc04;color:#111">Nb</div><div class="name-block"><h3>Nano Banana</h3><span class="maker">Google</span></div><span class="price freemium">grátis + R$</span></div><p>Edição de imagem por texto, muito boa em manter o rosto da pessoa igual.</p><span class="best">★ edição por texto</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-video" data-cat="s-video">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Vídeo</h2><span class="tag">do texto pro filme, avatar e edição</span></div>
+    <div class="grid">
+      <a class="card" href="https://sora.com" target="_blank" rel="noopener" data-name="sora openai vídeo realista"><div class="card-top"><div class="logo" style="background:#000;color:#fff">So</div><div class="name-block"><h3>Sora</h3><span class="maker">OpenAI</span></div><span class="price paid">R$</span></div><p>Vídeo realista e mais longo a partir só do texto que você escreve.</p><span class="best">★ realista e longo</span><span class="go">↗</span></a>
+      <a class="card" href="https://runwayml.com" target="_blank" rel="noopener" data-name="runway clipe cinema efeito edição"><div class="card-top"><div class="logo" style="background:#111;color:#fff">Rw</div><div class="name-block"><h3>Runway</h3><span class="maker">Runway</span></div><span class="price freemium">grátis + R$</span></div><p>Clipes cinematográficos e efeitos de edição poderosos pra quem quer capricho.</p><span class="best">★ cinematográfico</span><span class="go">↗</span></a>
+      <a class="card" href="https://deepmind.google/models/veo/" target="_blank" rel="noopener" data-name="veo google vídeo som áudio"><div class="card-top"><div class="logo" style="background:#4285f4;color:#fff">Ve</div><div class="name-block"><h3>Veo</h3><span class="maker">Google</span></div><span class="price paid">R$</span></div><p>Vídeo realista já com o áudio junto. Um dos melhores que tem hoje.</p><span class="best">★ vídeo com som</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.synthesia.io" target="_blank" rel="noopener" data-name="synthesia avatar treinamento corporativo"><div class="card-top"><div class="logo" style="background:#1a1a40;color:#fff">Sy</div><div class="name-block"><h3>Synthesia</h3><span class="maker">Synthesia</span></div><span class="price paid">R$</span></div><p>Avatar falante de IA. Ótimo pra treinamento e vídeo corporativo sem gravar nada.</p><span class="best">★ avatar falante</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.heygen.com" target="_blank" rel="noopener" data-name="heygen avatar tradução dublagem lipsync"><div class="card-top"><div class="logo" style="background:#5b2eff;color:#fff">Hg</div><div class="name-block"><h3>HeyGen</h3><span class="maker">HeyGen</span></div><span class="price freemium">grátis + R$</span></div><p>Avatar mais tradução de vídeo e dublagem com lip-sync em outras línguas.</p><span class="best">★ traduz e dubla</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.capcut.com" target="_blank" rel="noopener" data-name="capcut editor celular grátis legenda"><div class="card-top"><div class="logo" style="background:#000;color:#fff">Cc</div><div class="name-block"><h3>CapCut</h3><span class="maker">ByteDance</span></div><span class="price freemium">grátis + R$</span></div><p>Editor grátis no celular com IA: legenda automática e tira fundo no dia a dia.</p><span class="best">★ editor grátis</span><span class="go">↗</span></a>
+      <a class="card" href="https://pika.art" target="_blank" rel="noopener" data-name="pika animação imagem vídeo"><div class="card-top"><div class="logo" style="background:#6d28d9;color:#fff">Pk</div><div class="name-block"><h3>Pika</h3><span class="maker">Pika Labs</span></div><span class="price freemium">grátis + R$</span></div><p>Clipes animados rápidos e divertidos. Transforma uma imagem em vídeo num clique.</p><span class="best">★ animação rápida</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.klingai.com" target="_blank" rel="noopener" data-name="kling vídeo movimento realista chinês"><div class="card-top"><div class="logo" style="background:#00b4d8;color:#fff">Kl</div><div class="name-block"><h3>Kling</h3><span class="maker">Kuaishou</span></div><span class="price freemium">grátis + R$</span></div><p>Vídeo chinês muito forte em movimento realista e cenas com gente se mexendo.</p><span class="best">★ movimento realista</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-audio" data-cat="s-audio">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Áudio e voz</h2><span class="tag">narração, dublagem e música</span></div>
+    <div class="grid">
+      <a class="card" href="https://elevenlabs.io" target="_blank" rel="noopener" data-name="elevenlabs voz narração dublagem clonagem"><div class="card-top"><div class="logo" style="background:#000;color:#fff">El</div><div class="name-block"><h3>ElevenLabs</h3><span class="maker">ElevenLabs</span></div><span class="price freemium">grátis + R$</span></div><p>Locução realista e clonagem de voz. Líder em narração e dublagem.</p><span class="best">★ voz realista</span><span class="go">↗</span></a>
+      <a class="card" href="https://suno.com" target="_blank" rel="noopener" data-name="suno música letra voz"><div class="card-top"><div class="logo" style="background:#1a1a1a;color:#fff">Su</div><div class="name-block"><h3>Suno</h3><span class="maker">Suno</span></div><span class="price freemium">grátis + R$</span></div><p>Cria música completa, com letra e voz, a partir de um texto que você dá.</p><span class="best">★ música completa</span><span class="go">↗</span></a>
+      <a class="card" href="https://www.udio.com" target="_blank" rel="noopener" data-name="udio música áudio qualidade"><div class="card-top"><div class="logo" style="background:#7c3aed;color:#fff">Ud</div><div class="name-block"><h3>Udio</h3><span class="maker">Udio</span></div><span class="price freemium">grátis + R$</span></div><p>Música gerada por IA com qualidade de áudio bem alta pra quem quer capricho no som.</p><span class="best">★ áudio de alta qualidade</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="section s-work" data-cat="s-work">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Produtividade, notas e estudo</h2><span class="tag">reunião, pesquisa, slides e organização</span></div>
+    <div class="grid">
+      <a class="card" href="https://www.notion.com/product/ai" target="_blank" rel="noopener" data-name="notion notas organização documento"><div class="card-top"><div class="logo" style="background:#000;color:#fff">No</div><div class="name-block"><h3>Notion AI</h3><span class="maker">Notion</span></div><span class="price freemium">grátis + R$</span></div><p>Escreve, resume e organiza dentro das suas notas e do seu sistema de trabalho.</p><span class="best">★ notas e docs</span><span class="go">↗</span></a>
+      <a class="card" href="https://otter.ai" target="_blank" rel="noopener" data-name="otter reunião transcrição ata"><div class="card-top"><div class="logo" style="background:#00a4ff;color:#fff">Ot</div><div class="name-block"><h3>Otter.ai</h3><span class="maker">Otter</span></div><span class="price freemium">grátis + R$</span></div><p>Transcreve sua reunião ao vivo e ainda faz o resumo e os pontos de ação.</p><span class="best">★ transcrição de reunião</span><span class="go">↗</span></a>
+      <a class="card" href="https://notebooklm.google.com" target="_blank" rel="noopener" data-name="notebooklm google estudo documento podcast"><div class="card-top"><div class="logo" style="background:#4285f4;color:#fff">Nl</div><div class="name-block"><h3>NotebookLM</h3><span class="maker">Google</span></div><span class="price free">grátis</span></div><p>Você joga seus documentos e ele estuda só com base neles, até vira podcast.</p><span class="best">★ estudar seus arquivos</span><span class="go">↗</span></a>
+      <a class="card" href="https://gamma.app" target="_blank" rel="noopener" data-name="gamma slides apresentação tome"><div class="card-top"><div class="logo" style="background:#7c3aed;color:#fff">Gm</div><div class="name-block"><h3>Gamma</h3><span class="maker">Gamma</span></div><span class="price freemium">grátis + R$</span></div><p>Monta apresentação inteira a partir de um tema, com texto e visual prontos.</p><span class="best">★ slides automáticos</span><span class="go">↗</span></a>
+      <a class="card" href="https://elicit.com" target="_blank" rel="noopener" data-name="elicit consensus pesquisa acadêmica artigo"><div class="card-top"><div class="logo" style="background:#16a34a;color:#fff">Ec</div><div class="name-block"><h3>Elicit / Consensus</h3><span class="maker">research</span></div><span class="price freemium">grátis + R$</span></div><p>Pesquisa acadêmica de verdade: acha artigos científicos e resume o que dizem.</p><span class="best">★ artigos científicos</span><span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <div class="no-results" id="noresults">Nada encontrado. Tenta outra palavra.</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="big">É isso. O mapa completo das IAs em 2026.</p>
+    <p class="s">Escolha pela tarefa, não pela fama. A certa pro seu trabalho às vezes é a menos conhecida.</p>
+    <div class="legend">
+      <span><i style="background:#7affb0"></i>grátis</span>
+      <span><i style="background:#5aa8ff"></i>grátis + plano pago</span>
+      <span><i style="background:#ffba4d"></i>só pago</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const q=document.getElementById('q');
+  const chips=[...document.querySelectorAll('.chip')];
+  const sections=[...document.querySelectorAll('.section')];
+  const cards=[...document.querySelectorAll('.card')];
+  const countEl=document.getElementById('count');
+  const noResults=document.getElementById('noresults');
+  let activeFilter='all';
+  function apply(){
+    const term=q.value.trim().toLowerCase();
+    let visible=0;
+    sections.forEach(sec=>{
+      const cat=sec.dataset.cat;
+      const catOk=activeFilter==='all'||activeFilter===cat;
+      let secHas=false;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const txt=(card.dataset.name+' '+card.textContent).toLowerCase();
+        const match=catOk&&(term===''||txt.includes(term));
+        card.style.display=match?'':'none';
+        if(match){secHas=true;visible++}
+      });
+      sec.classList.toggle('hidden',!secHas);
+    });
+    countEl.textContent=visible+' de '+cards.length;
+    noResults.style.display=visible===0?'block':'none';
+  }
+  chips.forEach(c=>c.addEventListener('click',()=>{
+    chips.forEach(x=>x.classList.remove('on'));
+    c.classList.add('on');
+    activeFilter=c.dataset.f;
+    apply();
+  }));
+  q.addEventListener('input',apply);
+  apply();
+</script>
+</body>
+</html>
