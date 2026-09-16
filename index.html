@@ -35,7 +35,7 @@
     .button.ghost { border:1px solid var(--line); background:var(--surface); }
     .button.ghost:hover { border-color:var(--accent); color:var(--accent); }
     .hero-card { background:var(--ink); color:#eef5f0; border-radius:28px; padding:28px; box-shadow:var(--shadow); position:relative; overflow:hidden; }
-    .hero-card:after { content:''; position:absolute; width:190px; height:190px; border:1px solid rgba(91,205,151,.3); border-radius:50%; right:-60px; top:-55px; box-shadow:0 0 0 25px rgba(91,205,151,.05),0 0 0 50px rgba(91,205,151,.04); }
+    .hero-card:after { content:''; position:absolute; width:190px; height:190px; border:1px solid rgba(91,205,151,.3); border-radius:50%; right:-60px; top:-55px; box-shadow:0 0 0 25px rgba(91,205,151,.08); }
     .card-label { color:#8ed9b2; font-size:.73rem; text-transform:uppercase; letter-spacing:.12em; }
     .hero-card h2 { font-size:2rem; line-height:1.1; letter-spacing:-.06em; margin:54px 0 25px; max-width:280px; }
     .stat-row { border-top:1px solid rgba(255,255,255,.16); padding-top:18px; display:flex; justify-content:space-between; color:#b2c4b9; font-size:.78rem; }
@@ -75,35 +75,185 @@
     .contact p { color:#b6c8bc; max-width:420px; margin-top:18px; }
     .contact .button.primary { background:#8ed9b2; color:var(--ink); white-space:nowrap; }
     footer { padding:32px 0 42px; color:var(--muted); font-size:.78rem; display:flex; justify-content:space-between; gap:20px; }
-    @media (max-width:800px) { .hero,.about-grid { grid-template-columns:1fr; gap:40px; } .hero { padding:80px 0; } .projects { grid-template-columns:repeat(2,1fr); } .services { grid-template-columns:1fr; } .contact { padding:38px 28px; display:block; } .contact .button { margin-top:28px; } }
-    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .nav-links a:not(.nav-cta) { display:none; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .section-intro { margin-top:17px; } section { padding:65px 0; } h1 { font-size:3.4rem; } }
+    @media (max-width:800px) { .hero,.about-grid { grid-template-columns:1fr; gap:40px; } .hero { padding:80px 0; } .projects { grid-template-columns:repeat(2,1fr); } .services { grid-template-columns:1fr; } }
+    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .nav-links a:not(.nav-cta) { display:none; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .contact { display:block; } }
   </style>
 </head>
 <body>
-  <header><nav class="wrap"><a class="brand" href="#top">Wesley<span>.</span></a><div class="nav-links"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Expertise</a><a class="nav-cta" href="#contact">Let's talk ↗</a></div></nav></header>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#top">Wesley<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#services">Expertise</a>
+        <a class="nav-cta" href="#contact">Let’s talk</a>
+      </div>
+    </nav>
+  </header>
+
   <main id="top">
     <section class="hero wrap">
-      <div><div class="eyebrow">Data · AI · Digital products</div><h1>Turning complex data into <em>clear decisions.</em></h1><p class="hero-copy">I’m Wesley Haruo, a Data Analyst and Developer building practical analytics, machine learning, fraud detection, and web experiences that solve real business problems.</p><div class="actions"><a class="button primary" href="#work">Explore my work ↓</a><a class="button ghost" href="https://github.com/wesleyharuo" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
-      <aside class="hero-card"><div class="card-label mono">Current focus / 2026</div><h2>Build with data. Design for people.</h2><div class="stat-row"><div><strong>30+</strong>projects</div><div><strong>5</strong>focus areas</div><div><strong>∞</strong>curiosity</div></div></aside>
+      <div>
+        <div class="eyebrow">Data · AI · Digital products</div>
+        <h1>Turning complex data into <em>clear decisions.</em></h1>
+        <p class="hero-copy">I’m Wesley Haruo, a Data Analyst and Developer building analytics products, ML systems, fraud detection workflows, and production-ready web applications.</p>
+        <div class="actions">
+          <a class="button primary" href="#work">View work</a>
+          <a class="button ghost" href="#contact">Contact me</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="card-label mono">Current focus / 2026</div>
+        <h2>Build with data. Design for people.</h2>
+        <div class="stat-row">
+          <div><strong>30+</strong> projects</div>
+          <div><strong>5+</strong> domains</div>
+        </div>
+      </aside>
     </section>
-    <section id="about" class="about"><div class="wrap about-grid"><div><div class="eyebrow">01 / About</div><h2>A bridge between analysis and action.</h2></div><div><p class="about-text">I combine <strong>business thinking, data engineering, and product development</strong> to make useful things: from financial reconciliation pipelines and operational dashboards to predictive models and real-time fraud systems.</p><div class="skills"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Machine Learning</span><span class="tag">Data Visualization</span><span class="tag">Fraud Detection</span><span class="tag">Flask / FastAPI</span><span class="tag">Docker</span><span class="tag">Frontend</span></div></div></div></section>
-    <section id="work" class="wrap"><div class="section-head"><div><div class="eyebrow">02 / Selected work</div><h2>Projects with purpose.</h2></div><p class="section-intro">A selection of analytics, risk, machine learning, and digital product work from my portfolio.</p></div><div class="filters"><button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="data">Data & BI</button><button class="filter" data-filter="ai">AI & Risk</button><button class="filter" data-filter="web">Web products</button></div><div class="projects">
-      <article class="project" data-category="data"><div class="project-top"><span class="project-number">01</span><span>↗</span></div><h3>GL Reconciliation Platform</h3><p>Layered Snowflake and dbt models that trace accounting discrepancies back to their source and reduce manual adjustments.</p><div class="tags"><span>SNOWFLAKE</span><span>DBT</span><span>SQL</span></div><a class="project-link" href="https://github.com/wesleyharuo/gl-reconciliation-snowflake-dbt" target="_blank">View project ↗</a></article>
-      <article class="project" data-category="ai"><div class="project-top"><span class="project-number">02</span><span>↗</span></div><h3>AI Fraud Detection Canada</h3><p>An end-to-end financial risk system with feature engineering, explainable predictions, drift monitoring, and an inference API.</p><div class="tags"><span>CATBOOST</span><span>FASTAPI</span><span>SHAP</span></div><a class="project-link" href="https://github.com/wesleyharuo/AI-Fraud-Detection-Canada" target="_blank">View project ↗</a></article>
-      <article class="project" data-category="data"><div class="project-top"><span class="project-number">03</span><span>↗</span></div><h3>Process Improvement Platform</h3><p>Interactive operational dashboards for sales, supply chain, and customer service—turning scattered metrics into visible bottlenecks.</p><div class="tags"><span>STREAMLIT</span><span>PLOTLY</span><span>ETL</span></div><a class="project-link" href="https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform" target="_blank">View project ↗</a></article>
-      <article class="project" data-category="ai"><div class="project-top"><span class="project-number">04</span><span>↗</span></div><h3>CardGuard</h3><p>A modular credit-card fraud pipeline covering imbalanced data, model optimization, experiment tracking, and inference.</p><div class="tags"><span>LIGHTGBM</span><span>XGBOOST</span><span>MLFLOW</span></div><a class="project-link" href="https://github.com/wesleyharuo/CardGuard-" target="_blank">View project ↗</a></article>
-      <article class="project" data-category="web"><div class="project-top"><span class="project-number">05</span><span>↗</span></div><h3>Resume Evaluation SaaS</h3><p>A multi-tenant product concept for structured resume assessment, asynchronous processing, roles, and candidate results.</p><div class="tags"><span>TYPESCRIPT</span><span>PRISMA</span><span>VERCEL</span></div><a class="project-link" href="https://github.com/wesleyharuo/Aplication-new" target="_blank">View project ↗</a></article>
-      <article class="project" data-category="data"><div class="project-top"><span class="project-number">06</span><span>↗</span></div><h3>Toronto Rental Market</h3><p>Exploratory analysis of more than 5,400 properties, connecting geography, price per square metre, vacancy, and amenities.</p><div class="tags"><span>PANDAS</span><span>NUMPY</span><span>SEABORN</span></div><a class="project-link" href="https://github.com/wesleyharuo/gta-rental-market" target="_blank">View project ↗</a></article>
-    </div></section>
-    <section id="services" class="wrap"><div class="section-head"><div><div class="eyebrow">03 / Expertise</div><h2>What I bring to the table.</h2></div></div><div class="services"><div class="service"><b>01</b><h3>Data & Business Intelligence</h3><p>Clean pipelines, reliable metrics, dashboards, and analysis that give teams a shared view of performance.</p></div><div class="service"><b>02</b><h3>Machine Learning & Risk</h3><p>Predictive systems for fraud, insurance, sales, and decision support—with explainability and monitoring in mind.</p></div><div class="service"><b>03</b><h3>Digital Products</h3><p>Useful web interfaces and APIs that turn technical capabilities into simple, approachable experiences.</p></div></div></section>
-    <section id="contact" class="wrap"><div class="contact"><div><div class="eyebrow">04 / Contact</div><h2>Have a problem worth solving?</h2><p>I’m open to conversations about data, analytics, machine learning, and product development.</p></div><a class="button primary" href="mailto:wesleyharuo@gmail.com">Start a conversation ↗</a></div></section>
+
+    <section id="about" class="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="eyebrow">01 / About</div>
+          <h2>A bridge between analysis and action.</h2>
+        </div>
+        <div>
+          <p class="about-text">I combine <strong>data engineering</strong>, <strong>analytics</strong>, <strong>machine learning</strong>, and <strong>product thinking</strong> to turn messy information into tools people can use. My work spans operational reporting, forecasting, risk and fraud detection, and web platforms where business decisions need to move fast.</p>
+          <div class="skills">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">dbt</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Fraud Detection</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">02 / Selected work</div>
+          <h2>Projects with purpose.</h2>
+        </div>
+        <p class="section-intro">A selection of analytical systems, AI products, and operational tools with measurable business impact.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="data">Data</button>
+        <button class="filter" data-filter="ai">AI</button>
+        <button class="filter" data-filter="web">Web</button>
+      </div>
+
+      <div class="projects">
+        <article class="project" data-category="data">
+          <div class="project-top"><span class="project-number">01</span><span>↗</span></div>
+          <h3>GL Reconciliation Platform</h3>
+          <p>Layered Snowflake and dbt models to reconcile subledger and general ledger data, surface mismatches, and trace root causes.</p>
+          <div class="tags"><span>Snowflake</span><span>dbt</span><span>SQL</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/gl-reconciliation-snowflake-dbt" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="ai">
+          <div class="project-top"><span class="project-number">02</span><span>↗</span></div>
+          <h3>AI Fraud Detection Canada</h3>
+          <p>An end-to-end fraud detection system combining feature engineering, classification models, explainability, and monitoring.</p>
+          <div class="tags"><span>Python</span><span>CatBoost</span><span>FastAPI</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/AI-Fraud-Detection-Canada" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="data">
+          <div class="project-top"><span class="project-number">03</span><span>↗</span></div>
+          <h3>Process Improvement Platform</h3>
+          <p>Interactive dashboards for sales, supply chain, and customer support analytics to surface bottlenecks and opportunities.</p>
+          <div class="tags"><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="ai">
+          <div class="project-top"><span class="project-number">04</span><span>↗</span></div>
+          <h3>CardGuard</h3>
+          <p>A modular credit-card fraud pipeline covering class balancing, model training, validation, and inference workflows.</p>
+          <div class="tags"><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/CardGuard-" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="web">
+          <div class="project-top"><span class="project-number">05</span><span>↗</span></div>
+          <h3>Resume Evaluation SaaS</h3>
+          <p>A multi-tenant product concept for candidate scoring, job-fit evaluation, and async processing of submissions.</p>
+          <div class="tags"><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/Aplication-new" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="data">
+          <div class="project-top"><span class="project-number">06</span><span>↗</span></div>
+          <h3>Toronto Rental Market</h3>
+          <p>Exploratory analysis across more than 5,400 listings to understand pricing, vacancy, and regional demand patterns.</p>
+          <div class="tags"><span>Python</span><span>Analytics</span><span>EDA</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/gta-rental-market" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">03 / Expertise</div>
+          <h2>What I bring to the table.</h2>
+        </div>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <b>01</b>
+          <h3>Data & analytics</h3>
+          <p>Dashboards, KPI tracking, ETL pipelines, and exploratory analysis built for decision makers and operators.</p>
+        </div>
+        <div class="service">
+          <b>02</b>
+          <h3>Machine learning</h3>
+          <p>Model development, forecasting, anomaly detection, and risk scoring for practical business use cases.</p>
+        </div>
+        <div class="service">
+          <b>03</b>
+          <h3>Product & web</h3>
+          <p>Full-stack interfaces, SaaS experiences, and data-first product work that bridges technical depth with usability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap">
+      <div class="contact">
+        <div>
+          <div class="eyebrow">04 / Contact</div>
+          <h2>Have a problem worth solving?</h2>
+          <p>I’m open to conversations about data, analytics, machine learning, fraud detection, and product experiences.</p>
+        </div>
+        <a class="button primary" href="https://github.com/wesleyharuo" target="_blank" rel="noreferrer">GitHub profile</a>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><span>© 2026 Wesley Haruo</span><span class="mono">Built with curiosity + data</span></footer>
+
+  <footer class="wrap">
+    <span>© 2026 Wesley Haruo</span>
+    <span class="mono">Built with curiosity + data</span>
+  </footer>
+
   <script>
     const filters = document.querySelectorAll('.filter');
     const projects = document.querySelectorAll('.project');
     filters.forEach(button => button.addEventListener('click', () => {
-      filters.forEach(item => item.classList.remove('active')); button.classList.add('active');
+      filters.forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
       const category = button.dataset.filter;
       projects.forEach(project => project.classList.toggle('hidden', category !== 'all' && project.dataset.category !== category));
     }));
