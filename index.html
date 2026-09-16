@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Wesley Haruo — Data Analyst and Developer building analytics, machine learning, fraud detection, and web products." />
+  <meta property="og:title" content="Wesley Haruo | Data & Product Builder" />
+  <meta property="og:description" content="Analytics, machine learning, fraud detection, and data-first digital products." />
+  <meta property="og:url" content="https://wesleyharuo.github.io/wesley/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://wesleyharuo.github.io/wesley/" />
   <title>Wesley Haruo | Data & Product Builder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,10 +18,11 @@
     :root { --bg:#f5f7f4; --surface:#fff; --ink:#17211d; --muted:#68746d; --line:#dce4de; --accent:#16845b; --accent-dark:#0d6242; --soft:#e6f3eb; --shadow:0 24px 70px rgba(26,57,41,.09); }
     * { box-sizing:border-box; margin:0; padding:0; }
     html { scroll-behavior:smooth; }
-    body { background:var(--bg); color:var(--ink); font-family:Manrope, sans-serif; line-height:1.6; }
+    body { background:var(--bg); color:var(--ink); font-family:Manrope,sans-serif; line-height:1.6; }
     a { color:inherit; text-decoration:none; }
-    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
-    .mono, .eyebrow { font-family:'DM Mono', monospace; }
+    button { font:inherit; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    .mono,.eyebrow { font-family:'DM Mono',monospace; }
     .eyebrow { color:var(--accent); font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; }
     header { position:sticky; top:0; z-index:5; border-bottom:1px solid rgba(220,228,222,.8); background:rgba(245,247,244,.86); backdrop-filter:blur(14px); }
     nav { height:74px; display:flex; align-items:center; justify-content:space-between; }
@@ -24,8 +31,9 @@
     .nav-links { display:flex; gap:28px; align-items:center; color:var(--muted); font-size:.86rem; }
     .nav-links a:hover { color:var(--accent); }
     .nav-cta { border:1px solid var(--ink); border-radius:999px; padding:9px 16px; color:var(--ink); }
+    .menu-toggle { display:none; border:1px solid var(--line); border-radius:8px; background:var(--surface); padding:8px 10px; cursor:pointer; color:var(--ink); }
     .hero { padding:118px 0 110px; display:grid; grid-template-columns:1.2fr .8fr; gap:70px; align-items:center; }
-    h1 { font-size:clamp(3rem, 7vw, 6.4rem); line-height:.98; letter-spacing:-.075em; margin:20px 0 28px; max-width:760px; }
+    h1 { font-size:clamp(3rem,7vw,6.4rem); line-height:.98; letter-spacing:-.075em; margin:20px 0 28px; max-width:760px; }
     h1 em { color:var(--accent); font-style:normal; }
     .hero-copy { color:var(--muted); font-size:1.12rem; max-width:620px; }
     .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:34px; }
@@ -49,19 +57,20 @@
     .about-text { font-size:1.2rem; line-height:1.55; max-width:700px; }
     .about-text strong { color:var(--accent-dark); }
     .skills { display:flex; flex-wrap:wrap; gap:9px; margin-top:26px; }
-    .tag { background:var(--soft); color:var(--accent-dark); border-radius:5px; padding:6px 10px; font: .75rem 'DM Mono',monospace; }
+    .tag { background:var(--soft); color:var(--accent-dark); border-radius:5px; padding:6px 10px; font:.75rem 'DM Mono',monospace; }
     .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
-    .filter { border:1px solid var(--line); background:transparent; color:var(--muted); padding:8px 13px; border-radius:999px; cursor:pointer; font: .74rem 'DM Mono',monospace; }
-    .filter.active, .filter:hover { color:var(--accent-dark); border-color:var(--accent); background:var(--soft); }
-    .projects { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .filter { border:1px solid var(--line); background:transparent; color:var(--muted); padding:8px 13px; border-radius:999px; cursor:pointer; font:.74rem 'DM Mono',monospace; }
+    .filter.active,.filter:hover { color:var(--accent-dark); border-color:var(--accent); background:var(--soft); }
+    .filter:focus-visible,.menu-toggle:focus-visible,a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .projects { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
     .project { display:flex; flex-direction:column; min-height:310px; padding:24px; background:var(--surface); border:1px solid var(--line); border-radius:16px; transition:.25s; }
     .project:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:#b8d8c5; }
     .project-top { display:flex; justify-content:space-between; align-items:center; color:var(--accent); }
-    .project-number { font: .72rem 'DM Mono',monospace; }
+    .project-number { font:.72rem 'DM Mono',monospace; }
     .project h3 { font-size:1.23rem; letter-spacing:-.05em; margin:30px 0 11px; }
     .project p { color:var(--muted); font-size:.86rem; }
     .project .tags { margin-top:auto; padding-top:25px; display:flex; gap:6px; flex-wrap:wrap; }
-    .project .tags span { color:var(--muted); font: .68rem 'DM Mono',monospace; }
+    .project .tags span { color:var(--muted); font:.68rem 'DM Mono',monospace; }
     .project-link { margin-top:17px; color:var(--accent-dark); font-size:.78rem; font-weight:700; }
     .project.hidden { display:none; }
     .services { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
@@ -75,15 +84,18 @@
     .contact p { color:#b6c8bc; max-width:420px; margin-top:18px; }
     .contact .button.primary { background:#8ed9b2; color:var(--ink); white-space:nowrap; }
     footer { padding:32px 0 42px; color:var(--muted); font-size:.78rem; display:flex; justify-content:space-between; gap:20px; }
+    .footer-links { display:flex; gap:18px; }
+    .footer-links a:hover { color:var(--accent); }
     @media (max-width:800px) { .hero,.about-grid { grid-template-columns:1fr; gap:40px; } .hero { padding:80px 0; } .projects { grid-template-columns:repeat(2,1fr); } .services { grid-template-columns:1fr; } }
-    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .nav-links a:not(.nav-cta) { display:none; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .contact { display:block; } }
+    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .menu-toggle { display:block; } .nav-links { display:none; position:absolute; top:74px; left:0; right:0; padding:16px 20px 20px; background:var(--bg); border-bottom:1px solid var(--line); flex-direction:column; align-items:stretch; gap:0; } .nav-links.open { display:flex; } .nav-links a { padding:12px 0; } .nav-cta { text-align:center; margin-top:8px; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .section-intro { margin-top:17px; } .contact { display:block; padding:38px 28px; } .contact .button { margin-top:28px; } footer { display:block; } .footer-links { margin-top:14px; } section { padding:65px 0; } h1 { font-size:3.4rem; } }
   </style>
 </head>
 <body>
   <header>
-    <nav class="wrap">
+    <nav class="wrap" aria-label="Primary navigation">
       <a class="brand" href="#top">Wesley<span>.</span></a>
-      <div class="nav-links">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <div class="nav-links" id="site-menu">
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#services">Expertise</a>
@@ -103,159 +115,68 @@
           <a class="button ghost" href="#contact">Contact me</a>
         </div>
       </div>
-
       <aside class="hero-card">
         <div class="card-label mono">Current focus / 2026</div>
         <h2>Build with data. Design for people.</h2>
-        <div class="stat-row">
-          <div><strong>30+</strong> projects</div>
-          <div><strong>5+</strong> domains</div>
-        </div>
+        <div class="stat-row"><div><strong>6</strong> featured projects</div><div><strong>3</strong> focus areas</div></div>
       </aside>
     </section>
 
     <section id="about" class="about">
       <div class="wrap about-grid">
-        <div>
-          <div class="eyebrow">01 / About</div>
-          <h2>A bridge between analysis and action.</h2>
-        </div>
-        <div>
-          <p class="about-text">I combine <strong>data engineering</strong>, <strong>analytics</strong>, <strong>machine learning</strong>, and <strong>product thinking</strong> to turn messy information into tools people can use. My work spans operational reporting, forecasting, risk and fraud detection, and web platforms where business decisions need to move fast.</p>
-          <div class="skills">
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">dbt</span>
-            <span class="tag">Snowflake</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Fraud Detection</span>
-          </div>
+        <div><div class="eyebrow">01 / About</div><h2>A bridge between analysis and action.</h2></div>
+        <div><p class="about-text">I combine <strong>data engineering</strong>, <strong>analytics</strong>, <strong>machine learning</strong>, and <strong>product thinking</strong> to turn messy information into tools people can use. My work spans operational reporting, forecasting, risk and fraud detection, and web platforms where business decisions need to move fast.</p>
+          <div class="skills"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">dbt</span><span class="tag">Snowflake</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Machine Learning</span><span class="tag">Fraud Detection</span></div>
         </div>
       </div>
     </section>
 
     <section id="work" class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">02 / Selected work</div>
-          <h2>Projects with purpose.</h2>
-        </div>
-        <p class="section-intro">A selection of analytical systems, AI products, and operational tools with measurable business impact.</p>
+      <div class="section-head"><div><div class="eyebrow">02 / Selected work</div><h2>Projects with purpose.</h2></div><p class="section-intro">A selection of analytical systems, AI products, and operational tools. Each project links to its source repository.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="data" aria-pressed="false">Data</button>
+        <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI</button>
+        <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
       </div>
-
-      <div class="filters">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="data">Data</button>
-        <button class="filter" data-filter="ai">AI</button>
-        <button class="filter" data-filter="web">Web</button>
-      </div>
-
-      <div class="projects">
-        <article class="project" data-category="data">
-          <div class="project-top"><span class="project-number">01</span><span>↗</span></div>
-          <h3>GL Reconciliation Platform</h3>
-          <p>Layered Snowflake and dbt models to reconcile subledger and general ledger data, surface mismatches, and trace root causes.</p>
-          <div class="tags"><span>Snowflake</span><span>dbt</span><span>SQL</span></div>
-          <a class="project-link" href="https://github.com/wesleyharuo/gl-reconciliation-snowflake-dbt" target="_blank" rel="noreferrer">View project →</a>
-        </article>
-
-        <article class="project" data-category="ai">
-          <div class="project-top"><span class="project-number">02</span><span>↗</span></div>
-          <h3>AI Fraud Detection Canada</h3>
-          <p>An end-to-end fraud detection system combining feature engineering, classification models, explainability, and monitoring.</p>
-          <div class="tags"><span>Python</span><span>CatBoost</span><span>FastAPI</span></div>
-          <a class="project-link" href="https://github.com/wesleyharuo/AI-Fraud-Detection-Canada" target="_blank" rel="noreferrer">View project →</a>
-        </article>
-
-        <article class="project" data-category="data">
-          <div class="project-top"><span class="project-number">03</span><span>↗</span></div>
-          <h3>Process Improvement Platform</h3>
-          <p>Interactive dashboards for sales, supply chain, and customer support analytics to surface bottlenecks and opportunities.</p>
-          <div class="tags"><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div>
-          <a class="project-link" href="https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform" target="_blank" rel="noreferrer">View project →</a>
-        </article>
-
-        <article class="project" data-category="ai">
-          <div class="project-top"><span class="project-number">04</span><span>↗</span></div>
-          <h3>CardGuard</h3>
-          <p>A modular credit-card fraud pipeline covering class balancing, model training, validation, and inference workflows.</p>
-          <div class="tags"><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span></div>
-          <a class="project-link" href="https://github.com/wesleyharuo/CardGuard-" target="_blank" rel="noreferrer">View project →</a>
-        </article>
-
-        <article class="project" data-category="web">
-          <div class="project-top"><span class="project-number">05</span><span>↗</span></div>
-          <h3>Resume Evaluation SaaS</h3>
-          <p>A multi-tenant product concept for candidate scoring, job-fit evaluation, and async processing of submissions.</p>
-          <div class="tags"><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div>
-          <a class="project-link" href="https://github.com/wesleyharuo/Aplication-new" target="_blank" rel="noreferrer">View project →</a>
-        </article>
-
-        <article class="project" data-category="data">
-          <div class="project-top"><span class="project-number">06</span><span>↗</span></div>
-          <h3>Toronto Rental Market</h3>
-          <p>Exploratory analysis across more than 5,400 listings to understand pricing, vacancy, and regional demand patterns.</p>
-          <div class="tags"><span>Python</span><span>Analytics</span><span>EDA</span></div>
-          <a class="project-link" href="https://github.com/wesleyharuo/gta-rental-market" target="_blank" rel="noreferrer">View project →</a>
-        </article>
+      <div class="projects" aria-live="polite">
+        <article class="project" data-category="data"><div class="project-top"><span class="project-number">01</span><span aria-hidden="true">↗</span></div><h3>GL Reconciliation Platform</h3><p>Layered Snowflake and dbt models to reconcile subledger and general ledger data, surface mismatches, and trace root causes.</p><div class="tags"><span>Snowflake</span><span>dbt</span><span>SQL</span></div><a class="project-link" href="https://github.com/wesleyharuo/gl-reconciliation-snowflake-dbt" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+        <article class="project" data-category="ai"><div class="project-top"><span class="project-number">02</span><span aria-hidden="true">↗</span></div><h3>AI Fraud Detection Canada</h3><p>An end-to-end fraud detection system combining feature engineering, classification models, explainability, and monitoring.</p><div class="tags"><span>Python</span><span>CatBoost</span><span>FastAPI</span></div><a class="project-link" href="https://github.com/wesleyharuo/AI-Fraud-Detection-Canada" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+        <article class="project" data-category="data"><div class="project-top"><span class="project-number">03</span><span aria-hidden="true">↗</span></div><h3>Process Improvement Platform</h3><p>Interactive dashboards for sales, supply chain, and customer support analytics to surface bottlenecks and opportunities.</p><div class="tags"><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div><a class="project-link" href="https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+        <article class="project" data-category="ai"><div class="project-top"><span class="project-number">04</span><span aria-hidden="true">↗</span></div><h3>CardGuard</h3><p>A modular credit-card fraud pipeline covering class balancing, model training, validation, and inference workflows.</p><div class="tags"><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span></div><a class="project-link" href="https://github.com/wesleyharuo/CardGuard-" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+        <article class="project" data-category="web"><div class="project-top"><span class="project-number">05</span><span aria-hidden="true">↗</span></div><h3>Resume Evaluation SaaS</h3><p>A multi-tenant product concept for candidate scoring, job-fit evaluation, and async processing of submissions.</p><div class="tags"><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div><a class="project-link" href="https://github.com/wesleyharuo/Aplication-new" target="_blank" rel="noopener noreferrer">View repository →</a></article>
+        <article class="project" data-category="data"><div class="project-top"><span class="project-number">06</span><span aria-hidden="true">↗</span></div><h3>Toronto Rental Market</h3><p>Exploratory analysis across more than 5,400 listings to understand pricing, vacancy, and regional demand patterns.</p><div class="tags"><span>Python</span><span>Analytics</span><span>EDA</span></div><a class="project-link" href="https://github.com/wesleyharuo/gta-rental-market" target="_blank" rel="noopener noreferrer">View repository →</a></article>
       </div>
     </section>
 
-    <section id="services" class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">03 / Expertise</div>
-          <h2>What I bring to the table.</h2>
-        </div>
-      </div>
+    <section id="services" class="wrap"><div class="section-head"><div><div class="eyebrow">03 / Expertise</div><h2>What I bring to the table.</h2></div></div><div class="services"><div class="service"><b>01</b><h3>Data & analytics</h3><p>Dashboards, KPI tracking, ETL pipelines, and exploratory analysis built for decision makers and operators.</p></div><div class="service"><b>02</b><h3>Machine learning</h3><p>Model development, forecasting, anomaly detection, and risk scoring for practical business use cases.</p></div><div class="service"><b>03</b><h3>Product & web</h3><p>Full-stack interfaces, SaaS experiences, and data-first product work that bridges technical depth with usability.</p></div></div></section>
 
-      <div class="services">
-        <div class="service">
-          <b>01</b>
-          <h3>Data & analytics</h3>
-          <p>Dashboards, KPI tracking, ETL pipelines, and exploratory analysis built for decision makers and operators.</p>
-        </div>
-        <div class="service">
-          <b>02</b>
-          <h3>Machine learning</h3>
-          <p>Model development, forecasting, anomaly detection, and risk scoring for practical business use cases.</p>
-        </div>
-        <div class="service">
-          <b>03</b>
-          <h3>Product & web</h3>
-          <p>Full-stack interfaces, SaaS experiences, and data-first product work that bridges technical depth with usability.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="wrap">
-      <div class="contact">
-        <div>
-          <div class="eyebrow">04 / Contact</div>
-          <h2>Have a problem worth solving?</h2>
-          <p>I’m open to conversations about data, analytics, machine learning, fraud detection, and product experiences.</p>
-        </div>
-        <a class="button primary" href="https://github.com/wesleyharuo" target="_blank" rel="noreferrer">GitHub profile</a>
-      </div>
-    </section>
+    <section id="contact" class="wrap"><div class="contact"><div><div class="eyebrow">04 / Contact</div><h2>Have a problem worth solving?</h2><p>I’m open to conversations about data, analytics, machine learning, fraud detection, and product experiences.</p></div><a class="button primary" href="mailto:wesleyharuo@gmail.com">Email me ↗</a></div></section>
   </main>
 
-  <footer class="wrap">
-    <span>© 2026 Wesley Haruo</span>
-    <span class="mono">Built with curiosity + data</span>
-  </footer>
+  <footer class="wrap"><span>© 2026 Wesley Haruo</span><div class="footer-links"><a href="https://github.com/wesleyharuo" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:wesleyharuo@gmail.com">Email</a></div></footer>
 
   <script>
     const filters = document.querySelectorAll('.filter');
     const projects = document.querySelectorAll('.project');
     filters.forEach(button => button.addEventListener('click', () => {
-      filters.forEach(item => item.classList.remove('active'));
+      filters.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-pressed', 'false'); });
       button.classList.add('active');
+      button.setAttribute('aria-pressed', 'true');
       const category = button.dataset.filter;
       projects.forEach(project => project.classList.toggle('hidden', category !== 'all' && project.dataset.category !== category));
+    }));
+    const menuButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
     }));
   </script>
 </body>
