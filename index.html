@@ -40,10 +40,8 @@
     .button.primary:hover { background:var(--accent-dark); transform:translateY(-2px); }
     .button.ghost { border:1px solid var(--line); background:var(--surface); }
     .button.ghost:hover { border-color:var(--accent); color:var(--accent); }
-    .button .arrow { display:inline-flex; align-items:center; justify-content:center; min-width:1.1em; font-size:1.05em; line-height:1; transform:translateY(1px); transition:transform .2s ease; }
-    .button:hover .arrow { transform:translateY(2px); }
     .hero-card { background:var(--ink); color:#eef5f0; border-radius:28px; padding:28px; box-shadow:var(--shadow); position:relative; overflow:hidden; }
-    .hero-card:after { content:''; position:absolute; width:190px; height:190px; border:1px solid rgba(91,205,151,.3); border-radius:50%; right:-60px; top:-55px; box-shadow:0 0 0 25px rgba(91,205,151,.05),0 0 0 50px rgba(91,205,151,.03); }
+    .hero-card:after { content:''; position:absolute; width:190px; height:190px; border:1px solid rgba(91,205,151,.3); border-radius:50%; right:-60px; top:-55px; box-shadow:0 0 0 25px rgba(91,205,151,.03); }
     .card-label { color:#8ed9b2; font-size:.73rem; text-transform:uppercase; letter-spacing:.12em; }
     .hero-card h2 { font-size:2rem; line-height:1.1; letter-spacing:-.06em; margin:54px 0 25px; max-width:280px; }
     .stat-row { border-top:1px solid rgba(255,255,255,.16); padding-top:18px; display:flex; justify-content:space-between; color:#b2c4b9; font-size:.78rem; }
@@ -85,7 +83,7 @@
     .contact .button.primary { background:#8ed9b2; color:var(--ink); white-space:nowrap; }
     footer { padding:32px 0 42px; color:var(--muted); font-size:.78rem; display:flex; justify-content:space-between; gap:20px; }
     @media (max-width:800px) { .hero,.about-grid { grid-template-columns:1fr; gap:40px; } .hero { padding:80px 0; } .projects { grid-template-columns:repeat(2,1fr); } .services { grid-template-columns:1fr; } }
-    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .menu-toggle { display:block; } .nav-links { display:none; position:absolute; top:74px; left:0; right:0; padding:16px 20px 20px; background:var(--surface); border-bottom:1px solid var(--line); flex-direction:column; align-items:stretch; gap:16px; } .nav-links.open { display:flex; } .nav-cta { text-align:center; } .language-switcher { margin-left:0; padding:12px 0 0; border-left:0; border-top:1px solid var(--line); justify-content:center; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .section-intro { margin-top:18px; } .contact { display:block; padding:36px 25px; } .contact .button { margin-top:28px; } }
+    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .menu-toggle { display:block; } .nav-links { display:none; position:absolute; top:74px; left:0; right:0; padding:16px 20px 24px; background:rgba(245,247,244,.96); border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; } .nav-links.open { display:flex; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .contact { display:block; padding:42px 28px; } .contact h2 { margin-bottom:12px; } }
   </style>
 </head>
 <body>
@@ -108,62 +106,177 @@
   <main id="top">
     <section class="hero wrap">
       <div>
-        <div class="eyebrow" data-i18n="heroEyebrow">Data · AI · Digital products</div>
-        <h1 data-i18n-html="heroTitle">Turning complex data into <em>clear decisions.</em></h1>
-        <p class="hero-copy" data-i18n="heroCopy">I’m Wesley Haruo, a Data Analyst and Developer building analytics products, ML systems, fraud detection workflows, and production-ready web applications.</p>
-        <div class="actions"><a class="button primary" href="#work" data-i18n="viewWork">View work <span class="arrow">↓</span></a><a class="button ghost" href="#contact" data-i18n="contactMe">Contact me</a></div>
+        <div class="eyebrow">Data · AI · Digital products</div>
+        <h1>Turning complex data into <em>clear decisions.</em></h1>
+        <p class="hero-copy">I’m Wesley Haruo, a Data Analyst and Developer building analytics products, ML systems, fraud detection workflows, and production-ready web applications.</p>
+        <div class="actions">
+          <a class="button primary" href="#work">View selected work</a>
+          <a class="button ghost" href="#contact">Book a conversation</a>
+        </div>
       </div>
-      <aside class="hero-card"><div class="card-label mono" data-i18n="focus">Current focus / 2026</div><h2 data-i18n="heroCard">Build with data. Design for people.</h2><div class="stat-row"><div><strong>30+</strong><span data-i18n="projects">projects</span></div><div><strong>5+</strong><span data-i18n="domains">domains</span></div></div></aside>
+      <div class="hero-card" aria-label="Portfolio snapshot">
+        <div class="card-label">Portfolio snapshot</div>
+        <h2>From insight to product.</h2>
+        <div class="stat-row"><div><span>Projects</span><strong>06</strong></div><div><span>Focus</span><strong>Risk</strong></div></div>
+      </div>
     </section>
 
-    <section id="about" class="about"><div class="wrap about-grid"><div><div class="eyebrow">01 / <span data-i18n="aboutLabel">About</span></div><h2 data-i18n="aboutTitle">A bridge between analysis and action.</h2></div><div><p class="about-text" data-i18n="aboutCopy">I combine <strong>data engineering</strong>, <strong>analytics</strong>, <strong>machine learning</strong>, and <strong>product thinking</strong> to turn messy information into useful systems and clear decisions.</p><div class="skills"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">dbt</span><span class="tag">Snowflake</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Machine Learning</span><span class="tag">Fraud Detection</span></div></div></div></section>
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="eyebrow">About</div>
+        </div>
+        <div class="about-text">
+          I design and build <strong>data experiences</strong> that turn raw information into decision-making tools. My work sits at the intersection of analytics, machine learning, and product thinking — helping teams move from fragmented signals to clear, measurable action.
+          <div class="skills" aria-label="Skills list">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Fraud Detection</span>
+            <span class="tag">Product Analytics</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web Apps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="wrap" id="work">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Selected work</div>
+          <h2>Productized data solutions.</h2>
+        </div>
+        <p class="section-intro">I build systems that make complex datasets understandable, operational, and actionable for product teams and decision-makers.</p>
+      </div>
 
-    <section id="work" class="wrap"><div class="section-head"><div><div class="eyebrow">02 / <span data-i18n="workLabel">Selected work</span></div><h2 data-i18n="workTitle">Projects with purpose.</h2></div><p class="section-intro" data-i18n="workIntro">A selection of analytical systems, AI products, and operational tools with measurable business impact.</p></div><div class="filters" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all" data-i18n="all">All</button><button class="filter" data-filter="data">Data</button><button class="filter" data-filter="ai">AI</button><button class="filter" data-filter="web">Web</button></div><div class="projects" aria-live="polite">
-      <article class="project" data-category="data"><div class="project-top"><span class="project-number">01</span><span>↗</span></div><h3>GL Reconciliation Platform</h3><p data-i18n="p1">Layered Snowflake and dbt models to reconcile subledger and general ledger data, surface mismatches, and trace root causes.</p><div class="tags"><span>Snowflake</span><span>dbt</span><span>SQL</span></div><a class="project-link" href="https://github.com/wesleyharuo/gl-reconciliation-snowflake-dbt" target="_blank" rel="noreferrer" data-i18n="viewProject">View project →</a></article>
-      <article class="project" data-category="ai"><div class="project-top"><span class="project-number">02</span><span>↗</span></div><h3>AI Fraud Detection Canada</h3><p data-i18n="p2">An end-to-end fraud detection system combining feature engineering, classification models, explainability, and monitoring.</p><div class="tags"><span>Python</span><span>CatBoost</span><span>FastAPI</span></div><a class="project-link" href="https://github.com/wesleyharuo/AI-Fraud-Detection-Canada" target="_blank" rel="noreferrer" data-i18n="viewProject">View project →</a></article>
-      <article class="project" data-category="data"><div class="project-top"><span class="project-number">03</span><span>↗</span></div><h3>Process Improvement Platform</h3><p data-i18n="p3">Interactive dashboards for sales, supply chain, and customer support analytics to surface bottlenecks and opportunities.</p><div class="tags"><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div><a class="project-link" href="https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform" target="_blank" rel="noreferrer" data-i18n="viewProject">View project →</a></article>
-      <article class="project" data-category="ai"><div class="project-top"><span class="project-number">04</span><span>↗</span></div><h3>CardGuard</h3><p data-i18n="p4">A modular credit-card fraud pipeline covering class balancing, model training, validation, and inference workflows.</p><div class="tags"><span>Scikit-learn</span><span>XGBoost</span><span>MLflow</span></div><a class="project-link" href="https://github.com/wesleyharuo/CardGuard-" target="_blank" rel="noreferrer" data-i18n="viewProject">View project →</a></article>
-      <article class="project" data-category="web"><div class="project-top"><span class="project-number">05</span><span>↗</span></div><h3>Resume Evaluation SaaS</h3><p data-i18n="p5">A multi-tenant product concept for candidate scoring, job-fit evaluation, and async processing of submissions.</p><div class="tags"><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div><a class="project-link" href="https://github.com/wesleyharuo/Aplication-new" target="_blank" rel="noreferrer" data-i18n="viewProject">View project →</a></article>
-      <article class="project" data-category="data"><div class="project-top"><span class="project-number">06</span><span>↗</span></div><h3>Toronto Rental Market</h3><p data-i18n="p6">Exploratory analysis across more than 5,400 listings to understand pricing, vacancy, and regional demand patterns.</p><div class="tags"><span>Python</span><span>Analytics</span><span>EDA</span></div><a class="project-link" href="https://github.com/wesleyharuo/gta-rental-market" target="_blank" rel="noreferrer" data-i18n="viewProject">View project →</a></article>
-    </div></section>
+      <div class="filters" aria-label="Project filters">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="analytics">Analytics</button>
+        <button class="filter" type="button" data-filter="ai">AI / Risk</button>
+        <button class="filter" type="button" data-filter="web">Web Products</button>
+      </div>
 
-    <section id="services" class="wrap"><div class="section-head"><div><div class="eyebrow">03 / <span data-i18n="expertiseLabel">Expertise</span></div><h2 data-i18n="expertiseTitle">What I bring to the table.</h2></div></div><div class="services"><div class="service"><b>01</b><h3 data-i18n="service1Title">Data & analytics</h3><p data-i18n="service1Copy">Dashboards, KPI tracking, ETL pipelines, and exploratory analysis built for decision makers and operators.</p></div><div class="service"><b>02</b><h3 data-i18n="service2Title">Machine learning</h3><p data-i18n="service2Copy">Model development, forecasting, anomaly detection, and risk scoring for practical business use cases.</p></div><div class="service"><b>03</b><h3 data-i18n="service3Title">Product & web</h3><p data-i18n="service3Copy">Full-stack interfaces, SaaS experiences, and data-first product work that bridges technical depth with usability.</p></div></div></section>
+      <div class="projects">
+        <article class="project" data-category="analytics">
+          <div class="project-top"><span class="project-number">01</span><span class="eyebrow">Analytics</span></div>
+          <h3>GL Reconciliation Platform</h3>
+          <p>Built a financial reconciliation workflow that brought together transactions, exceptions, and auditability into a shared operational dashboard.</p>
+          <div class="tags"><span>Python</span><span>SQL</span><span>Dash</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/wesley/tree/main" target="_blank" rel="noreferrer">View project →</a>
+        </article>
 
-    <section id="contact" class="wrap"><div class="contact"><div><div class="eyebrow">04 / Contact</div><h2 data-i18n="contactTitle">Have a problem worth solving?</h2><p data-i18n="contactCopy">I’m open to conversations about data, analytics, machine learning, fraud detection, and product experiences.</p></div><a class="button primary" href="https://github.com/wesleyharuo" target="_blank" rel="noreferrer" data-i18n="github">GitHub profile</a></div></section>
+        <article class="project" data-category="ai">
+          <div class="project-top"><span class="project-number">02</span><span class="eyebrow">AI / Risk</span></div>
+          <h3>AI Fraud Detection Canada</h3>
+          <p>Designing and testing decision-support models for fraud classification, explainability, and model monitoring in high-risk operational flows.</p>
+          <div class="tags"><span>XGBoost</span><span>MLflow</span><span>Risk</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/wesley/tree/main" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="analytics">
+          <div class="project-top"><span class="project-number">03</span><span class="eyebrow">Analytics</span></div>
+          <h3>Process Improvement Platform</h3>
+          <p>Created dashboards and review loops to expose bottlenecks, operational drift, and process inefficiencies across business workflows.</p>
+          <div class="tags"><span>BI</span><span>SQL</span><span>Ops</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/wesley/tree/main" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="ai">
+          <div class="project-top"><span class="project-number">04</span><span class="eyebrow">AI / Risk</span></div>
+          <h3>CardGuard</h3>
+          <p>Fraud detection pipeline for payment data, covering feature engineering, model scoring, and operational monitoring.</p>
+          <div class="tags"><span>scikit-learn</span><span>Python</span><span>Monitoring</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/wesley/tree/main" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="web">
+          <div class="project-top"><span class="project-number">05</span><span class="eyebrow">Web</span></div>
+          <h3>Resume Evaluation SaaS</h3>
+          <p>Built a candidate evaluation app with async processing, structured outputs, and a product-ready workflow for recruiting teams.</p>
+          <div class="tags"><span>React</span><span>Python</span><span>Automation</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/wesley/tree/main" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+
+        <article class="project" data-category="analytics">
+          <div class="project-top"><span class="project-number">06</span><span class="eyebrow">Analytics</span></div>
+          <h3>Toronto Rental Market</h3>
+          <p>Analysed over 5,400 listings to surface market trends, price dispersion, and emerging opportunity signals across neighborhoods.</p>
+          <div class="tags"><span>Python</span><span>EDA</span><span>Geo</span></div>
+          <a class="project-link" href="https://github.com/wesleyharuo/wesley/tree/main" target="_blank" rel="noreferrer">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="services">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Expertise</div>
+          <h2>Built for evidence and execution.</h2>
+        </div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <b>01</b>
+          <h3>Analytics systems</h3>
+          <p>Dashboards, reporting, measurement frameworks, and decision-support interfaces for teams that need signal, not noise.</p>
+        </div>
+        <div class="service">
+          <b>02</b>
+          <h3>ML & fraud</h3>
+          <p>Model design, feature engineering, monitoring, and experimentation for classification problems in high-stakes environments.</p>
+        </div>
+        <div class="service">
+          <b>03</b>
+          <h3>Product delivery</h3>
+          <p>End-to-end work from concept to prototype to shipped interface — blending product thinking with technical delivery.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="contact">
+        <div>
+          <div class="eyebrow">Let’s build</div>
+          <h2>Data products that help teams make better decisions.</h2>
+        </div>
+        <a class="button primary" href="mailto:wesley_haruo@hotmail.com">wesley_haruo@hotmail.com</a>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><span>© 2026 Wesley Haruo</span><span class="mono">Built with curiosity + data</span></footer>
+
+  <footer class="wrap">
+    <span>© 2026 Wesley Haruo</span>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
 
   <script>
-    const copy = {
-      en: { aboutNav:'About', workNav:'Work', expertiseNav:'Expertise', contactNav:'Let’s talk', heroEyebrow:'Data · AI · Digital products', heroTitle:'Turning complex data into <em>clear decisions.</em>', heroCopy:'I’m Wesley Haruo, a Data Analyst and Developer building analytics products, ML systems, fraud detection workflows, and production-ready web applications.', viewWork:'View work', contactMe:'Contact me', focus:'Current focus / 2026', heroCard:'Build with data. Design for people.', projects:'projects', domains:'domains', aboutLabel:'About', aboutTitle:'A bridge between analysis and action.', aboutCopy:'I combine <strong>data engineering</strong>, <strong>analytics</strong>, <strong>machine learning</strong>, and <strong>product thinking</strong> to turn messy information into useful systems and clear decisions.', workLabel:'Selected work', workTitle:'Projects with purpose.', workIntro:'A selection of analytical systems, AI products, and operational tools with measurable business impact.', all:'All', viewProject:'View project →', p1:'Layered Snowflake and dbt models to reconcile subledger and general ledger data, surface mismatches, and trace root causes.', p2:'An end-to-end fraud detection system combining feature engineering, classification models, explainability, and monitoring.', p3:'Interactive dashboards for sales, supply chain, and customer support analytics to surface bottlenecks and opportunities.', p4:'A modular credit-card fraud pipeline covering class balancing, model training, validation, and inference workflows.', p5:'A multi-tenant product concept for candidate scoring, job-fit evaluation, and async processing of submissions.', p6:'Exploratory analysis across more than 5,400 listings to understand pricing, vacancy, and regional demand patterns.', expertiseLabel:'Expertise', expertiseTitle:'What I bring to the table.', service1Title:'Data & analytics', service1Copy:'Dashboards, KPI tracking, ETL pipelines, and exploratory analysis built for decision makers and operators.', service2Title:'Machine learning', service2Copy:'Model development, forecasting, anomaly detection, and risk scoring for practical business use cases.', service3Title:'Product & web', service3Copy:'Full-stack interfaces, SaaS experiences, and data-first product work that bridges technical depth with usability.', contactTitle:'Have a problem worth solving?', contactCopy:'I’m open to conversations about data, analytics, machine learning, fraud detection, and product experiences.', github:'GitHub profile' },
-      fr: { aboutNav:'À propos', workNav:'Projets', expertiseNav:'Expertise', contactNav:'Parlons-en', heroEyebrow:'Données · IA · Produits numériques', heroTitle:'Des données complexes pour des <em>décisions claires.</em>', heroCopy:'Je suis Wesley Haruo, analyste de données et développeur. Je crée des produits analytiques, des systèmes de ML, des workflows de détection de fraude et des applications web prêtes pour la production.', viewWork:'Voir les projets', contactMe:'Me contacter', focus:'Focus actuel / 2026', heroCard:'Construire avec les données. Concevoir pour les personnes.', projects:'projets', domains:'domaines', aboutLabel:'À propos', aboutTitle:'Le lien entre analyse et action.', aboutCopy:'Je combine <strong>l’ingénierie des données</strong>, <strong>l’analytique</strong>, <strong>le machine learning</strong> et <strong>la pensée produit</strong> pour transformer des informations complexes en systèmes utiles et en décisions claires.', workLabel:'Projets sélectionnés', workTitle:'Des projets qui ont du sens.', workIntro:'Une sélection de systèmes analytiques, de produits d’IA et d’outils opérationnels à impact mesurable.', all:'Tous', viewProject:'Voir le projet →', p1:'Modèles Snowflake et dbt pour rapprocher les données du sous-grand livre et du grand livre, détecter les écarts et identifier leurs causes.', p2:'Système de détection de fraude de bout en bout combinant ingénierie des variables, modèles de classification, explicabilité et surveillance.', p3:'Tableaux de bord interactifs pour les ventes, la chaîne d’approvisionnement et le service client afin de révéler les blocages et les opportunités.', p4:'Pipeline modulaire de détection de fraude par carte couvrant l’équilibrage des classes, l’entraînement, la validation et l’inférence.', p5:'Concept de produit multi-tenant pour le scoring des candidats, l’évaluation de l’adéquation et le traitement asynchrone des soumissions.', p6:'Analyse exploratoire de plus de 5 400 annonces pour comprendre les prix, la disponibilité et la demande régionale.', expertiseLabel:'Expertise', expertiseTitle:'Ce que j’apporte.', service1Title:'Données & analytique', service1Copy:'Tableaux de bord, indicateurs KPI, pipelines ETL et analyses exploratoires conçus pour les décideurs et les équipes opérationnelles.', service2Title:'Machine learning', service2Copy:'Développement de modèles, prévisions, détection d’anomalies et scoring des risques pour des cas d’usage concrets.', service3Title:'Produit & web', service3Copy:'Interfaces full-stack, expériences SaaS et produits orientés données qui relient profondeur technique et facilité d’utilisation.', contactTitle:'Un problème qui mérite d’être résolu?', contactCopy:'Je suis ouvert aux conversations sur les données, l’analytique, le machine learning, la détection de fraude et les produits numériques.', github:'Profil GitHub' }
-    };
-
-    const setLanguage = language => {
-      const selected = copy[language];
-      document.documentElement.lang = language;
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        if (selected[element.dataset.i18n]) element.innerHTML = selected[element.dataset.i18n];
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
       });
-      document.querySelectorAll('[data-language]').forEach(button => {
-        const active = button.dataset.language === language;
-        button.classList.toggle('active', active);
-        button.setAttribute('aria-pressed', String(active));
-      });
-      localStorage.setItem('portfolio-language', language);
-    };
-
-    document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
-    setLanguage(localStorage.getItem('portfolio-language') || 'en');
+    }
 
     const filters = document.querySelectorAll('.filter');
     const projects = document.querySelectorAll('.project');
-    filters.forEach(button => button.addEventListener('click', () => { filters.forEach(item => item.classList.remove('active')); button.classList.add('active'); const category = button.dataset.filter; projects.forEach(project => project.classList.toggle('hidden', category !== 'all' && project.dataset.category !== category)); }));
-
-    const menuButton = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', () => { const open = menu.classList.toggle('open'); menuButton.setAttribute('aria-expanded', String(open)); });
-    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); }));
+    filters.forEach(button => {
+      button.addEventListener('click', () => {
+        filters.forEach(item => item.classList.toggle('active', item === button));
+        const filter = button.dataset.filter;
+        projects.forEach(project => {
+          const matches = filter === 'all' || project.dataset.category === filter;
+          project.classList.toggle('hidden', !matches);
+        });
+      });
+    });
   </script>
 </body>
 </html>
