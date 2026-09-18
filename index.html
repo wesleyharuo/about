@@ -3,42 +3,1288 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Wesley Haruo is a data analyst and developer working across financial data automation, analytics engineering, fraud detection, and AI security." />
-  <meta name="theme-color" content="#f5f7f4" />
-  <title>Wesley Haruo | Data, Automation & AI Security</title>
+  <title>Wesley Haruo Kurosawa | Financial data automation, analytics engineering and AI risk</title>
+  <meta name="description" content="Toronto data analyst with a systems engineering background and finance experience. Financial data migration and reconciliation, Python and SQL automation, fraud analytics and independent research on AI-generated code security." />
+  <meta property="og:title" content="Wesley Haruo Kurosawa | Data that agrees before anyone decides on it" />
+  <meta property="og:description" content="Twenty years across systems, health and insurance finance, and financial data automation in Canada. Projects, methods and research." />
+  <meta property="og:type" content="profile" />
+  <meta name="theme-color" content="#f6f7f2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Wesley Haruo Kurosawa","jobTitle":"Data Analyst","address":{"@type":"PostalAddress","addressRegion":"ON","addressCountry":"CA"},"email":"mailto:wesley_haruo@hotmail.com","sameAs":["https://www.linkedin.com/in/wesleyharuo","https://github.com/wesleyharuo","https://orcid.org/0009-0002-1368-2250"],"knowsAbout":["SQL","Python","pandas","Power BI","Tableau","ETL","Financial reconciliation","FP&A","Fraud detection","AI security"]}
+  </script>
   <style>
-    :root{--bg:#f5f7f4;--surface:#fff;--ink:#17211d;--muted:#68746d;--line:#dce4de;--accent:#16845b;--accent-dark:#0d6242;--soft:#e6f3eb;--shadow:0 24px 70px rgba(26,57,41,.09)}
-    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid #f0a84a;outline-offset:4px}.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}
-    header{position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(220,228,222,.8);background:rgba(245,247,244,.92);backdrop-filter:blur(14px)}nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:1.15rem;font-weight:800;letter-spacing:-.04em}.brand span,em{color:var(--accent);font-style:normal}.nav-links{display:flex;align-items:center;gap:25px;font-size:.86rem;font-weight:700}.nav-links a:hover{color:var(--accent)}.menu-toggle{display:none;border:0;background:none;color:var(--ink);font:700 .85rem Manrope;cursor:pointer}
-    .eyebrow,.tag,.meta{color:var(--accent-dark);font:500 .72rem 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase}.hero{min-height:670px;padding:118px 0 110px;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}h1{max-width:760px;margin:20px 0 28px;font-size:clamp(3rem,7vw,6.4rem);line-height:.98;letter-spacing:-.075em}h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.07em}h3{font-size:1.25rem;line-height:1.2;letter-spacing:-.035em}p{color:var(--muted)}.hero-copy{max-width:610px;font-size:1.12rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 19px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;font-weight:800;transition:.2s ease}.button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,57,41,.1)}.button.primary{border-color:var(--accent);background:var(--accent);color:#fff}.button.secondary{background:var(--surface)}
-    .hero-card{padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:var(--shadow)}.hero-card .signal{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}.hero-card .signal:last-child{border-bottom:0;padding-bottom:0}.number{min-width:28px;color:var(--accent);font:500 .8rem 'DM Mono',monospace}.signal strong{display:block;margin-bottom:3px;font-size:.94rem}.signal p{font-size:.83rem}section{padding:92px 0}.about{border-top:1px solid var(--line)}.about-grid,.trajectory-intro,.profile-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-text{max-width:720px;font-size:1.35rem;line-height:1.5;letter-spacing:-.03em}.about-text strong{color:var(--ink)}
-    .trajectory{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}.trajectory-intro{align-items:end;margin-bottom:52px}.trajectory-intro p{max-width:640px;font-size:1.03rem}.timeline{position:relative;display:grid}.timeline:before{content:'';position:absolute;left:92px;top:8px;bottom:8px;width:1px;background:var(--line)}.milestone{position:relative;display:grid;grid-template-columns:184px 1fr;gap:38px;padding:0 0 38px}.milestone:last-child{padding-bottom:0}.milestone:before{content:'';position:absolute;left:88px;top:8px;width:9px;height:9px;border:3px solid var(--surface);border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--accent)}.milestone .meta{padding-top:2px}.milestone-content{max-width:700px}.milestone-content h3{margin-bottom:8px}.milestone-content p{font-size:.94rem}.profile{padding-top:0}.profile-layout{align-items:start}.profile-summary{display:flex;flex-direction:column;gap:18px}.pill{display:inline-flex;width:max-content;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--accent-dark);font:500 .7rem 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em}.profile-summary p{font-size:1.02rem}.profile-points{display:grid;gap:14px}.profile-point{padding:18px 20px;border-left:3px solid var(--accent);background:var(--surface)}.profile-point strong{display:block;margin-bottom:4px}.profile-point p{font-size:.9rem}
-    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.section-intro{max-width:450px;font-size:.95rem}.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.filter{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font:500 .72rem 'DM Mono',monospace;cursor:pointer}.filter.active,.filter:hover{border-color:var(--accent);background:var(--soft);color:var(--accent-dark)}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{display:flex;flex-direction:column;min-height:260px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--surface);transition:.2s ease}.project:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.project h3{margin:13px 0 8px}.project p{font-size:.87rem}.project .stack{margin-top:auto;padding-top:22px;color:var(--accent-dark);font:500 .7rem 'DM Mono',monospace}.project[hidden]{display:none}
-    .research{background:var(--ink);color:#f4f8f5}.research .eyebrow,.research p{color:#a9c8b7}.research h2{max-width:650px}.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}.research-card{padding:25px;border:1px solid rgba(169,200,183,.22);border-radius:16px;background:rgba(255,255,255,.045)}.research-card h3{margin:14px 0 9px;color:#fff}.research-card p{font-size:.87rem}.note{margin-top:24px;font-size:.78rem}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--line);background:var(--line)}.service{min-height:190px;padding:30px;background:var(--bg)}.service b{display:block;margin-bottom:10px;color:var(--accent-dark)}.service p{font-size:.88rem}.contact{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:52px;border-radius:24px;background:var(--soft)}.contact h2{max-width:650px;margin-top:10px}footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0 36px;color:var(--muted);font-size:.78rem}.footer-links{display:flex;gap:18px}
-    @media(max-width:800px){.hero,.about-grid,.profile-layout,.trajectory-intro{grid-template-columns:1fr;gap:40px}.hero{min-height:auto;padding:80px 0}.projects,.research-grid,.services{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}}
-    @media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:74px;left:0;right:0;padding:16px 20px 24px;flex-direction:column;align-items:flex-start;background:var(--bg);border-bottom:1px solid var(--line)}.nav-links.open{display:flex}h1{font-size:clamp(3rem,16vw,4.5rem)}section{padding:68px 0}.about-text{font-size:1.12rem}.timeline:before{left:4px}.milestone{display:block;padding-left:25px}.milestone:before{left:0}.milestone .meta{margin-bottom:10px}.projects,.research-grid,.services{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column;padding:30px}footer{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    :root{
+      --paper:#f6f7f2;--surface:#ffffff;--band:#e8f0e9;--ink:#18221d;--muted:#56645b;--line:#d4ddd5;
+      --ledger:#2c6a4d;--ledger-deep:#1e4d37;--variance:#a8412c;--variance-soft:#f6e4de;--focus:#d99a2b;
+      --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+      --display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+      --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+    }
+    @media (prefers-color-scheme:dark){
+      :root{--paper:#111713;--surface:#18201b;--band:#1c2921;--ink:#e6eee8;--muted:#9fb0a5;--line:#2c3a31;--ledger:#72c29a;--ledger-deep:#a3dcbc;--variance:#ec927c;--variance-soft:#3a2520}
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+    body{background:var(--paper);color:var(--ink);font:400 1rem/1.65 var(--sans)}
+    a{color:inherit}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+    .wrap{width:min(1140px,calc(100% - 48px));margin-inline:auto}
+    p{color:var(--muted);max-width:68ch}
+    strong{color:var(--ink);font-weight:600}
+    h1,h2,h3,h4{font-family:var(--display);color:var(--ink);letter-spacing:-.01em}
+    h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;font-weight:700;max-width:14ch}
+    h2{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.08;font-weight:600;max-width:22ch}
+    h3{font-size:1.25rem;line-height:1.25;font-weight:600}
+    h4{font-size:1.02rem;font-weight:600}
+    .kicker{display:block;margin-bottom:14px;color:var(--ledger-deep);font-weight:600;font-size:.92rem}
+    .skip{position:absolute;left:-999px;top:8px;padding:8px 12px;background:var(--ink);color:var(--paper);z-index:50}
+    .skip:focus{left:8px}
+    .textlink{color:var(--ledger-deep);font-weight:500;text-underline-offset:3px;text-decoration-thickness:1px}
+
+    header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font:700 1.1rem var(--display);text-decoration:none;letter-spacing:.01em;white-space:nowrap}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:500}
+    .nav-links a{text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+    .nav-links a:hover{color:var(--ledger)}
+    .nav-links a.current{border-bottom-color:var(--ledger)}
+    .menu-toggle{display:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 .88rem var(--sans);padding:6px 12px;border-radius:4px;cursor:pointer}
+
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding:88px 0 96px}
+    .hero-lede{margin-top:24px;font-size:1.13rem;max-width:52ch}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+    .button{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--ink);border-radius:4px;font-weight:600;font-size:.92rem;text-decoration:none;background:transparent;color:var(--ink)}
+    .button.primary{background:var(--ledger-deep);border-color:var(--ledger-deep);color:#fff}
+    .button:hover{background:var(--band)}
+    .button.primary:hover{background:var(--ledger)}
+    @media (prefers-color-scheme:dark){.button.primary,.button.primary:hover{color:#0f1712}}
+    .facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:4px 28px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line)}
+    .facts div{font-size:.84rem;color:var(--muted)}
+    .facts b{display:block;font:600 1.3rem var(--display);color:var(--ink)}
+
+    .recon{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 18px 40px -24px rgba(24,34,29,.35)}
+    .recon-head{padding:16px 20px;border-bottom:1px solid var(--line)}
+    .recon-head b{display:block;font:600 1.02rem var(--display)}
+    .recon-head span{font-size:.8rem;color:var(--muted)}
+    .recon table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .recon th{text-align:left;font-weight:500;color:var(--muted);font-size:.8rem;padding:10px 20px 6px}
+    .recon th:last-child,.recon td:last-child{text-align:right}
+    .recon td{padding:11px 20px;border-top:1px solid var(--line)}
+    .recon tbody tr:nth-child(odd){background:var(--band)}
+    .amt{font-family:var(--mono);font-variant-numeric:tabular-nums}
+    .recon tr.flag td{transition:background-color .5s ease,color .5s ease}
+    .recon tr.flag.is-off td{background:var(--variance-soft)}
+    .recon tr.flag.is-off .amt{color:var(--variance)}
+    .variance{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-top:2px solid var(--ink);font-weight:600}
+    .variance .amt{font-size:1.15rem;color:var(--variance);transition:color .4s ease}
+    .variance.done .amt{color:var(--ledger)}
+    .trace{list-style:none;padding:14px 20px 4px;border-top:1px solid var(--line);min-height:128px}
+    .trace li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:.85rem;color:var(--muted);padding-bottom:8px;opacity:0;transform:translateY(4px);transition:opacity .35s ease,transform .35s ease}
+    .trace li.show{opacity:1;transform:none}
+    .trace li i{font:500 .78rem var(--mono);font-style:normal;color:var(--ledger-deep)}
+    .recon-foot{display:flex;justify-content:space-between;align-items:center;padding:10px 20px 16px}
+    .status{font-size:.84rem;font-weight:600;color:var(--variance)}
+    .status.done{color:var(--ledger)}
+    .small-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:500 .82rem var(--sans);padding:6px 12px;border-radius:4px;cursor:pointer}
+    .small-btn:hover{background:var(--band)}
+
+    section{padding:96px 0;border-top:1px solid var(--line)}
+    .split{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+    .section-intro{margin-bottom:48px}
+    .section-intro p{font-size:1.04rem;margin-top:16px}
+
+    /* Story */
+    .story{display:grid;grid-template-columns:230px 1fr;gap:64px}
+    .chapters{position:sticky;top:100px;align-self:start;list-style:none;border-left:1px solid var(--line)}
+    .chapters a{display:block;padding:7px 0 7px 16px;margin-left:-1px;border-left:2px solid transparent;font-size:.9rem;color:var(--muted);text-decoration:none}
+    .chapters a:hover{color:var(--ink)}
+    .chapters a.current{border-left-color:var(--ledger);color:var(--ink);font-weight:500}
+    .chapters span{display:block;font:400 .76rem var(--mono);color:var(--ledger-deep)}
+    .chapter{padding-bottom:48px;margin-bottom:48px;border-bottom:1px solid var(--line)}
+    .chapter:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+    .chapter .when{font:500 .84rem var(--mono);color:var(--ledger-deep)}
+    .chapter h3{font-size:1.6rem;margin:6px 0 18px;max-width:28ch}
+    .chapter p{font-size:1.05rem;line-height:1.72}
+    .chapter p+p{margin-top:16px}
+    .pull{margin:28px 0;padding:4px 0 4px 22px;border-left:3px solid var(--ledger);font:500 1.3rem/1.45 var(--display);color:var(--ink);max-width:40ch}
+
+    /* Method */
+    .steps{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);border-top:2px solid var(--ink);counter-reset:step}
+    .steps li{padding:18px 16px 0 0;counter-increment:step}
+    .steps li+li{padding-left:16px;border-left:1px solid var(--line)}
+    .steps li::before{content:counter(step);display:block;font:500 .82rem var(--mono);color:var(--ledger-deep);margin-bottom:8px}
+    .steps b{display:block;font:600 1rem var(--display);margin-bottom:6px}
+    .steps p{font-size:.86rem}
+    .procedures{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+    .procedure{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:24px}
+    .procedure h3{font-size:1.12rem;margin-bottom:6px}
+    .procedure .src{font-size:.8rem;color:var(--muted);margin-bottom:16px;display:block}
+    .procedure ol{list-style:none;counter-reset:p}
+    .procedure li{counter-increment:p;display:grid;grid-template-columns:24px 1fr;gap:6px;padding:9px 0;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+    .procedure li::before{content:counter(p);font:500 .78rem var(--mono);color:var(--ledger-deep);padding-top:2px}
+    .procedure li b{color:var(--ink);font-weight:600}
+    .toolbelt{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:0 32px}
+    .toolbelt div{padding:16px 0;border-top:1px solid var(--line)}
+    .toolbelt b{display:block;font-size:.88rem;margin-bottom:4px}
+    .toolbelt span{font:400 .82rem/1.7 var(--mono);color:var(--muted)}
+
+    /* Profile */
+    .layers{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);margin-bottom:64px}
+    .layer{padding:20px 20px 0 0}
+    .layer+.layer{padding-left:20px;border-left:1px solid var(--line)}
+    .layer .when{display:block;font:500 .8rem var(--mono);color:var(--ledger-deep);margin-bottom:8px}
+    .layer h3{font-size:1.1rem;margin-bottom:8px}
+    .layer p{font-size:.9rem}
+    .layer ul{list-style:none;margin-top:10px}
+    .layer li{font:400 .78rem/1.8 var(--mono);color:var(--muted)}
+    .diffs{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+    .diff{padding:22px 0;border-top:1px solid var(--line)}
+    .diff h3{font-size:1.12rem;margin-bottom:8px}
+    .diff p{font-size:.95rem}
+    .diff .proof{display:block;margin-top:10px;font-size:.82rem;color:var(--ledger-deep)}
+    .direction{margin-top:56px;padding:32px;background:var(--band);border-radius:6px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+    .direction ol{list-style:none;counter-reset:d}
+    .direction li{counter-increment:d;display:grid;grid-template-columns:26px 1fr;gap:8px;padding:10px 0;border-top:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+    .direction li:first-child{border-top:0}
+    .direction li::before{content:counter(d);font:500 .8rem var(--mono);color:var(--ledger-deep);padding-top:2px}
+    .direction li b{color:var(--ink)}
+
+    /* Process blocks inside cases */
+    .process{margin:4px 0 28px}
+    .process h4,.method h4{font-size:.9rem;color:var(--ledger-deep);font-family:var(--sans);margin-bottom:10px}
+    .process ol{list-style:none;counter-reset:ps;display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+    .process li{counter-increment:ps;display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+    .process li::before{content:counter(ps,decimal-leading-zero);font:500 .78rem var(--mono);color:var(--ledger-deep);padding-top:2px}
+    .process li b{color:var(--ink);font-weight:600}
+    .method{margin-top:26px;padding:20px 22px;border-left:3px solid var(--ledger);background:var(--band);border-radius:0 4px 4px 0}
+    .method dl{display:grid;grid-template-columns:170px 1fr;gap:10px 20px}
+    .method dt{font-weight:600;font-size:.88rem;color:var(--ink)}
+    .method dd{font-size:.88rem;color:var(--muted)}
+    .formula{font-family:var(--mono);font-size:.82rem;color:var(--ink);background:var(--surface);padding:2px 6px;border-radius:3px;white-space:nowrap}
+    .project-body h4{font-size:.86rem;color:var(--ledger-deep);font-family:var(--sans);margin:4px 0 6px}
+    .project-body ol{list-style:none;counter-reset:pp;margin:0 0 12px}
+    .project-body ol li{counter-increment:pp;padding-left:0;display:grid;grid-template-columns:24px 1fr;gap:6px;padding:5px 0;font-size:.9rem;color:var(--muted);border-top:1px solid var(--line)}
+    .project-body ol li::before{content:counter(pp);position:static;width:auto;height:auto;background:none;font:500 .76rem var(--mono);color:var(--ledger-deep);padding-top:2px}
+    .project-body .note{font-size:.88rem;margin:6px 0 12px;padding-left:12px;border-left:2px solid var(--ledger)}
+
+    /* Career */
+    .ledger{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+    .entry{display:grid;grid-template-columns:150px 1fr 1fr;gap:32px;padding:26px 28px;border-top:1px solid var(--line)}
+    .entry:first-child{border-top:0}
+    .entry:nth-child(odd){background:var(--band)}
+    .years{font:500 .9rem var(--mono);color:var(--ledger-deep);font-variant-numeric:tabular-nums}
+    .years small{display:block;font:400 .8rem var(--sans);color:var(--muted);margin-top:4px}
+    .entry h3{margin-bottom:6px}
+    .entry .org{font-size:.88rem;color:var(--muted);margin-bottom:10px}
+    .entry p{font-size:.93rem}
+    .added{border-left:2px solid var(--ledger);padding-left:16px}
+    .added b{display:block;font-size:.82rem;font-weight:600;color:var(--ledger-deep);margin-bottom:4px}
+    .added p{font-size:.9rem}
+
+    /* Evidence map */
+    .tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+    .tools > span{font-size:.86rem;color:var(--muted);margin-right:6px}
+    .chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 .84rem var(--sans);padding:6px 12px;border-radius:4px;cursor:pointer}
+    .chip[aria-pressed="true"]{background:var(--ledger-deep);border-color:var(--ledger-deep);color:#fff}
+    @media (prefers-color-scheme:dark){.chip[aria-pressed="true"]{color:#0f1712}}
+    .map{border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow-x:auto}
+    .map-row{border-top:1px solid var(--line)}
+    .map-row:first-child{border-top:0}
+    .map-grid{display:grid;grid-template-columns:minmax(220px,1.6fr) repeat(4,minmax(78px,.6fr)) 36px;align-items:center;min-width:640px}
+    .map-headrow{font-size:.8rem;color:var(--muted);font-weight:500;padding:12px 20px;border-bottom:1px solid var(--line)}
+    .map-headrow div{text-align:center}
+    .map-headrow div:first-child{text-align:left}
+    .map-btn{width:100%;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer;padding:14px 20px}
+    .map-btn:hover{background:var(--band)}
+    .cap{font-weight:600;font-size:.95rem}
+    .cell{display:flex;justify-content:center}
+    .mark{width:14px;height:14px;border-radius:2px;border:1.5px solid var(--line)}
+    .mark.on{background:var(--ledger);border-color:var(--ledger)}
+    .mark.dim{opacity:.2}
+    .caret{font-family:var(--mono);color:var(--muted);text-align:center;transition:transform .2s ease}
+    .map-row.open .caret{transform:rotate(90deg)}
+    .detail{display:none;padding:4px 20px 20px;min-width:640px}
+    .map-row.open .detail{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .detail h4{font:600 .82rem var(--sans);color:var(--ledger-deep);margin-bottom:6px}
+    .detail ul{list-style:none;font-size:.86rem;color:var(--muted)}
+    .detail li{padding:3px 0 3px 12px;position:relative}
+    .detail li::before{content:"";position:absolute;left:0;top:.8em;width:5px;height:1px;background:var(--muted)}
+    .detail .none{font-size:.84rem;color:var(--muted);font-style:italic}
+    .legend{margin-top:14px;font-size:.84rem}
+
+    /* Case studies */
+    .cases{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}.case,.case-top > div{min-width:0}
+    .case{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:32px}
+    .case-top{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start}
+    .case .type{font-size:.84rem;color:var(--muted)}
+    .case h3{font-size:1.55rem;margin:2px 0 12px}
+    .case-top p{font-size:1rem}
+    .repo{font-size:.86rem;white-space:nowrap}
+    .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:24px 0;padding:16px;background:var(--band);border-radius:4px;overflow-x:auto}
+    .flow span{font:500 .8rem var(--mono);padding:6px 10px;background:var(--surface);border:1px solid var(--line);border-radius:3px;white-space:nowrap}
+    .flow i{font-style:normal;color:var(--muted);font-family:var(--mono)}
+    .case-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .case-cols h4{font-size:.9rem;color:var(--ledger-deep);font-family:var(--sans);margin-bottom:8px}
+    .case-cols ul{list-style:none}
+    .case-cols li{position:relative;padding:4px 0 4px 14px;font-size:.9rem;color:var(--muted)}
+    .case-cols li::before{content:"";position:absolute;left:0;top:.9em;width:6px;height:1px;background:var(--ledger)}
+    .case-cols p{font-size:.9rem}
+    .stack{display:block;margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font:400 .8rem/1.7 var(--mono);color:var(--muted)}
+
+    .more-head{margin:64px 0 18px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+    .projects{border-top:2px solid var(--ink)}
+    .project{border-bottom:1px solid var(--line)}
+    .project[hidden]{display:none}
+    .project summary{list-style:none;display:grid;grid-template-columns:240px 1fr 24px;gap:24px;padding:18px 0;cursor:pointer;align-items:baseline}
+    .project summary::-webkit-details-marker{display:none}
+    .project summary:hover h3{color:var(--ledger)}
+    .project h3{font-size:1.08rem}
+    .project .type{display:block;font-size:.8rem;color:var(--muted);margin-top:2px;font-family:var(--sans);font-weight:400}
+    .project summary p{font-size:.92rem}
+    .project .plus{font:500 1rem var(--mono);color:var(--muted);transition:transform .2s ease}
+    .project[open] .plus{transform:rotate(45deg)}
+    .project-body{display:grid;grid-template-columns:240px 1fr 24px;gap:24px;padding:0 0 22px}
+    .project-body > div{grid-column:2}
+    .project-body ul{list-style:none;margin:6px 0 12px}
+    .project-body li{position:relative;padding:3px 0 3px 14px;font-size:.9rem;color:var(--muted)}
+    .project-body li::before{content:"";position:absolute;left:0;top:.9em;width:6px;height:1px;background:var(--ledger)}
+    .project-body .stack{margin-top:10px}
+    .fineprint{margin-top:18px;font-size:.84rem}
+
+    /* Research */
+    .research{background:var(--ink);color:#eaf1ec;border-top:0}
+    .research h2,.research h3,.research h4{color:#fff}
+    .research p,.research li{color:#b3c7ba}
+    .research .kicker{color:#8fd1ae}
+    .research a{color:#fff}
+    @media (prefers-color-scheme:dark){.research{background:#0b100d}}
+    .paper{padding:44px 0;border-top:1px solid rgba(179,199,186,.22)}
+    .paper-head{display:grid;grid-template-columns:150px 1fr;gap:32px}
+    .paper .when{font:500 .88rem var(--mono);color:#8fd1ae}
+    .paper .form{display:block;font-size:.82rem;color:#b3c7ba;margin-top:4px}
+    .paper h3{font-size:1.5rem;margin-bottom:12px;max-width:34ch}
+    .paper-body{margin:26px 0 0 182px}
+    .paper-body > p{margin-bottom:18px}
+    .r-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:10px}
+    .r-cols h4{font-family:var(--sans);font-size:.9rem;color:#8fd1ae;margin-bottom:8px}
+    .r-cols ul{list-style:none}
+    .r-cols li{position:relative;padding:4px 0 4px 14px;font-size:.9rem}
+    .r-cols li::before{content:"";position:absolute;left:0;top:.9em;width:6px;height:1px;background:#8fd1ae}
+    .figures{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:8px 0 22px;border-top:1px solid rgba(179,199,186,.3)}
+    .figures div{padding:16px 16px 0 0}
+    .figures div+div{padding-left:16px;border-left:1px solid rgba(179,199,186,.22)}
+    .figures b{display:block;font:600 1.6rem var(--display);color:#fff}
+    .figures span{font-size:.82rem;color:#b3c7ba}
+
+    .sagp{margin-top:28px;border:1px solid rgba(179,199,186,.28);border-radius:6px;padding:24px}
+    .sagp h4{margin-bottom:6px}
+    .sagp > p{font-size:.9rem;margin-bottom:16px}
+    .tiers{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .tier{border:1px solid rgba(179,199,186,.4);background:transparent;color:#eaf1ec;font:500 .84rem var(--sans);padding:7px 12px;border-radius:4px;cursor:pointer}
+    .tier[aria-pressed="true"]{background:#8fd1ae;border-color:#8fd1ae;color:#0f1712}
+    .tier-desc{font-size:.9rem;min-height:3.2em;margin-bottom:14px}
+    .tier-desc b{color:#fff}
+    .stages{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+    .stage{padding:12px 10px;border:1px solid rgba(179,199,186,.22);border-radius:4px;font-size:.8rem;color:#7f958a;transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+    .stage b{display:block;font:500 .78rem var(--mono);margin-bottom:4px}
+    .stage.req{background:rgba(143,209,174,.14);border-color:#8fd1ae;color:#eaf1ec}
+    .stage.req b{color:#8fd1ae}
+    .sagp-note{margin-top:12px;font-size:.8rem}
+    .research-note{margin-top:8px;padding:22px 24px;border:1px solid rgba(179,199,186,.25);border-radius:6px}
+    .research-note p{max-width:none}
+
+    /* Study, help, contact */
+    .study{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+    .study-item{padding:18px 0;border-top:1px solid var(--line)}
+    .study-item b{display:block;font-weight:600}
+    .study-item span{font-size:.9rem;color:var(--muted)}
+    .certs{margin-top:28px;font-size:.93rem}
+    .help{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+    .help h3{margin-bottom:10px;padding-top:16px;border-top:2px solid var(--ledger)}
+    .help p{font-size:.94rem}
+    .help ul{list-style:none;margin-top:12px}
+    .help li{font-size:.86rem;color:var(--muted);padding:3px 0}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+    .contact-list{list-style:none;border-top:2px solid var(--ink)}
+    .contact-list li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+    .contact-list span{color:var(--muted)}
+    .contact-list a{font-weight:500;color:var(--ledger-deep);text-underline-offset:3px;word-break:break-all;text-align:right}
+    .copy{margin-top:16px}
+    footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0 40px;font-size:.84rem;color:var(--muted);border-top:1px solid var(--line)}
+
+    @media (max-width:980px){
+      .nav-links{gap:16px;font-size:.86rem}
+      .steps{grid-template-columns:repeat(3,1fr)}
+      .steps li:nth-child(4){padding-left:0;border-left:0}
+      .steps li{padding-bottom:18px}
+      .procedures{grid-template-columns:1fr}
+      .toolbelt{grid-template-columns:1fr 1fr}
+      .stages{grid-template-columns:repeat(4,1fr)}
+    }
+    @media (max-width:900px){
+      .menu-toggle{display:block}
+      .nav-links{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:12px;padding:18px 24px 22px;background:var(--paper);border-bottom:1px solid var(--line);font-size:1rem}
+      .nav-links.open{display:flex}
+      .hero,.split,.contact,.story{grid-template-columns:1fr;gap:40px}
+      .chapters{display:none}
+      .hero{padding:56px 0 72px}
+      .entry,.paper-head{grid-template-columns:1fr;gap:12px}
+      .paper-body{margin-left:0}
+      .case-cols,.r-cols{grid-template-columns:1fr;gap:18px}
+      .figures{grid-template-columns:1fr 1fr}
+      .figures div:nth-child(3){padding-left:0;border-left:0}
+      .figures div{padding-bottom:14px}
+      .project summary,.project-body{grid-template-columns:1fr 24px;gap:8px 16px}
+      .project summary p{grid-column:1;grid-row:2}
+      .project-body > div{grid-column:1}
+      .help,.study,.diffs{grid-template-columns:1fr}
+      .layers{grid-template-columns:1fr 1fr}
+      .layer:nth-child(3){padding-left:0;border-left:0}
+      .layer{padding-bottom:20px}
+      .direction{grid-template-columns:1fr;gap:20px}
+      .process ol{grid-template-columns:1fr}
+      .method dl{grid-template-columns:1fr;gap:2px 0}
+      .method dd{margin-bottom:10px}
+      .help{gap:24px}
+      .facts{grid-template-columns:repeat(2,auto)}
+    }
+    @media (max-width:640px){
+      .wrap{width:calc(100% - 32px)}
+      section{padding:68px 0}
+      .case{padding:22px}
+      .case-top{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .steps li,.steps li+li{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+      .steps li:first-child{border-top:0}
+      .toolbelt{grid-template-columns:1fr}
+      .layers{grid-template-columns:1fr}
+      .layer+.layer{padding-left:0;border-left:0;border-top:1px solid var(--line);padding-top:18px}
+      .direction{padding:22px}
+      .stages{grid-template-columns:1fr 1fr}
+      .entry{padding:22px 18px}
+      .recon td,.recon th{padding-left:14px;padding-right:14px}
+      .contact-list li{flex-direction:column;gap:2px}
+      .contact-list a{text-align:left}
+      footer{flex-direction:column}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+    @media print{header,.recon-foot,.tools,.small-btn{display:none}section{padding:32px 0}.research{background:#fff;color:#000}.research *{color:#000!important}}
   </style>
 </head>
 <body>
-  <header><nav class="wrap" aria-label="Primary navigation"><a class="brand" href="#top">Wesley<span>.</span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button><div class="nav-links"><a href="#about">About</a><a href="#trajectory">Career</a><a href="#work">Work</a><a href="#research">Research</a><a href="#contact">Contact</a></div></nav></header>
-  <main id="top">
-    <section class="hero wrap"><div><div class="eyebrow">Data · Automation · AI security</div><h1>Turning complex data into <em>clear decisions.</em></h1><p class="hero-copy">I’m Wesley Haruo, a data analyst and developer with a systems background, finance experience, and a practical focus on building reliable data products.</p><div class="actions"><a class="button primary" href="#work">Explore my work</a><a class="button secondary" href="https://github.com/wesleyharuo" target="_blank" rel="noreferrer">GitHub profile ↗</a></div></div><aside class="hero-card" aria-label="Professional focus"><div class="signal"><span class="number">01</span><div><strong>Build the pipeline</strong><p>Python, SQL, APIs and workflow automation for financial data.</p></div></div><div class="signal"><span class="number">02</span><div><strong>Validate the output</strong><p>Reconciliation, business rules, monitoring and source-level traceability.</p></div></div><div class="signal"><span class="number">03</span><div><strong>Question the automation</strong><p>Independent research on security and risk in AI-assisted work.</p></div></div></aside></section>
-    <section class="about" id="about"><div class="wrap about-grid"><div><div class="eyebrow">About</div></div><div class="about-text">I design and build <strong>data experiences</strong> that turn raw, fragmented information into decisions people can trust. My work sits at the intersection of systems, finance and automation — with a habit of tracing every number back to where it started.</div></div></section>
-    <section class="trajectory" id="trajectory" aria-labelledby="trajectory-title"><div class="wrap"><div class="trajectory-intro"><div><div class="eyebrow">Professional trajectory</div><h2 id="trajectory-title">From systems to safer automation.</h2></div><p>I started by keeping clinical systems reliable, moved into health and insurance finance, and now build financial data workflows for small businesses in Canada. The through-line is simple: compare what a system says with what is true, then fix the difference at its source.</p></div><div class="timeline"><article class="milestone"><div class="meta">Technology · Brazil</div><div class="milestone-content"><h3>Systems analyst </h3><p>Maintained Informix databases and clinical systems, wrote Informix 4GL and shell scripts, shipped releases, corrected production records, and migrated data across legacy platforms for new units.</p></div></article><article class="milestone"><div class="meta">Health finance · Brazil</div><div class="milestone-content"><h3>Data quality and cost control</h3><p>Consolidated medical and financial records during a corporate transition, tracked loss ratio and medical costs, and used SQL to identify duplicate claims and provider overcharging.</p></div></article><article class="milestone"><div class="meta">FP&amp;A · Brazil</div><div class="milestone-content"><h3>Financial planning</h3><p>Supported the launch of Youse by tracking budgets versus actuals, allocating costs between legal entities, classifying investments and operating expenses, and reconciling SAP with TM1.</p></div></article><article class="milestone"><div class="meta">Canada · Data</div><div class="milestone-content"><h3>From operations to financial analytics</h3><p>Built Canadian experience across inventory, automotive financial analysis and operations, replacing manual Excel consolidation with Power Query workflows that validate data as it moves.</p></div></article><article class="milestone"><div class="meta">Now · NextLens Data</div><div class="milestone-content"><h3>Financial data automation</h3><p>Migrates small businesses from spreadsheets and manual bookkeeping to cloud accounting, mapping accounts and building Python, SQL, API and n8n workflows. Uses LLMs for invoice extraction while checking every value against accounting rules.</p></div></article></div></div></section>
-    <section class="profile" aria-labelledby="profile-title"><div class="wrap profile-layout"><div class="profile-summary"><div class="pill">Professional profile</div><h2 id="profile-title">An analyst with an engineering mindset.</h2><p>My strongest work combines domain understanding with technical execution: I can understand the accounting logic, build the pipeline, integrate systems, apply AI where it helps, and explain where it introduces risk.</p></div><div class="profile-points"><div class="profile-point"><strong>Propagation is the mental model.</strong><p>From damaged clinical records to dependency risk in AI-generated code, I look for how a small error travels downstream.</p></div><div class="profile-point"><strong>Finance gives automation direction.</strong><p>FP&amp;A, cost allocation and reconciliation inform the validation rules behind the systems I build.</p></div><div class="profile-point"><strong>AI adoption needs controls.</strong><p>I use LLMs in practice while researching how to govern their output in financial, regulated and public-sector contexts.</p></div><div class="profile-point"><strong>Technical ideas should be explainable.</strong><p>I write for both technical and non-technical readers, from threat models to practical security guidance.</p></div></div></div></section>
-    <section class="wrap" id="work"><div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Productized data solutions.</h2></div><p class="section-intro">Portfolio projects explore recurring themes from my work: analytics, fraud, insurance, forecasting and dependable data operations.</p></div><div class="filters" role="group" aria-label="Filter projects"><button class="filter active" type="button" data-filter="all">All</button><button class="filter" type="button" data-filter="analytics">Analytics</button><button class="filter" type="button" data-filter="risk">Risk &amp; fraud</button><button class="filter" type="button" data-filter="platform">Platforms</button></div><div class="projects"><article class="project" data-category="risk"><div class="tag">Risk &amp; fraud</div><h3>CardGuard</h3><p>Fraud detection system with modular design, PSI and KS drift monitoring, MLflow tracking and Docker packaging.</p><div class="stack">ML · Monitoring · MLOps</div></article><article class="project" data-category="risk platform"><div class="tag">Risk &amp; fraud</div><h3>KW Risk</h3><p>React and FastAPI insurance claims platform using OCR and NLP to triage documents and flag suspicious claims.</p><div class="stack">React · FastAPI · OCR · NLP</div></article><article class="project" data-category="analytics"><div class="tag">Analytics</div><h3>Retail &amp; transaction cases</h3><p>Structured analytics studies across 9,800 outdoor orders, 46,000 cafe transactions and Toronto rental listings.</p><div class="stack">Python · pandas · Visualization</div></article><article class="project" data-category="analytics"><div class="tag">Analytics</div><h3>Forecasting suite</h3><p>Comparison of Prophet and ARIMA approaches for turning historical patterns into planning signals.</p><div class="stack">Forecasting · Python · Evaluation</div></article><article class="project" data-category="platform"><div class="tag">Data platform</div><h3>Clean, validate, aggregate</h3><p>Streamlit workflow that makes repeatable data preparation stages visible and usable.</p><div class="stack">Streamlit · Validation · ETL</div></article><article class="project" data-category="platform"><div class="tag">Application</div><h3>Multi-tenant operations app</h3><p>TypeScript application with role-based access and a job queue for organized, asynchronous work.</p><div class="stack">TypeScript · RBAC · Jobs</div></article></div></section>
-    <section class="research" id="research"><div class="wrap"><div class="eyebrow">Independent research</div><h2>Building AI systems is also a security problem.</h2><div class="research-grid"><article class="research-card"><div class="meta">July 2025</div><h3>The Escalating Security Challenge of AI-Generated Code</h3><p>A practitioner essay on injection, weak authentication, slopsquatting and the human review required before generated code reaches production.</p></article><article class="research-card"><div class="meta">2026</div><h3>Generative Code Security Engineering</h3><p>An independent thesis proposing GCVP: trust levels, dependency graphs, VPI and SLES risk scores, threat modeling and a seven-stage secure generation pipeline.</p></article><article class="research-card"><div class="meta">June 2026</div><h3>Ghost Jobs, Broken Code, and the AI Security Crisis</h3><p>A public-facing analysis connecting AI security, public-sector risks and ghost jobs in Canada through documented sources and practical guidance.</p></article></div><p class="note">These publications are independent work. The thesis is self-published on Zenodo, has not been peer reviewed, and its reported results use synthetic models; empirical validation remains future work.</p></div></section>
-    <section class="wrap" id="services"><div class="section-head"><div><div class="eyebrow">Expertise</div><h2>Built for evidence and execution.</h2></div></div><div class="services"><div class="service"><b>Financial data automation</b><p>Migration, account mapping, reconciliation and repeatable workflows for businesses moving beyond spreadsheets.</p></div><div class="service"><b>Analytics engineering</b><p>Python and SQL pipelines that clean, validate, consolidate and explain operational or financial data.</p></div><div class="service"><b>AI, risk &amp; fraud</b><p>Practical machine learning, document automation and controls for teams adopting AI in sensitive domains.</p></div></div></section>
-    <section class="wrap" id="contact"><div class="contact"><div><div class="eyebrow">Let’s build</div><h2>Data products that help teams make better decisions.</h2></div><a class="button primary" href="https://github.com/wesleyharuo" target="_blank" rel="noreferrer">Connect on GitHub ↗</a></div></section>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Primary">
+      <a class="brand" href="#top">Wesley Haruo Kurosawa</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#story">Story</a>
+        <a href="#profile">Profile</a>
+        <a href="#method">Method</a>
+        <a href="#career">Career</a>
+        <a href="#intelligence">Evidence</a>
+        <a href="#work">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <div id="top" class="wrap hero">
+      <div>
+        <h1>I make sure the numbers agree before anyone decides on them.</h1>
+        <p class="hero-lede">I'm a data analyst in Toronto who started out building the systems that produce data. I spent the next years inside finance while the books were being closed. Today I migrate, reconcile and automate financial data with Python, SQL and APIs, use AI where it genuinely helps, and publish research on the risks it brings.</p>
+        <div class="actions">
+          <a class="button primary" href="#work">See my projects</a>
+          <a class="button" href="#story">Read my story</a>
+          <a class="button" href="https://www.linkedin.com/in/wesleyharuo" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="facts">
+          <div><b>20 years</b>in systems and data</div>
+          <div><b>2 countries</b>Brazil and Canada</div>
+          <div><b>18 projects</b>public on GitHub</div>
+          <div><b>3 papers</b>on AI and security</div>
+        </div>
+      </div>
+
+      <figure class="recon" aria-labelledby="recon-title">
+        <div class="recon-head">
+          <b id="recon-title">Closing a month-end variance</b>
+          <span>Three sources, one revenue figure, and how I bring them into agreement</span>
+        </div>
+        <table>
+          <thead><tr><th scope="col">Source</th><th scope="col">Reported</th></tr></thead>
+          <tbody>
+            <tr><td>Client spreadsheet</td><td class="amt">48,210.00</td></tr>
+            <tr class="flag is-off" id="flag-row"><td>Shared Google Sheet</td><td class="amt" id="flag-amt">47,960.00</td></tr>
+            <tr><td>General ledger</td><td class="amt">48,210.00</td></tr>
+          </tbody>
+        </table>
+        <div class="variance" id="variance"><span>Variance</span><span class="amt" id="variance-amt">−250.00</span></div>
+        <ol class="trace" id="trace" aria-live="polite">
+          <li><i>1</i><span>Trace the gap to a single record: a credit note applied twice in the shared sheet.</span></li>
+          <li><i>2</i><span>Confirm it against the ledger entry and the original document.</span></li>
+          <li><i>3</i><span>Correct the record at its source, never in the report.</span></li>
+        </ol>
+        <div class="recon-foot">
+          <span class="status" id="status">Out of balance</span>
+          <button class="small-btn" type="button" id="replay">Replay</button>
+        </div>
+      </figure>
+    </div>
+
+    <!-- STORY -->
+    <section id="story" aria-labelledby="story-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">My story</span>
+            <h2 id="story-title">I started underneath the data, and worked my way up to the people who read it.</h2>
+          </div>
+          <p>Most analysts start at the dashboard and learn what's underneath over time. My path went the other way, and that order explains most of how I work today.</p>
+        </div>
+
+        <div class="story">
+          <ol class="chapters" aria-label="Chapters">
+            <li><a href="#ch1"><span>2006 – 2014</span>Inside the systems</a></li>
+            <li><a href="#ch2"><span>2014 – 2018</span>Learning what data is for</a></li>
+            <li><a href="#ch3"><span>2019 – 2025</span>Starting again in Canada</a></li>
+            <li><a href="#ch4"><span>2025 – now</span>Putting it together</a></li>
+            <li><a href="#ch5"><span>2025 – 2026</span>Asking what AI changes</a></li>
+          </ol>
+          <div>
+            <article class="chapter" id="ch1">
+              <span class="when">2006 – 2014 · Brazil</span>
+              <h3>Nine years inside the systems that produce the data</h3>
+              <p>After a degree in network technology, I joined Dasa, one of Brazil's largest diagnostics groups, as a systems analyst. My job wasn't to analyze data. It was to keep alive the systems that created it: the Informix databases behind clinical and laboratory operations, the Informix 4GL applications, the shell scripts running on Linux, Unix and Windows.</p>
+              <p>I shipped releases and applied the database changes that came with them. When something broke downstream, I went into production and fixed the record itself. I also integrated electronic billing standards and card-reader patient check-in with the legacy clinical systems.</p>
+              <p>Two projects shaped everything that came after. Dasa grew through acquisitions, and I consolidated data from three legacy platforms into one. And as new units opened, around 80 of them, I wrote the ETL routines that took them live under the access-control and governance rules that apply to clinical data.</p>
+              <blockquote class="pull">Merging systems that were never designed to talk to each other teaches you one thing: the only proof a migration worked is that the numbers still match on the other side.</blockquote>
+            </article>
+
+            <article class="chapter" id="ch2">
+              <span class="when">2014 – 2018 · Brazil</span>
+              <h3>Learning what the data was for</h3>
+              <p>At Postal Saúde, the health plan created when benefits were separated from Brazil's postal service, I moved from keeping systems running to questioning what was inside them. I joined as the plan launched, consolidated medical and financial data into a single structure during the separation, and kept reporting running through the transition.</p>
+              <p>I built KPI dashboards on loss ratio, medical costs and provider utilization, and wrote SQL against claims and eligibility databases to flag duplicate claims, billing anomalies and provider overcharging. For the first time my code was protecting money, not uptime.</p>
+              <p>At CNP Assurances I moved into finance itself. In FP&amp;A, during the launch of the digital subsidiary Youse, I delivered monthly budget-versus-actual analysis within the close cycle, allocated Capex and Opex, and separated costs between the parent insurer and the new company so each finance team received correctly allocated data. I cross-checked SAP (CO) against IBM Planning Analytics (TM1) to support readiness for IFRS 16, and built Power BI and Cognos dashboards that showed budget consumption during the month, not after close.</p>
+              <blockquote class="pull">That's where finance stopped being a subject I supported and became a language I speak.</blockquote>
+            </article>
+
+            <article class="chapter" id="ch3">
+              <span class="when">2019 – 2025 · Ontario, Canada</span>
+              <h3>Starting again, keeping the same habit</h3>
+              <p>Moving to Canada meant starting over. My first role was as an auditor at RGIS, reconciling physical inventory against system records across thousands of items and documenting every variance and its cause. The title was new; the habit wasn't.</p>
+              <p>At The Humberview Group, a multi-store automotive retail group, I returned to financial data work. I reconciled dealer management system output to the general ledger across stores and OEM account structures, built the Power BI dashboards general managers used in weekly business reviews, wrote variance commentary against budget, forecast and prior period, and supported month-end close with reconciliation schedules. I also rebuilt Excel financial models as Power Query workflows with validation checks built in, which removed a manual compilation cycle.</p>
+              <p>At Amazon, first in Inventory Control and Quality Assurance and then in Problem Solve, I traced inventory discrepancies and failed scans through internal warehouse systems and corrected records at the root. Through Amazon Career Choice I also completed a six-month data analytics program in SQL, Python, R and Tableau.</p>
+            </article>
+
+            <article class="chapter" id="ch4">
+              <span class="when">2025 – now · Ontario, Canada</span>
+              <h3>Putting all of it together</h3>
+              <p>At NextLens Data, everything I learned in the previous twenty years is used at once. I migrate small businesses from spreadsheets and manual bookkeeping into cloud accounting platforms, handling finance data migrations of up to about 75,000 records. I build the account crosswalks, remove duplicates, load validated data, reconcile balances after every load and deliver a written sign-off that the migrated data ties to the books.</p>
+              <p>I build Python and SQL pipelines that consolidate financial, operational and sales data under one chart of accounts, and automate recurring accounting routines through APIs, n8n and JavaScript. I use LLMs to extract data from invoices and other unstructured documents, but every value is checked against the chart of accounts before it reaches a report. And for each client, I assess whether AI automation is actually worth building, weighing need, technical fit and expected return.</p>
+              <p>In parallel, I'm completing a Business Accounting diploma at Algonquin College. It anchors the finance experience I gained in Brazil in Canadian accounting standards.</p>
+            </article>
+
+            <article class="chapter" id="ch5">
+              <span class="when">2025 – 2026 · Independent research</span>
+              <h3>Asking what AI changes</h3>
+              <p>Using AI every day made me ask the same question I've always asked, applied to a new kind of system: can this output be trusted, and how far does the damage travel when it can't? That question became three publications in twelve months, a practitioner essay, a formal thesis and a policy article on Canada's public sector.</p>
+              <p>The thread is the same one that runs from 2006: a single bad record doesn't stay local, whether it's a clinical record, a ledger entry or a function written by a language model.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile" aria-labelledby="profile-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">Profile</span>
+            <h2 id="profile-title">An analyst with an engineering mindset, and finance as my domain.</h2>
+          </div>
+          <div>
+            <p>In practice, I can understand the accounting logic, build the pipeline, integrate systems through APIs, apply AI where it adds value, and explain where that same AI introduces risk. That combination didn't come from one job. It was built in layers, in a specific order.</p>
+            <p style="margin-top:14px">It's easy to read my path as a finance person who learned technology. It was the opposite: technology first, then data, then finance, and now automation and AI security on top.</p>
+          </div>
+        </div>
+
+        <div class="layers" aria-label="How my specialization was built">
+          <div class="layer">
+            <span class="when">Layer 1 · 2006 – 2014</span>
+            <h3>Technology</h3>
+            <p>Database-level programming in production: the foundation everything else rests on.</p>
+            <ul><li>SQL and stored procedures</li><li>Informix and Informix 4GL</li><li>Shell on Linux, Unix, Windows</li><li>ETL and migrations</li></ul>
+          </div>
+          <div class="layer">
+            <span class="when">Layer 2 · 2014 – 2016</span>
+            <h3>Data</h3>
+            <p>The same SQL, now used to question data: claims, costs, anomalies and regulatory reporting.</p>
+            <ul><li>Claims and eligibility analysis</li><li>KPI dashboards</li><li>Anomaly and duplicate detection</li><li>Data consolidation</li></ul>
+          </div>
+          <div class="layer">
+            <span class="when">Layer 3 · 2016 – 2022</span>
+            <h3>Finance</h3>
+            <p>Planning, allocation, accounting standards and the close, in Brazil and then in Canada.</p>
+            <ul><li>FP&amp;A and budget vs actual</li><li>SAP (CO), TM1, Cognos</li><li>GL reconciliation, IFRS 16</li><li>Power BI, DAX, Power Query</li></ul>
+          </div>
+          <div class="layer">
+            <span class="when">Layer 4 · 2022 – now</span>
+            <h3>Automation and AI</h3>
+            <p>Python arrived late and went far, reinforced by a bootcamp, a pandas certification and a six-month analytics program.</p>
+            <ul><li>Python, pandas, APIs, n8n</li><li>ML, MLflow, Docker</li><li>LLM workflows with validation</li><li>AI security research</li></ul>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.5rem;margin-bottom:8px">What sets me apart</h3>
+        <p style="margin-bottom:22px">Five things that run through my work, each with the evidence behind it.</p>
+        <div class="diffs">
+          <div class="diff">
+            <h3>I think in terms of propagation</h3>
+            <p>A single bad record doesn't stay local. I fixed clinical records before they broke downstream systems, traced ledger figures back to their source, and then built a mathematical model of how flaws spread through dependencies in AI-generated code.</p>
+            <span class="proof">Evidence: Dasa, reconciliation roles, GCVP thesis</span>
+          </div>
+          <div class="diff">
+            <h3>Finance gives my automation direction</h3>
+            <p>FP&amp;A, cost allocation, GL reconciliation and lease accounting mean I build pipelines and validation rules around what correct financial data should look like, not only around what the code can do.</p>
+            <span class="proof">Evidence: CNP, Humberview, NextLens</span>
+          </div>
+          <div class="diff">
+            <h3>I apply AI and question it at the same time</h3>
+            <p>I use LLMs every day and validate every value they produce. I build drift monitoring into my models. And I've written three pieces on the risks of trusting AI output, which is directly useful to teams adopting AI in regulated or financial settings.</p>
+            <span class="proof">Evidence: NextLens, CardGuard, three publications</span>
+          </div>
+          <div class="diff">
+            <h3>I write for technical and non-technical readers</h3>
+            <p>My thesis uses formal notation and threat modelling. My public sector article turns security risks into plain guidance. Both matter when a finding has to reach a decision-maker.</p>
+            <span class="proof">Evidence: GCVP thesis, June 2026 article, variance commentary for leadership</span>
+          </div>
+          <div class="diff">
+            <h3>My domains keep coming back</h3>
+            <p>Healthcare and financial services appear in my work history, in my fraud and insurance projects, and in the sector risk analysis of my thesis. My interests are consistent, not scattered.</p>
+            <span class="proof">Evidence: Postal Saúde, CNP, KW Risk, CardGuard, thesis sector profiles</span>
+          </div>
+        </div>
+
+        <div class="direction">
+          <div>
+            <span class="kicker">Where I'm heading</span>
+            <h3 style="font-size:1.4rem">Financial data automation, analytics engineering, and AI governance and risk.</h3>
+            <p style="margin-top:12px">For finance, insurance and public sector teams that need someone who understands the ledger and the pipeline at the same time.</p>
+          </div>
+          <ol>
+            <li><span><b>Completing my Business Accounting diploma</b> at Algonquin College, to anchor my finance experience in Canadian standards.</span></li>
+            <li><span><b>Growing my Canadian experience</b> in financial data automation, building on NextLens and Humberview.</span></li>
+            <li><span><b>Testing my framework against real systems,</b> the first research priority set out in my own thesis.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD -->
+    <section id="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">How I work</span>
+            <h2 id="method-title">The report is the last step, not the first.</h2>
+          </div>
+          <p>When a number doesn't agree, I trace it back to where the record broke instead of adjusting the output. This is the sequence I follow, and three procedures I use in practice.</p>
+        </div>
+
+        <ol class="steps">
+          <li><b>Requirements</b><p>What decision will this number support, and who needs to trust it?</p></li>
+          <li><b>Data model</b><p>Entities, keys and the chart of accounts before any query is written.</p></li>
+          <li><b>SQL and ingestion</b><p>Extraction, cleaning and loading with checks at each stage.</p></li>
+          <li><b>Reconciliation</b><p>Every total tied back to the books or the system of record.</p></li>
+          <li><b>Automation</b><p>Repeatable jobs replace manual re-keying, with validation built in.</p></li>
+          <li><b>Reporting</b><p>Dashboards and commentary built on one validated dataset.</p></li>
+        </ol>
+
+        <div class="procedures">
+          <article class="procedure">
+            <h3>Migrating a client to cloud accounting</h3>
+            <span class="src">Used at NextLens Data</span>
+            <ol>
+              <li><span><b>Inventory the sources.</b> Spreadsheets, Google Sheets and manual books, including figures that appear with different values.</span></li>
+              <li><span><b>Build the account crosswalk</b> from the client's categories to the target chart of accounts.</span></li>
+              <li><span><b>Trace conflicts</b> to their correct source and document each decision.</span></li>
+              <li><span><b>De-duplicate and clean</b> with pandas before anything is loaded.</span></li>
+              <li><span><b>Load validated data</b> into the cloud platform.</span></li>
+              <li><span><b>Reconcile balances</b> after every load and deliver a written sign-off.</span></li>
+            </ol>
+          </article>
+          <article class="procedure">
+            <h3>Extracting invoices with an LLM</h3>
+            <span class="src">Used at NextLens Data</span>
+            <ol>
+              <li><span><b>Receive the document,</b> often an unstructured invoice or PDF.</span></li>
+              <li><span><b>Extract fields with an LLM</b> using a structured prompt.</span></li>
+              <li><span><b>Validate every value</b> against the chart of accounts and business rules.</span></li>
+              <li><span><b>Route exceptions to a person</b> instead of letting them pass silently.</span></li>
+              <li><span><b>Publish only validated values</b> to the pipeline and the reports.</span></li>
+            </ol>
+          </article>
+          <article class="procedure">
+            <h3>Accepting AI-generated code</h3>
+            <span class="src">From my 2025 essay</span>
+            <ol>
+              <li><span><b>Treat the suggestion as a draft,</b> not an answer.</span></li>
+              <li><span><b>Review it manually,</b> ideally with a peer.</span></li>
+              <li><span><b>Run automated scans:</b> SAST, DAST and dependency checks (SCA).</span></li>
+              <li><span><b>Verify every package</b> exists and is maintained, to avoid slopsquatting.</span></li>
+              <li><span><b>Deploy to staging first,</b> then monitor in production.</span></li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="toolbelt" aria-label="Tools">
+          <div><b>Languages</b><span>SQL (queries, views, stored procedures) · Python (pandas, NumPy) · JavaScript · TypeScript · R · Informix 4GL · shell</span></div>
+          <div><b>BI and reporting</b><span>Power BI · DAX · Power Query · Tableau · IBM Cognos · Excel · Google Sheets</span></div>
+          <div><b>Enterprise and data</b><span>SAP (CO) · IBM Planning Analytics (TM1) · Databricks · Informix · PostgreSQL</span></div>
+          <div><b>Automation and AI</b><span>n8n · REST APIs · Flask · FastAPI · Streamlit · LLM workflows · MLflow · Docker</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section id="career" aria-labelledby="career-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">Career</span>
+            <h2 id="career-title">Twenty years, one recurring job: find where two versions of the truth diverge.</h2>
+          </div>
+          <p>The titles changed between countries and industries. Each entry shows what the role was and what it added to how I work today.</p>
+        </div>
+
+        <div class="ledger">
+          <article class="entry">
+            <div class="years">2025 – now<small>Ontario</small></div>
+            <div><h3>Data Analyst</h3><div class="org">NextLens Data</div><p>Finance data migration, reconciliation and sign-off; Python and SQL pipelines under one chart of accounts; API and n8n automation; Power BI and Tableau reporting; LLM document extraction with validation; AI feasibility assessments for clients.</p></div>
+            <div class="added"><b>What it added</b><p>The first role where systems, finance and AI are used together every day, working directly with business owners.</p></div>
+          </article>
+          <article class="entry">
+            <div class="years">2022 – now<small>Ontario</small></div>
+            <div><h3>ICQA Associate, then Problem Solve</h3><div class="org">Amazon</div><p>Inventory discrepancies and routing failures traced through warehouse management systems; cycle counts and bin audits on automated fulfillment floors; exceptions corrected at the record level.</p></div>
+            <div class="added"><b>What it added</b><p>Diagnosis at high volume inside systems I didn't build, and a six-month data analytics program through Amazon Career Choice.</p></div>
+          </article>
+          <article class="entry">
+            <div class="years">2020 – 2022<small>Ontario</small></div>
+            <div><h3>Financial Data Analyst</h3><div class="org">The Humberview Group</div><p>DMS to general ledger reconciliation across stores and OEM structures; Power BI for weekly business reviews; budget, forecast and prior-period variance with commentary; month-end close support; Excel models rebuilt as validated Power Query workflows.</p></div>
+            <div class="added"><b>What it added</b><p>Canadian financial reporting practice and the move from manual compilation to automated, validated workflows.</p></div>
+          </article>
+          <article class="entry">
+            <div class="years">2019 – 2020<small>Ontario</small></div>
+            <div><h3>Auditor</h3><div class="org">RGIS</div><p>Physical-to-system reconciliations across thousands of items, with every variance and its driver documented; validation checks that flagged anomalies before they reached reporting.</p></div>
+            <div class="added"><b>What it added</b><p>A fresh start in Canada that kept the core habit intact.</p></div>
+          </article>
+          <article class="entry">
+            <div class="years">2016 – 2018<small>Brazil</small></div>
+            <div><h3>Financial Data Analyst, FP&amp;A</h3><div class="org">CNP Assurances</div><p>Budget versus actual within the close cycle; Capex and Opex allocation; cost separation between the insurer and its digital subsidiary Youse; SAP (CO) and TM1 cross-validation for IFRS 16; Power BI and Cognos dashboards.</p></div>
+            <div class="added"><b>What it added</b><p>Formal finance: planning, allocation, accounting standards and the rhythm of the close.</p></div>
+          </article>
+          <article class="entry">
+            <div class="years">2014 – 2016<small>Brazil</small></div>
+            <div><h3>Data Analyst</h3><div class="org">Postal Saúde</div><p>Medical and financial data consolidated during the separation into a new entity; KPI dashboards on loss ratio, medical costs and provider utilization; SQL for duplicate claims, billing anomalies and regulatory reporting.</p></div>
+            <div class="added"><b>What it added</b><p>Data used to protect money, and the first contact with regulated financial reporting.</p></div>
+          </article>
+          <article class="entry">
+            <div class="years">2006 – 2014<small>Brazil</small></div>
+            <div><h3>Systems Analyst</h3><div class="org">Dasa</div><p>Informix databases, 4GL applications and scripts; releases and production fixes; complex SQL and stored procedures; ETL for go-lives across about 80 units; consolidation of three legacy platforms after acquisitions.</p></div>
+            <div class="added"><b>What it added</b><p>Responsibility for data in production, and the foundation for everything after.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVIDENCE MAP -->
+    <section id="intelligence" aria-labelledby="map-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">Evidence map</span>
+            <h2 id="map-title">Where each skill is actually proven.</h2>
+          </div>
+          <p>A filled mark means there's concrete evidence of that skill in that part of my background. Select a row to see exactly where it comes from.</p>
+        </div>
+        <div class="tools" role="group" aria-label="Highlight evidence by source">
+          <span>Highlight</span>
+          <button class="chip src" type="button" data-src="all" aria-pressed="true">All sources</button>
+          <button class="chip src" type="button" data-src="work" aria-pressed="false">Paid work</button>
+          <button class="chip src" type="button" data-src="portfolio" aria-pressed="false">Portfolio</button>
+          <button class="chip src" type="button" data-src="research" aria-pressed="false">Research</button>
+          <button class="chip src" type="button" data-src="study" aria-pressed="false">Study</button>
+        </div>
+        <div class="map" id="map">
+          <div class="map-grid map-headrow" aria-hidden="true"><div>Capability</div><div>Paid work</div><div>Portfolio</div><div>Research</div><div>Study</div><div></div></div>
+        </div>
+        <p class="legend">Paid work means employment roles. Portfolio means personal projects on GitHub. Research means independent publications. Study means formal programs and certifications.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">Projects</span>
+            <h2 id="work-title">What I build when nobody assigns the task.</h2>
+          </div>
+          <p>Eighteen public repositories. The themes aren't random: fraud, claims and risk are the problems I worked on in Brazilian healthcare and insurance, rebuilt with modern tools. Four case studies first, then everything else.</p>
+        </div>
+
+        <div class="cases">
+          <article class="case">
+            <div class="case-top">
+              <div><span class="type">Fraud detection · machine learning</span><h3>CardGuard</h3>
+              <p>A credit card fraud detection system rebuilt from scratch as software, not a notebook. The question behind it: how do you keep a fraud model trustworthy after it's deployed, when fraud patterns and customer behaviour keep shifting?</p></div>
+              <a class="textlink repo" href="https://github.com/wesleyharuo/CardGuard-" target="_blank" rel="noopener">View repository</a>
+            </div>
+            <div class="flow" aria-label="Pipeline"><span>config</span><i>›</i><span>data</span><i>›</i><span>features</span><i>›</i><span>models</span><i>›</i><span>evaluation</span><i>›</i><span>drift monitor</span><i>›</i><span>CLI inference</span></div>
+            <div class="process">
+              <h4>Process, step by step</h4>
+              <ol>
+                <li><span><b>Frame the problem.</b> Fraud detection is an imbalanced binary classification: frauds are a tiny share of transactions, so the metrics and sampling have to reflect that from the start.</span></li>
+                <li><span><b>Configure, don't hard-code.</b> A configuration file defines data paths, features, model choice and thresholds, so each experiment is reproducible and comparable.</span></li>
+                <li><span><b>Data layer.</b> Loads the transactions and splits them into training and evaluation sets, isolated from the rest of the code.</span></li>
+                <li><span><b>Feature layer.</b> Transformations live in one module, so exactly the same logic runs in training and in inference.</span></li>
+                <li><span><b>Model layer.</b> LightGBM and XGBoost gradient boosting, with class weighting or undersampling to handle imbalance, and Optuna searching the hyperparameter space.</span></li>
+                <li><span><b>Evaluation layer.</b> ROC-AUC, PR-AUC and confusion matrices, with every run and its parameters logged in MLflow.</span></li>
+                <li><span><b>Drift monitoring.</b> PSI and the KS statistic compare new data against the training baseline to show when the model is seeing a different world.</span></li>
+                <li><span><b>Packaging.</b> Command-line tools for train, evaluate and infer, inside a Docker image so it runs the same everywhere.</span></li>
+              </ol>
+            </div>
+            <div class="case-cols">
+              <div><h4>Why these choices</h4><ul>
+                <li>Fraud is rare, so accuracy is misleading; the evaluation uses ROC-AUC, PR-AUC and confusion matrices</li>
+                <li>PR-AUC shows how well the model finds fraud without flooding analysts with false alarms</li>
+                <li>PSI and the KS statistic detect when incoming data drifts away from training data</li>
+                <li>MLflow tracks every experiment; Docker makes runs reproducible</li>
+              </ul></div>
+              <div><h4>Connection to my work</h4><p>The same instinct as reconciliation: don't trust a result just because it was right once. Canada-specific configuration notes PIPEDA and PCI DSS considerations for handling card data.</p></div>
+            </div>
+            <div class="method">
+              <h4>Methodology notes</h4>
+              <dl>
+                <dt>Why PR-AUC</dt><dd>When 99% of transactions are legitimate, a model that never flags fraud is 99% accurate and useless. Precision-recall shows the real trade-off: how much fraud is caught versus how many false alarms analysts receive.</dd>
+                <dt>PSI</dt><dd>Splits a variable into bins and compares the share of records in each bin between training and new data: <span class="formula">Σ (new% − base%) × ln(new% / base%)</span>. A common rule of thumb reads under 0.1 as stable and above 0.25 as a significant shift.</dd>
+                <dt>KS statistic</dt><dd>The largest gap between two cumulative distributions. Used here to detect whether a feature's distribution has moved away from what the model was trained on.</dd>
+                <dt>Weighting vs undersampling</dt><dd>Weighting keeps all data but makes fraud errors cost more; undersampling removes legitimate records to balance classes. Supporting both lets the evaluation decide.</dd>
+                <dt>Optuna</dt><dd>Searches hyperparameters by learning from previous trials instead of testing every combination, which keeps tuning fast and documented.</dd>
+              </dl>
+            </div>
+            <span class="stack">Python · pandas · NumPy · scikit-learn · LightGBM · XGBoost · Optuna · MLflow · Docker</span>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <div><span class="type">Insurance · document AI · full stack</span><h3>KW Risk</h3>
+              <p>A platform that streamlines insurance claims processing: it reads claim documents, classifies them, scores its own confidence and flags claims that look suspicious. It revisits, with modern tools, the duplicate-claim detection I did in SQL for a health plan in Brazil.</p></div>
+              <a class="textlink repo" href="https://github.com/wesleyharuo/KW_Risk" target="_blank" rel="noopener">View repository</a>
+            </div>
+            <div class="flow" aria-label="Pipeline"><span>claim upload</span><i>›</i><span>OCR</span><i>›</i><span>NLP triage</span><i>›</i><span>rules engine</span><i>+</i><span>ML anomaly</span><i>›</i><span>confidence score</span><i>›</i><span>approve or review</span></div>
+            <div class="process">
+              <h4>Process, step by step</h4>
+              <ol>
+                <li><span><b>Upload.</b> The user submits claim documents through the React interface.</span></li>
+                <li><span><b>Receive.</b> The FastAPI backend accepts the files through its API and starts processing.</span></li>
+                <li><span><b>Read.</b> OCR converts scanned documents and images into machine-readable text.</span></li>
+                <li><span><b>Understand.</b> NLP classifies the document and extracts the information the claim depends on.</span></li>
+                <li><span><b>Check known patterns.</b> A rule-based engine tests the claim against explicit fraud rules.</span></li>
+                <li><span><b>Check the unusual.</b> ML anomaly detection scores how far the claim sits from normal behaviour.</span></li>
+                <li><span><b>Decide who decides.</b> A confidence score routes clear cases to automated approval and uncertain ones to a human reviewer.</span></li>
+                <li><span><b>Measure.</b> A real-time dashboard tracks how much is automated and how approvals evolve.</span></li>
+              </ol>
+            </div>
+            <div class="case-cols">
+              <div><h4>Why these choices</h4><ul>
+                <li>A rules engine catches known fraud patterns that are easy to explain</li>
+                <li>ML anomaly detection catches the unusual cases rules miss</li>
+                <li>Confidence scoring decides what can be automated and what needs a person</li>
+              </ul></div>
+              <div><h4>Connection to my work</h4><p>It's the same design principle I apply to LLM invoice extraction: automation handles the clear cases, and anything uncertain goes to a human instead of passing silently.</p></div>
+            </div>
+            <div class="method">
+              <h4>Methodology notes</h4>
+              <dl>
+                <dt>Hybrid detection</dt><dd>Rules are transparent and easy to audit but only catch what someone already thought of. Anomaly detection finds new patterns but is harder to explain. Using both covers each one's blind spot.</dd>
+                <dt>Human in the loop</dt><dd>The confidence threshold is a business decision, not only a technical one: it sets how much risk the insurer accepts in exchange for speed.</dd>
+                <dt>Separated deployment</dt><dd>The frontend runs on Vercel and the API on Uvicorn, so each can be updated and scaled independently.</dd>
+              </dl>
+            </div>
+            <span class="stack">React · Vite · Tailwind CSS · FastAPI · Uvicorn · Python · OCR · NLP · Vercel</span>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <div><span class="type">Fraud detection · Canadian financial context</span><h3>AI Fraud Detection Canada</h3>
+              <p>An end-to-end fraud detection design for Canadian banks, credit unions and fintechs, covering the full path from data ingestion to a decision, with monitoring and bilingual support.</p></div>
+              <a class="textlink repo" href="https://github.com/wesleyharuo/AI-Fraud-Detection-Canada" target="_blank" rel="noopener">View repository</a>
+            </div>
+            <div class="flow" aria-label="Pipeline"><span>ingestion</span><i>›</i><span>feature engineering</span><i>›</i><span>model ensemble</span><i>›</i><span>decision</span><i>›</i><span>monitoring and alerts</span></div>
+            <div class="process">
+              <h4>Process, step by step</h4>
+              <ol>
+                <li><span><b>Map the context.</b> Start from how Canadian banks, credit unions and fintechs operate, including reporting and privacy obligations.</span></li>
+                <li><span><b>Ingest.</b> Transaction data enters through a dedicated ingestion stage.</span></li>
+                <li><span><b>Engineer features.</b> Raw transactions become the signals the models learn from.</span></li>
+                <li><span><b>Score.</b> Neural networks and ensemble methods produce a fraud assessment.</span></li>
+                <li><span><b>Decide.</b> The pipeline ends in a decision output, not just a score.</span></li>
+                <li><span><b>Watch.</b> A monitoring and alerting stack observes the system after deployment.</span></li>
+                <li><span><b>Serve both languages.</b> English and French support, as Canadian financial services require.</span></li>
+                <li><span><b>Separate concerns.</b> Each stage runs as its own microservice so it can change without breaking the others.</span></li>
+              </ol>
+            </div>
+            <div class="case-cols">
+              <div><h4>Why these choices</h4><ul>
+                <li>Canadian institutions work under FINTRAC reporting and PIPEDA privacy rules, so those considerations are built into the design</li>
+                <li>Bilingual support reflects how Canadian financial services actually operate</li>
+              </ul></div>
+              <div><h4>Connection to my work</h4><p>It applies my experience with regulated data, clinical in Brazil and financial in both countries, to the Canadian context I work in now.</p></div>
+            </div>
+            <div class="method">
+              <h4>Methodology notes</h4>
+              <dl>
+                <dt>Ensembles</dt><dd>Combining different models reduces the chance that one model's weakness becomes the system's weakness, a useful property when errors cost money.</dd>
+                <dt>FINTRAC</dt><dd>Canada's financial intelligence unit. Institutions must report certain transactions, so a fraud system has to support traceable decisions.</dd>
+                <dt>PIPEDA</dt><dd>Canada's private-sector privacy law. It shapes what personal data is collected, how it's used and how long it's kept.</dd>
+              </dl>
+            </div>
+            <span class="stack">Python · neural networks · ensemble methods · microservices · monitoring</span>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <div><span class="type">Operations analytics · data engineering</span><h3>Process Improvement Analytics Platform</h3>
+              <p>A Streamlit platform with three interactive dashboards for retail sales, supply chain and customer support, fed by an automated pipeline where every stage is visible.</p></div>
+              <a class="textlink repo" href="https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform" target="_blank" rel="noopener">View repository</a>
+            </div>
+            <div class="flow" aria-label="Pipeline"><span>raw data</span><i>›</i><span>clean</span><i>›</i><span>validate</span><i>›</i><span>aggregate</span><i>›</i><span>retail · supply chain · support dashboards</span></div>
+            <div class="process">
+              <h4>Process, step by step</h4>
+              <ol>
+                <li><span><b>Define the questions</b> for each area: sales performance, delivery efficiency and support quality.</span></li>
+                <li><span><b>Load</b> the operational data for the three domains with pandas and SQL.</span></li>
+                <li><span><b>Clean.</b> Standardize formats and deal with missing or invalid values before anything else runs.</span></li>
+                <li><span><b>Validate.</b> A dedicated stage checks the data against rules, so bad records stop here instead of reaching a chart.</span></li>
+                <li><span><b>Aggregate</b> into KPIs: revenue and volume, carrier efficiency and delivery times, resolution time and satisfaction.</span></li>
+                <li><span><b>Visualize</b> with Plotly inside three Streamlit dashboards that non-technical users can explore.</span></li>
+              </ol>
+            </div>
+            <div class="case-cols">
+              <div><h4>Why these choices</h4><ul>
+                <li>Validation is its own stage, so bad data stops before it reaches a chart</li>
+                <li>Streamlit lets non-technical users interact without installing anything</li>
+              </ul></div>
+              <div><h4>Connection to my work</h4><p>It's the same shape as the Power Query workflows I built at Humberview: validation inside the flow, not a check at the end.</p></div>
+            </div>
+            <div class="method">
+              <h4>Methodology notes</h4>
+              <dl>
+                <dt>Validation as a stage</dt><dd>Separating validation from cleaning makes failures visible and explainable. It's the same principle as reconciling after every load in a migration.</dd>
+                <dt>One pipeline, three domains</dt><dd>Retail, supply chain and support share the same clean, validate and aggregate pattern, which shows the design is reusable rather than one-off.</dd>
+              </dl>
+            </div>
+            <span class="stack">Python · Streamlit · pandas · NumPy · Plotly · SQL</span>
+          </article>
+        </div>
+
+        <div class="more-head">
+          <h3>All other projects</h3>
+          <div class="tools" role="group" aria-label="Filter projects" style="margin:0">
+            <button class="chip pf" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip pf" type="button" data-filter="analytics" aria-pressed="false">Analytics</button>
+            <button class="chip pf" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+            <button class="chip pf" type="button" data-filter="apps" aria-pressed="false">Applications</button>
+          </div>
+        </div>
+        <div class="projects" id="projects"></div>
+        <p class="fineprint">These are personal portfolio projects built on synthetic or public data, not client systems. Code and documentation for each one are on <a class="textlink" href="https://github.com/wesleyharuo" target="_blank" rel="noopener">github.com/wesleyharuo</a>.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="research" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">Independent research</span>
+            <h2 id="research-title">Three publications, one year: practice, theory, policy.</h2>
+          </div>
+          <p>Each piece builds on the one before it. The essay describes what I saw, the thesis turns it into a model, and the article applies the concern to Canada's public sector.</p>
+        </div>
+
+        <article class="paper">
+          <div class="paper-head">
+            <div><span class="when">July 2025</span><span class="form">Practitioner essay</span></div>
+            <div><h3>The Escalating Security Challenge of AI-Generated Code</h3>
+            <p>What I kept running into when reviewing code suggested by AI assistants, and the review process I recommend before any of it reaches production.</p></div>
+          </div>
+          <div class="paper-body">
+            <div class="r-cols">
+              <div><h4>What I found</h4><ul><li>SQL queries built by concatenating user input without validation</li><li>Authentication that doesn't properly check credentials, and sessions that stay open too long</li><li>Suggestions to install packages that don't exist or aren't maintained</li></ul></div>
+              <div><h4>Why it happens</h4><ul><li>Models learn from public code that includes insecure patterns</li><li>They replicate patterns without understanding the security context</li><li>Developers accept suggestions because they look authoritative</li></ul></div>
+              <div><h4>What I recommend</h4><ul><li>Mandatory human review</li><li>SAST, DAST and SCA across the lifecycle</li><li>Clear standards for validation and dependencies</li><li>Ongoing team education and dependency monitoring</li></ul></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="paper">
+          <div class="paper-head">
+            <div><span class="when">2026</span><span class="form">Independent thesis</span></div>
+            <div><h3>Generative Code Security Engineering</h3>
+            <p>The essay's intuition, formalized. The central argument: the real danger of AI-generated code isn't one flawed function, it's how a flaw spreads through dependencies into distant parts of a system. The thesis proposes a framework, GCVP, to classify, measure and reduce that spread.</p></div>
+          </div>
+          <div class="paper-body">
+            <div class="r-cols">
+              <div><h4>Classify</h4><ul><li>A taxonomy of seven ways AI introduces vulnerabilities, from reproducing insecure training patterns to drift after model updates</li><li>Seven impact classes, from self-contained flaws to supply chain amplification</li><li>A threat model for prompt-based attacks, including indirect injection through data</li></ul></div>
+              <div><h4>Measure</h4><ul><li>A dependency graph where each module carries a trust level and each connection a coupling strength</li><li>VPI: the probability a flaw travels from one module to another</li><li>SLES: a single exposure score for the whole system, weighted by how critical each module is</li></ul></div>
+              <div><h4>Reduce</h4><ul><li>A seven-stage secure generation pipeline, SAGP</li><li>Controls scale with risk: the less trusted the code's origin, the more stages are mandatory</li><li>A compliance score to measure how fully the pipeline is applied</li></ul></div>
+            </div>
+
+            <div class="sagp" aria-labelledby="sagp-title">
+              <h4 id="sagp-title">Try it: which pipeline stages does each trust level require?</h4>
+              <p>Pick how the code was generated. The stages the thesis makes mandatory for that level light up.</p>
+              <div class="tiers" role="group" aria-label="Trust level">
+                <button class="tier" type="button" data-tier="1" aria-pressed="false">T1 Constrained</button>
+                <button class="tier" type="button" data-tier="2" aria-pressed="false">T2 Guided</button>
+                <button class="tier" type="button" data-tier="3" aria-pressed="true">T3 Open-domain</button>
+                <button class="tier" type="button" data-tier="4" aria-pressed="false">T4 Adversarially exposed</button>
+              </div>
+              <p class="tier-desc" id="tier-desc" aria-live="polite"></p>
+              <ol class="stages" id="stages">
+                <li class="stage" data-min="2"><b>S1</b>Threat-aware specification</li>
+                <li class="stage" data-min="1"><b>S2</b>Controlled generation</li>
+                <li class="stage" data-min="3"><b>S3</b>Adversarial sampling</li>
+                <li class="stage" data-min="2"><b>S4</b>Multi-layer static analysis</li>
+                <li class="stage" data-min="1"><b>S5</b>Dependency integration audit</li>
+                <li class="stage" data-min="1"><b>S6</b>Runtime monitoring</li>
+                <li class="stage" data-min="1"><b>S7</b>Long-term re-evaluation</li>
+              </ol>
+              <p class="sagp-note">Stage requirements follow the thesis's SAGP stage table. Vulnerability ranges are modelling assumptions from the thesis, not measured rates.</p>
+            </div>
+
+            <div class="figures" style="margin-top:28px">
+              <div><b>0.47 → 0.083</b><span>Simulated exposure, 24-module web application</span></div>
+              <div><b>0.61 → 0.094</b><span>Simulated exposure, 18-module IoT pipeline</span></div>
+              <div><b>82–85%</b><span>Modelled reduction with the full pipeline</span></div>
+              <div><b>Coupling</b><span>The parameter with the most influence on risk</span></div>
+            </div>
+            <p>These results come from simulations on two synthetic architectures, not from live systems. The thesis is explicit about this and lists empirical calibration against real software as its first research priority.</p>
+          </div>
+        </article>
+
+        <article class="paper">
+          <div class="paper-head">
+            <div><span class="when">June 2026</span><span class="form">Research article</span></div>
+            <div><h3>Ghost Jobs, Broken Code, and the AI Security Crisis Inside Canada's Public Sector</h3>
+            <p>A synthesis of public Canadian sources connecting three problems: job postings that lead to no hire, public servants using unapproved AI tools, and fake job ads used by foreign intelligence services to recruit people with access to sensitive information.</p></div>
+          </div>
+          <div class="paper-body">
+            <div class="figures">
+              <div><b>24.9–43.2%</b><span>Ghost job rates reported across Canadian platforms</span></div>
+              <div><b>244 of ~400</b><span>AI sites used by Ontario public servants rated unsafe</span></div>
+              <div><b>3%</b><span>Of Ontario public servants completed AI safety training</span></div>
+              <div><b>42,755</b><span>Confirmed CRA cases of unauthorized taxpayer data use</span></div>
+            </div>
+            <div class="r-cols">
+              <div><h4>How it was done</h4><ul><li>Compiled findings from the Ontario Auditor General, the Privacy Commissioner, the Five Eyes joint bulletin and labour market studies</li><li>Organized them into ghost jobs, AI misuse, breaches, prompt injection and espionage</li></ul></div>
+              <div><h4>Key argument</h4><ul><li>Technology is being adopted faster than the knowledge needed to use it safely</li><li>The same platforms that host ghost jobs are also used for intelligence recruitment</li></ul></div>
+              <div><h4>Practical guidance</h4><ul><li>Use only approved AI tools; never paste protected data into public ones</li><li>Review public code and prompt templates before using them</li><li>Treat AI-generated text as a first draft that needs human review</li></ul></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="research-note">
+          <p>All three publications are independent work published on Zenodo and haven't been peer reviewed. Figures in the June 2026 article are compiled from the public sources it cites. Publications are linked from my <a href="https://orcid.org/0009-0002-1368-2250" target="_blank" rel="noopener">ORCID profile</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="study" aria-labelledby="study-title">
+      <div class="wrap">
+        <div class="split section-intro">
+          <div>
+            <span class="kicker">Education</span>
+            <h2 id="study-title">Each program filled a specific gap.</h2>
+          </div>
+          <p>A technology degree came first, then project management and business analysis. The accounting diploma I'm completing now anchors my Brazilian finance experience in Canadian standards.</p>
+        </div>
+        <div class="study">
+          <div class="study-item"><b>Business Accounting, in progress</b><span>Algonquin College. Canadian accounting standards applied to how numbers are recorded and reconciled.</span></div>
+          <div class="study-item"><b>Data Analytics program</b><span>Amazon Career Choice, six months. SQL, Python, R and Tableau.</span></div>
+          <div class="study-item"><b>Business Analyst course</b><span>University of Toronto. Analyze, model, design, deliver, assess and measure.</span></div>
+          <div class="study-item"><b>MBA, Project Management</b><span>Faculdade Unyleya, Brazil.</span></div>
+          <div class="study-item"><b>Bachelor's degree, Network Technology</b><span>União Educacional de Brasília, Brazil.</span></div>
+          <div class="study-item"><b>Languages</b><span>Portuguese, native. English, full professional.</span></div>
+        </div>
+        <p class="certs"><strong>Certifications:</strong> Python Boot Camp · pandas · Oracle Analytics: Visualizing Data · Databricks AI/BI for Data Analysts · Business Analysis</p>
+      </div>
+    </section>
+
+    <!-- HELP -->
+    <section id="help" aria-labelledby="help-title">
+      <div class="wrap">
+        <div class="section-intro">
+          <span class="kicker">Where I can help</span>
+          <h2 id="help-title">Problems I'm ready to take on.</h2>
+          <p>Financial data scattered across spreadsheets that don't agree. Migrations to cloud accounting that must reconcile exactly. Manual monthly processes that can become Python jobs or workflow automation. Companies adopting LLMs for documents or code that need controls around the output. Fraud and anomaly detection in claims and transactions.</p>
+        </div>
+        <div class="help">
+          <div>
+            <h3>Financial data that doesn't agree</h3>
+            <p>Figures that appear with different values across spreadsheets and systems, migrations that must tie back to the books, and month-end reporting from one validated dataset.</p>
+            <ul><li>Account crosswalks and data migration</li><li>GL and sub-ledger reconciliation</li><li>Budget versus actual and variance commentary</li></ul>
+          </div>
+          <div>
+            <h3>Manual work that should be a pipeline</h3>
+            <p>Recurring re-keying replaced with Python and SQL jobs, API integrations and n8n workflows, with validation inside each step.</p>
+            <ul><li>ETL and data consolidation</li><li>Power BI and Tableau reporting</li><li>Workflow and API automation</li></ul>
+          </div>
+          <div>
+            <h3>AI adoption with controls</h3>
+            <p>Document extraction, fraud and anomaly detection, and an honest view of where LLMs help, where they fail, and which checks need to sit around them.</p>
+            <ul><li>LLM extraction with validation</li><li>Fraud and anomaly models with monitoring</li><li>Review processes for AI-generated code</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <div>
+          <span class="kicker">Contact</span>
+          <h2 id="contact-title">Open to roles in financial data automation, analytics engineering and AI risk.</h2>
+          <p style="margin-top:16px">Canadian citizen based in the Greater Toronto Area, open to on-site, hybrid and remote work. I'm especially interested in finance, insurance, public sector and small business teams that need their data to agree.</p>
+          <button class="small-btn copy" type="button" id="copy-email">Copy email address</button>
+        </div>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:wesley_haruo@hotmail.com">wesley_haruo@hotmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/wesleyharuo" target="_blank" rel="noopener">linkedin.com/in/wesleyharuo</a></li>
+          <li><span>GitHub</span><a href="https://github.com/wesleyharuo" target="_blank" rel="noopener">github.com/wesleyharuo</a></li>
+          <li><span>ORCID</span><a href="https://orcid.org/0009-0002-1368-2250" target="_blank" rel="noopener">0009-0002-1368-2250</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><span>© 2026 Wesley Haruo</span><div class="footer-links"><a href="#about">About</a><a href="#trajectory">Career</a><a href="#work">Work</a><a href="#research">Research</a></div></footer>
+
+  <footer class="wrap">
+    <span>© 2026 Wesley Haruo Kurosawa</span>
+    <span>Greater Toronto Area, Canada</span>
+  </footer>
+
   <script>
-    const menuToggle=document.querySelector('.menu-toggle');const navLinks=document.querySelector('.nav-links');
-    if(menuToggle&&navLinks){menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}))}
-    const filters=document.querySelectorAll('.filter');const projects=document.querySelectorAll('.project');filters.forEach(button=>button.addEventListener('click',()=>{filters.forEach(item=>item.classList.remove('active'));button.classList.add('active');const selected=button.dataset.filter;projects.forEach(project=>{project.hidden=selected!=='all'&&!project.dataset.category.split(' ').includes(selected)})}));
+    // Navigation
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Highlight current section in nav and chapter list
+    const watch = (selector, navSelector) => {
+      const targets = [...document.querySelectorAll(selector)];
+      const navs = [...document.querySelectorAll(navSelector)];
+      if (!('IntersectionObserver' in window)) return;
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) navs.forEach(a => a.classList.toggle('current', a.getAttribute('href') === '#' + e.target.id));
+        });
+      }, {rootMargin: '-40% 0px -55% 0px'});
+      targets.forEach(t => io.observe(t));
+    };
+    watch('main > section[id]', '.nav-links a');
+    watch('.chapter', '.chapters a');
+
+    // Reconciliation walkthrough
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const steps = [...document.querySelectorAll('#trace li')];
+    const flagRow = document.getElementById('flag-row');
+    const flagAmt = document.getElementById('flag-amt');
+    const variance = document.getElementById('variance');
+    const varianceAmt = document.getElementById('variance-amt');
+    const status = document.getElementById('status');
+    let timers = [];
+    const fmt = n => (n < -0.004 ? '−' : '') + Math.abs(n).toLocaleString('en-CA', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    function setInitial(){
+      timers.forEach(clearTimeout); timers = [];
+      steps.forEach(s => s.classList.remove('show'));
+      flagRow.classList.add('is-off'); flagAmt.textContent = '47,960.00';
+      variance.classList.remove('done'); varianceAmt.textContent = fmt(-250);
+      status.classList.remove('done'); status.textContent = 'Out of balance';
+    }
+    function setFinal(){
+      steps.forEach(s => s.classList.add('show'));
+      flagRow.classList.remove('is-off'); flagAmt.textContent = '48,210.00';
+      variance.classList.add('done'); varianceAmt.textContent = fmt(0);
+      status.classList.add('done'); status.textContent = 'Reconciled';
+    }
+    function countTo(start, end, ms, onFrame, onDone){
+      const t0 = performance.now();
+      (function tick(t){
+        const p = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - p, 3);
+        onFrame(start + (end - start) * e);
+        p < 1 ? requestAnimationFrame(tick) : onDone();
+      })(t0);
+    }
+    function run(){
+      if (reduce) { setFinal(); return; }
+      setInitial();
+      steps.forEach((s, i) => timers.push(setTimeout(() => s.classList.add('show'), 700 + i * 900)));
+      timers.push(setTimeout(() => {
+        status.textContent = 'Correcting at source';
+        countTo(-250, 0, 900, v => { varianceAmt.textContent = fmt(v); flagAmt.textContent = fmt(48210 + v); }, setFinal);
+      }, 700 + steps.length * 900));
+    }
+    document.getElementById('replay').addEventListener('click', run);
+    run();
+
+    // Evidence map
+    const evidence = [
+      {cap:'SQL and database engineering', work:['Dasa: Informix databases, complex SQL and stored procedures, 2006–2014','Postal Saúde: SQL on claims and eligibility databases','Humberview and NextLens: SQL for reporting and pipelines'], portfolio:['Process Improvement Analytics Platform','Lex: PostgreSQL-backed file server'], research:[], study:['Data Analytics program: SQL']},
+      {cap:'Python automation and pipelines', work:['NextLens: pandas and SQL pipelines replacing manual re-keying','NextLens: API, n8n and JavaScript automation'], portfolio:['CardGuard','Process Improvement Analytics Platform','Predicta Suite','Model Dig MKT'], research:[], study:['Python Boot Camp','pandas certification','Data Analytics program']},
+      {cap:'Financial reconciliation and FP&A', work:['CNP: budget versus actual, Capex and Opex, SAP against TM1 for IFRS 16','Humberview: DMS to general ledger, month-end close','NextLens: post-migration reconciliation with written sign-off'], portfolio:[], research:[], study:['Business Accounting diploma, in progress']},
+      {cap:'Data migration and ETL', work:['Dasa: ETL for go-lives across about 80 units; three legacy platforms consolidated','Postal Saúde: consolidation into a new entity','NextLens: migrations of up to about 75,000 records'], portfolio:['Process Improvement Analytics Platform'], research:[], study:[]},
+      {cap:'BI and reporting', work:['Postal Saúde: KPI dashboards on loss ratio and medical costs','CNP: Power BI and Cognos','Humberview: Power BI for weekly business reviews','NextLens: Power BI and Tableau'], portfolio:['Maple Outfitters','Maple Cafe Sales','GTA Rental Market','Model Dig MKT'], research:[], study:['Oracle Analytics: Visualizing Data','Databricks AI/BI for Data Analysts','Data Analytics program: Tableau']},
+      {cap:'Fraud and anomaly detection', work:['Postal Saúde: duplicate claims and provider overcharging','Amazon: inventory discrepancies traced to root cause'], portfolio:['CardGuard','AI Fraud Detection Canada','KW Risk'], research:[], study:[]},
+      {cap:'Machine learning and forecasting', work:[], portfolio:['CardGuard: LightGBM, XGBoost, Optuna','Insurance ML: Random Forest, Gradient Boosting','Predicta Suite: Prophet and ARIMA'], research:['GCVP thesis: probabilistic risk model'], study:[]},
+      {cap:'LLM and AI automation', work:['NextLens: LLM invoice extraction validated against the chart of accounts','NextLens: AI feasibility assessment per client'], portfolio:['KW Risk: OCR and NLP triage','Cop: multi-model copilot via OpenRouter'], research:['All three publications'], study:[]},
+      {cap:'AI security and governance', work:['NextLens: validation controls on every LLM output','Dasa: governance rules for clinical data'], portfolio:['CardGuard: drift monitoring'], research:['2025 essay on AI-generated code','2026 GCVP thesis','2026 article on AI in Canada\u2019s public sector'], study:[]},
+      {cap:'Regulated and sensitive data', work:['Dasa: clinical data','Postal Saúde: health claims and regulatory reporting','CNP: IFRS 16 readiness'], portfolio:['AI Fraud Detection Canada: FINTRAC and PIPEDA','CardGuard: PIPEDA and PCI DSS notes'], research:['Sector risk profiles for healthcare and finance','Canadian privacy and AI regulation'], study:[]},
+      {cap:'Full-stack development', work:['Dasa: Informix 4GL applications and integrations'], portfolio:['KW Risk: React and FastAPI','Aplicaton-new: multi-tenant TypeScript SaaS','Insurance ML: Flask API'], research:[], study:[]},
+      {cap:'Business analysis and delivery', work:['Dasa: releases and multi-site go-lives','NextLens: working directly with business owners'], portfolio:[], research:[], study:['MBA, Project Management','University of Toronto Business Analyst course','Business Analysis certification']}
+    ];
+    const cols = [['work','Paid work'],['portfolio','Portfolio'],['research','Research'],['study','Study']];
+    const map = document.getElementById('map');
+    evidence.forEach((row, i) => {
+      const el = document.createElement('div');
+      el.className = 'map-row';
+      const id = 'ev-' + i;
+      el.innerHTML =
+        `<button class="map-btn map-grid" type="button" aria-expanded="false" aria-controls="${id}">
+          <span class="cap">${row.cap}</span>
+          ${cols.map(([k,l]) => `<span class="cell"><span class="mark ${row[k].length ? 'on' : ''}" data-src="${k}" role="img" aria-label="${l}: ${row[k].length ? 'evidence' : 'none'}"></span></span>`).join('')}
+          <span class="caret" aria-hidden="true">›</span>
+        </button>
+        <div class="detail" id="${id}">
+          ${cols.map(([k,l]) => `<div><h4>${l}</h4>${row[k].length ? `<ul>${row[k].map(x => `<li>${x}</li>`).join('')}</ul>` : `<span class="none">Nothing yet</span>`}</div>`).join('')}
+        </div>`;
+      const btn = el.querySelector('.map-btn');
+      btn.addEventListener('click', () => btn.setAttribute('aria-expanded', String(el.classList.toggle('open'))));
+      map.appendChild(el);
+    });
+    const srcChips = document.querySelectorAll('.chip.src');
+    srcChips.forEach(chip => chip.addEventListener('click', () => {
+      srcChips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+      chip.setAttribute('aria-pressed', 'true');
+      const s = chip.dataset.src;
+      document.querySelectorAll('#map .mark').forEach(m => m.classList.toggle('dim', s !== 'all' && m.dataset.src !== s));
+    }));
+
+    // Other projects
+    const gh = 'https://github.com/wesleyharuo/';
+    const projects = [
+      {n:'Maple Outfitters', t:'E-commerce analytics', c:'analytics', r:'maple-outfitters', s:'Full-funnel analysis of 9,800+ orders from a Canadian outdoor retail brand across five sales channels in 2024.',
+        steps:['Define the business questions: which channels perform, who comes back, what gets returned, where the margin is','Load and structure the order data with pandas and NumPy','Clean and prepare the fields each question depends on','Measure channel performance, retention, return rates and profitability','Build nine visualizations: revenue trends, geographic distribution, discount impact, product rankings','Write an executive summary and a multi-channel roadmap'],
+        note:'The method is the same one I use in finance: start from the decision, then work back to the data that supports it.', k:'Python 3.12 · pandas · NumPy · Matplotlib · Seaborn'},
+      {n:'Maple Cafe Sales', t:'Point-of-sale analytics', c:'analytics', r:'maple-cafe-sales', s:'46,000+ POS transactions from a three-location Canadian cafe chain across 2024.',
+        steps:['Frame questions on revenue drivers, product mix and operational efficiency','Load and clean a full year of transactions','Compare revenue by location and product category','Analyze hourly sales patterns to find peak hours','Break down payment methods','Build nine visualizations and recommendations for inventory, menu, staffing and marketing'],
+        note:'Hourly patterns turn sales data into a staffing decision, which is where analysis becomes useful to an owner.', k:'Python 3.12 · pandas · NumPy · Matplotlib · Seaborn'},
+      {n:'GTA Rental Market', t:'Real estate analytics', c:'analytics', r:'gta-rental-market', s:'5,400+ rental listings across ten Greater Toronto Area neighbourhoods, analyzed for a property management use case.',
+        steps:['Set the goal: pricing strategy and investment opportunities for a property manager','Load and clean listings across ten neighbourhoods','Compare price distributions and price per square foot','Measure how amenities affect rent','Estimate market absorption and vacancy trends','Build eight visualizations and an executive report'],
+        note:'Price per square foot normalizes units of different sizes, so neighbourhoods can be compared fairly.', k:'Python 3.12 · pandas · NumPy · Matplotlib · Seaborn'},
+      {n:'Predicta Suite', t:'Sales forecasting', c:'analytics ml', r:'Predicta_Suite', s:'A multi-model forecasting suite that compares approaches instead of trusting one.',
+        steps:['Decompose the time series into trend, seasonality and residual','Fit Prophet, ARIMA and ensemble methods on the same data','Benchmark the models against each other','Visualize forecasts in interactive dashboards','Generate reports automatically'],
+        note:'ARIMA models a series from its own past values and errors; Prophet fits trend and seasonal components and handles holidays and gaps well. Comparing them shows which assumptions fit the data.', k:'Python · scikit-learn · Prophet · ARIMA · Plotly · pandas'},
+      {n:'Insurance ML', t:'Premium prediction', c:'ml apps', r:'Data_insurance_IA_ML_Insurance', s:'A full-stack application estimating insurance premiums from region, vehicle type and demographic data.',
+        steps:['Build a data pipeline from insurance APIs and public datasets','Prepare region, vehicle and demographic inputs','Train and compare Random Forest, Gradient Boosting and neural network models','Serve predictions through a Flask REST API','Collect inputs through a JavaScript front end','Retrain periodically to keep estimates current'],
+        note:'Tree-based models capture interactions between variables, such as vehicle type behaving differently by region, without manual feature crafting.', k:'Python · Flask · scikit-learn · pandas · JavaScript'},
+      {n:'Model Dig MKT', t:'Marketing analytics', c:'analytics apps', r:'Model_Dig_MKT', s:'One dashboard for traffic, social and conversion metrics from sources that were never designed to agree.',
+        steps:['Authenticate users and manage their API keys','Connect to Google Analytics, Facebook, Instagram and X/Twitter APIs','Normalize each platform\'s metrics into one structure','Display a unified view of traffic, engagement and conversions','Export the consolidated data'],
+        note:'The hard part is normalization, not the charts: each platform defines its metrics differently, just like different spreadsheets reporting the same revenue.', k:'Python · Flask · HTML · CSS · REST APIs'},
+      {n:'QuickStats Web', t:'Statistics in the browser', c:'analytics apps', r:'QuickStats-Web', s:'A statistics service for students and researchers that runs entirely in the browser.',
+        steps:['Upload or enter data in the browser','Run t-tests, ANOVA or regression','Visualize results interactively','Generate a report, with no installation'],
+        note:'T-tests compare two groups, ANOVA compares several, and regression models the relationship between variables.', k:'HTML · CSS · JavaScript'},
+      {n:'Aplicaton-new', t:'Multi-tenant SaaS', c:'apps', r:'Aplicaton-new', s:'A resume evaluation platform where each organization manages its own versioned scoring rubrics.',
+        steps:['Isolate data at the organization level','Control access with custom roles','Version each organization\'s evaluation rubrics','Queue resumes for asynchronous processing with Upstash Redis','Persist data through Prisma ORM','Deploy as serverless functions'],
+        note:'Versioned rubrics mean every score can be traced to the exact rules that produced it, the same auditability I expect from financial data.', k:'TypeScript · Prisma · Upstash Redis · RBAC · serverless'},
+      {n:'Cop', t:'AI copilot', c:'apps ml', r:'cop', demo:'https://cop-three.vercel.app', s:'A lightweight web copilot with access to multiple AI models through OpenRouter.',
+        steps:['Build a single-file web interface','Route requests to multiple models through the OpenRouter API','Deploy on Vercel for instant access'],
+        note:'One interface, many models: useful for comparing how different LLMs answer the same question.', k:'HTML · JavaScript · OpenRouter API · Vercel'},
+      {n:'AI Hub', t:'AI dashboard', c:'apps', r:'AI-hub', demo:'https://ai-hub-nine-kappa.vercel.app', s:'A web dashboard for exploring and visualizing AI capabilities.',
+        steps:['Design an intelligence dashboard interface','Deploy as a static site on Vercel'], k:'HTML · Vercel'},
+      {n:'DigitalMenuHub', t:'Restaurant technology', c:'apps', r:'DigitalMenuHub', s:'QR code menus that restaurants can update in real time without reprinting.',
+        steps:['Generate QR codes that open the menu','Update prices and items in real time','Offer the menu in multiple languages','Track customer preferences'], k:'HTML · CSS · JavaScript · QR Code API'},
+      {n:'Lex', t:'File server', c:'apps', r:'lex', s:'A browser-based file storage and management system backed by PostgreSQL.',
+        steps:['Configure a PostgreSQL database on Railway','Write the PHP backend for file operations','Build the web interface for upload, retrieval and management'], k:'PHP · HTML · PostgreSQL · Railway'},
+      {n:'Calc Vector', t:'STEM education tool', c:'apps', r:'Calc_Vector', s:'An interactive app for engineering students to compute and visualize vectors in real time.',
+        steps:['Enter vectors and see results update live','Compute dot and cross products, magnitude and angles','Plot vectors in interactive 2D and 3D','Control precision rounding for academic use'], k:'Python · Streamlit · NumPy · SciPy · Plotly'},
+      {n:'Process-Improvemen', t:'Web interface', c:'apps', r:'Process-Improvemen', s:'The browser entry point for the Process Improvement Analytics Platform.',
+        steps:['Landing page that links to the operational dashboards'], k:'HTML'}
+    ];
+    const list = document.getElementById('projects');
+    projects.forEach(p => {
+      const d = document.createElement('details');
+      d.className = 'project';
+      d.dataset.category = p.c;
+      d.innerHTML = `<summary><div><h3>${p.n}</h3><span class="type">${p.t}</span></div><p>${p.s}</p><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="project-body"><div><h4>How it was done</h4><ol>${p.steps.map(h => `<li><span>${h}</span></li>`).join('')}</ol>${p.note ? `<p class="note">${p.note}</p>` : ''}
+        <a class="textlink" href="${gh + p.r}" target="_blank" rel="noopener">Repository</a>${p.demo ? ` &nbsp;·&nbsp; <a class="textlink" href="${p.demo}" target="_blank" rel="noopener">Live demo</a>` : ''}
+        <span class="stack">${p.k}</span></div></div>`;
+      list.appendChild(d);
+    });
+    const pChips = document.querySelectorAll('.chip.pf');
+    pChips.forEach(chip => chip.addEventListener('click', () => {
+      pChips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+      chip.setAttribute('aria-pressed', 'true');
+      const f = chip.dataset.filter;
+      document.querySelectorAll('.project').forEach(el => { el.hidden = f !== 'all' && !el.dataset.category.split(' ').includes(f); });
+    }));
+
+    // SAGP explorer
+    const tierInfo = {
+      1:'<b>T1 Constrained.</b> Tightly specified, security-reviewed templates with human review. Assumed vulnerability range in the thesis: 3–9%.',
+      2:'<b>T2 Guided.</b> A developer writes a moderately specific request with some security requirements. Assumed range: 10–20%.',
+      3:'<b>T3 Open-domain.</b> Typical copilot use: informal requests with no security guidance. Assumed range: 18–35%. Recommended minimum compliance score: 0.60.',
+      4:'<b>T4 Adversarially exposed.</b> The prompt is partly built from untrusted external data, as in agent systems. Adds mandatory isolation between instructions and data. Assumed range: 30–65%. Recommended minimum compliance score: 0.85.'
+    };
+    const tiers = document.querySelectorAll('.tier');
+    const stagesEls = document.querySelectorAll('#stages .stage');
+    const tierDesc = document.getElementById('tier-desc');
+    function setTier(t){
+      tiers.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tier === String(t))));
+      stagesEls.forEach(s => s.classList.toggle('req', Number(s.dataset.min) <= t));
+      const n = [...stagesEls].filter(s => Number(s.dataset.min) <= t).length;
+      tierDesc.innerHTML = tierInfo[t] + ` ${n} of 7 stages mandatory.`;
+    }
+    tiers.forEach(b => b.addEventListener('click', () => setTier(Number(b.dataset.tier))));
+    setTier(3);
+
+    // Copy email
+    const copyBtn = document.getElementById('copy-email');
+    copyBtn.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText('wesley_haruo@hotmail.com'); copyBtn.textContent = 'Email address copied'; }
+      catch { copyBtn.textContent = 'wesley_haruo@hotmail.com'; }
+      setTimeout(() => copyBtn.textContent = 'Copy email address', 2500);
+    });
+
+    // Arriving from the old dashboard link
+    if (location.hash === '#intelligence') { const f = document.querySelector('#map .map-btn'); if (f) f.click(); }
   </script>
 </body>
 </html>
