@@ -41,7 +41,7 @@
     .button.ghost { border:1px solid var(--line); background:var(--surface); }
     .button.ghost:hover { border-color:var(--accent); color:var(--accent); }
     .hero-card { background:var(--ink); color:#eef5f0; border-radius:28px; padding:28px; box-shadow:var(--shadow); position:relative; overflow:hidden; }
-    .hero-card:after { content:''; position:absolute; width:190px; height:190px; border:1px solid rgba(91,205,151,.3); border-radius:50%; right:-60px; top:-55px; box-shadow:0 0 0 25px rgba(91,205,151,.03); }
+    .hero-card:after { content:''; position:absolute; width:190px; height:190px; border:1px solid rgba(91,205,151,.3); border-radius:50%; right:-60px; top:-55px; box-shadow:0 0 0 25px rgba(91,205,151,.08); }
     .card-label { color:#8ed9b2; font-size:.73rem; text-transform:uppercase; letter-spacing:.12em; }
     .hero-card h2 { font-size:2rem; line-height:1.1; letter-spacing:-.06em; margin:54px 0 25px; max-width:280px; }
     .stat-row { border-top:1px solid rgba(255,255,255,.16); padding-top:18px; display:flex; justify-content:space-between; color:#b2c4b9; font-size:.78rem; }
@@ -56,6 +56,16 @@
     .about-text strong { color:var(--accent-dark); }
     .skills { display:flex; flex-wrap:wrap; gap:9px; margin-top:26px; }
     .tag { background:var(--soft); color:var(--accent-dark); border-radius:5px; padding:6px 10px; font:.75rem 'DM Mono',monospace; }
+    .profile { background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .profile-layout { display:grid; grid-template-columns:0.9fr 1.1fr; gap:40px; }
+    .profile-summary { display:flex; flex-direction:column; gap:18px; }
+    .profile-summary .pill { display:inline-flex; align-items:center; width:max-content; background:var(--soft); color:var(--accent-dark); border-radius:999px; padding:7px 12px; font:.69rem 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+    .profile-summary h3 { font-size:2rem; line-height:1.1; letter-spacing:-.06em; }
+    .profile-summary p, .profile-copy p { color:var(--muted); }
+    .profile-copy { display:grid; gap:18px; font-size:1rem; color:var(--ink); }
+    .profile-copy h4 { font-size:1.05rem; letter-spacing:-.04em; margin-top:10px; }
+    .profile-copy strong { color:var(--accent-dark); }
+    .profile-copy ul { display:grid; gap:10px; margin-left:18px; color:var(--muted); }
     .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
     .filter { border:1px solid var(--line); background:transparent; color:var(--muted); padding:8px 13px; border-radius:999px; cursor:pointer; font:.74rem 'DM Mono',monospace; }
     .filter.active,.filter:hover { color:var(--accent-dark); border-color:var(--accent); background:var(--soft); }
@@ -82,8 +92,8 @@
     .contact p { color:#b6c8bc; max-width:420px; margin-top:18px; }
     .contact .button.primary { background:#8ed9b2; color:var(--ink); white-space:nowrap; }
     footer { padding:32px 0 42px; color:var(--muted); font-size:.78rem; display:flex; justify-content:space-between; gap:20px; }
-    @media (max-width:800px) { .hero,.about-grid { grid-template-columns:1fr; gap:40px; } .hero { padding:80px 0; } .projects { grid-template-columns:repeat(2,1fr); } .services { grid-template-columns:1fr; } }
-    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .menu-toggle { display:block; } .nav-links { display:none; position:absolute; top:74px; left:0; right:0; padding:16px 20px 24px; background:rgba(245,247,244,.96); border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; } .nav-links.open { display:flex; } .projects { grid-template-columns:1fr; } .section-head { display:block; } .contact { display:block; padding:42px 28px; } .contact h2 { margin-bottom:12px; } }
+    @media (max-width:800px) { .hero,.about-grid,.profile-layout { grid-template-columns:1fr; gap:40px; } .hero { padding:80px 0; } .projects { grid-template-columns:repeat(2,1fr); } .services { grid-template-columns:1fr; } }
+    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .menu-toggle { display:block; } .nav-links { display:none; position:absolute; top:74px; left:0; right:0; padding:16px 20px 24px; background:rgba(245,247,244,.96); border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; } .nav-links.open { display:flex; } .projects { grid-template-columns:1fr; } .contact { padding:34px 24px; flex-direction:column; align-items:flex-start; } }
   </style>
 </head>
 <body>
@@ -93,6 +103,7 @@
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">Menu</button>
       <div class="nav-links" id="site-menu">
         <a href="#about" data-i18n="aboutNav">About</a>
+        <a href="#profile" data-i18n="profileNav">Profile</a>
         <a href="#work" data-i18n="workNav">Work</a>
         <a href="#services" data-i18n="expertiseNav">Expertise</a>
         <a class="nav-cta" href="#contact" data-i18n="contactNav">Let’s talk</a>
@@ -127,7 +138,7 @@
           <div class="eyebrow">About</div>
         </div>
         <div class="about-text">
-          I design and build <strong>data experiences</strong> that turn raw information into decision-making tools. My work sits at the intersection of analytics, machine learning, and product thinking — helping teams move from fragmented signals to clear, measurable action.
+          I design and build <strong>data experiences</strong> that turn raw information into decision-making tools. My work sits at the intersection of analytics, machine learning, and product thinking, with a strong bias toward systems that can be trusted in real operations. I build for clarity, accuracy, and measurable outcomes.
           <div class="skills" aria-label="Skills list">
             <span class="tag">Python</span>
             <span class="tag">SQL</span>
@@ -138,6 +149,36 @@
             <span class="tag">JavaScript</span>
             <span class="tag">Web Apps</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile" id="profile">
+      <div class="wrap profile-layout">
+        <div class="profile-summary">
+          <div class="pill">Professional profile</div>
+          <div class="eyebrow">Career trajectory</div>
+          <h3>From systems operations to AI risk thinking.</h3>
+          <p>Wesley Haruo built his career through operational data work: first as a systems analyst maintaining critical databases, then in healthcare and finance, and now at the junction between automation, analytics, and AI governance.</p>
+        </div>
+
+        <div class="profile-copy">
+          <p><strong>Professional overview:</strong> Wesley is a data analyst whose work moves in two directions at once: downward into the systems and code that produce data, and outward into the risks created when that data and code are automated. Between those two ends sits his current role migrating and reconciling financial data for small businesses in Ontario using Python, SQL, APIs, and LLMs.</p>
+
+          <p><strong>Where it began:</strong> His career started in technology, not finance. After a degree in network technology, he spent nearly nine years as a systems analyst at Dasa, one of Brazil's largest diagnostic groups, maintaining Informix databases behind clinical and laboratory systems; writing code in Informix 4GL; scripting across Linux, Unix and Windows; shipping software releases; and correcting damaged records directly in production. A key lesson was that a single bad record spreads into billing, reporting and every downstream system built on it.</p>
+
+          <p><strong>How the career evolved:</strong> At Postal Saúde, he shifted from maintenance to analysis, consolidating medical and financial records during a transition and using SQL to detect duplicate claims and provider overcharging. At CNP Assurances he worked in FP&A during the launch of the digital subsidiary Youse, reconciling SAP and TM1 and helping prepare for IFRS 16. After moving to Canada, he held operations and financial analysis roles focused on comparing system outputs to reality and fixing discrepancies at the source. Today, at NextLens Data, he migrates small businesses from spreadsheets and manual bookkeeping into cloud accounting workflows, maps accounts, builds Python and SQL pipelines, automates routines with n8n and APIs, and validates LLM-extracted invoice values against accounting rules before they are used.</p>
+
+          <p><strong>How the specialization was built:</strong> The evidence points to a clear order: technology first, then data, then finance, and now automation and AI security layered on top. His GitHub projects show structured analytics work, fraud detection systems, risk and insurance platforms, and a pattern of building machine learning tools for classification problems in high-stakes settings. He also writes about AI-generated code and security risk with a disciplined, practical lens, arguing that AI accelerates development but does not remove responsibility.</p>
+
+          <h4>Key differentiators</h4>
+          <ul>
+            <li><strong>Propagation mindset:</strong> From fixing data errors in clinical systems to modeling how security flaws travel through dependencies, Wesley consistently thinks about how a small issue becomes a larger operational problem.</li>
+            <li><strong>Finance-driven automation:</strong> His background in FP&A, cost allocation, GL reconciliation, and lease accounting gives his data work a strong operational logic and validation framework.</li>
+            <li><strong>AI plus control:</strong> He uses LLMs in production but validates outputs, monitors drift, and writes about the risks of trusting AI-generated code or data without guardrails.</li>
+          </ul>
+
+          <p><strong>Current positioning:</strong> He is best described as an experienced mid-level analyst with engineering instincts, strong finance-domain knowledge, and a growing specialization in AI governance and AI-assisted workflow risk. His work is particularly relevant to financial data automation, analytics engineering, and AI governance in finance, insurance, or public sector contexts.</p>
         </div>
       </div>
     </section>
@@ -250,6 +291,7 @@
     <span>© 2026 Wesley Haruo</span>
     <div class="footer-links">
       <a href="#about">About</a>
+      <a href="#profile">Profile</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </div>
