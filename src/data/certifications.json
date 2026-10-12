@@ -1,0 +1,23 @@
+[
+  { "id": "c1-amazon-da", "name": "Amazon Data Analytics 21 — Honors Certification", "issuer": "Correlation One", "date": "2026-09", "track": "Analytics", "status": "earned", "credentialId": "193790233" },
+  { "id": "sap-ba", "name": "Business Analysis", "issuer": "SAP", "date": "2026-02", "track": "Business", "status": "earned", "credentialId": "57HX1AUGIAY8" },
+  { "id": "ibm-prompt", "name": "Generative AI: Prompt Engineering Basics", "issuer": "IBM", "date": "2025-10", "dateApprox": true, "track": "AI", "status": "earned", "credentialId": "FY47HRVBFVFL" },
+  { "id": "dbx-aibi", "name": "Databricks AI/BI for Data Analysts", "issuer": "Databricks", "date": "2025-09", "track": "Analytics", "status": "earned" },
+  { "id": "dbx-fund", "name": "Databricks Fundamentals Accreditation", "issuer": "Databricks", "date": "2025-09", "track": "Engineering", "status": "earned" },
+  { "id": "dbx-de", "name": "Data Engineering", "issuer": "Databricks", "date": "2025-09", "track": "Engineering", "status": "earned" },
+  { "id": "dbx-genai", "name": "Generative AI Fundamentals", "issuer": "Databricks", "date": "2025-08", "track": "AI", "status": "earned", "credentialId": "159719607" },
+  { "id": "w3-pandas", "name": "Pandas", "issuer": "W3Schools", "date": "2025-07", "track": "Engineering", "status": "earned", "credentialId": "1Q58U5LYRC" },
+  { "id": "w3-awsml", "name": "AWS ML", "issuer": "W3Schools", "date": "2025-07", "track": "AI", "status": "earned", "credentialId": "1Q58SPSUBC" },
+  { "id": "w3-ds", "name": "Data Science", "issuer": "W3Schools", "date": "2025-07", "track": "Analytics", "status": "earned", "credentialId": "67NCBLHAK" },
+  { "id": "w3-stats", "name": "Statistics", "issuer": "W3Schools", "date": "2025-07", "track": "Analytics", "status": "earned", "credentialId": "1Q3QERCXY2" },
+  { "id": "sf-ai", "name": "AI Associate", "issuer": "Salesforce", "date": "2024-08", "track": "AI", "status": "earned" },
+  { "id": "alura-oracle", "name": "Oracle Analytics: Visualizing Data", "issuer": "Alura", "date": "2024-01", "track": "Analytics", "status": "earned" },
+  { "id": "meta-js", "name": "Programming with JavaScript", "issuer": "Meta", "date": "2023-01", "track": "Engineering", "status": "earned" },
+  { "id": "meta-html", "name": "HTML and CSS", "issuer": "Meta", "date": "2023-01", "track": "Engineering", "status": "earned" },
+  { "id": "aws-cte", "name": "AWS Cloud Technical Essentials", "issuer": "Amazon Web Services", "date": "2023-06", "dateApprox": true, "track": "Engineering", "status": "earned" },
+  { "id": "udemy-py", "name": "Python Boot Camp", "issuer": "Udemy", "date": "2023-03", "dateApprox": true, "track": "Engineering", "status": "earned" },
+  { "id": "algonquin", "name": "Business Accounting Diploma", "issuer": "Algonquin College", "date": "2027-06", "dateApprox": true, "track": "Business", "status": "in-progress" },
+  { "id": "pl-300", "name": "Microsoft Power BI Data Analyst (PL-300)", "issuer": "Microsoft", "date": "2027-03", "dateApprox": true, "track": "Analytics", "status": "target" },
+  { "id": "tableau-specialist", "name": "Tableau Desktop Specialist", "issuer": "Salesforce / Tableau", "date": "2027-03", "dateApprox": true, "track": "Analytics", "status": "target" },
+  { "id": "dbx-da-assoc", "name": "Databricks Certified Data Analyst Associate", "issuer": "Databricks", "date": "2027-06", "dateApprox": true, "track": "Engineering", "status": "target" }
+]

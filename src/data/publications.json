@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ai-code-security-essay",
+    "title": "The Escalating Security Challenge of AI-Generated Code",
+    "type": "Practitioner essay",
+    "date": "2025-07",
+    "summary": "What I kept running into when reviewing code suggested by AI assistants — SQL built by concatenation, weak session handling, non-existent packages — and the review process I recommend before any of it reaches production.",
+    "url": "https://orcid.org/0009-0002-1368-2250"
+  },
+  {
+    "id": "gcvp-thesis",
+    "title": "A Comprehensive Framework for Vulnerability Propagation Analysis, Threat Classification, and Security-Integrated Pipeline Design",
+    "type": "Independent thesis",
+    "date": "2026-01",
+    "summary": "Formalizes how one flaw in AI-generated code spreads through dependencies (GCVP), with a trust-weighted dependency graph, a propagation index (VPI) and a seven-stage secure generation pipeline. Simulated exposure fell from 0.47 to 0.083 on a 24-module app.",
+    "url": "https://orcid.org/0009-0002-1368-2250"
+  },
+  {
+    "id": "ghost-jobs",
+    "title": "Ghost Jobs, Broken Code, and the AI Security Crisis Inside Canada's Public Sector",
+    "type": "Research article",
+    "date": "2026-06",
+    "summary": "A synthesis of public Canadian sources connecting ghost job postings, unapproved AI tools in the public service and fake job ads used for intelligence recruitment.",
+    "url": "https://orcid.org/0009-0002-1368-2250"
+  },
+  {
+    "id": "competence-gap",
+    "title": "The Competence Gap: How Unskilled Use of AI Prompts, Agents, Skills and Code Generators Opens New Attack Surfaces in Software Systems",
+    "type": "Research article",
+    "date": "2026",
+    "summary": "Why the risk of AI tooling grows with the gap between how easy the tools are to use and how much the user understands what they produce.",
+    "url": "https://orcid.org/0009-0002-1368-2250"
+  }
+]

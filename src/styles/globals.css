@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────── Design tokens ─────────────────────────
+   One dark theme on purpose: the site is a "control room", and the
+   embedded Power BI / Tableau reports read best on a dark frame.
+   Channels are space-separated RGB so Tailwind alpha modifiers work. */
+:root {
+  --ink: 7 9 13;          /* page background            */
+  --ink-2: 13 17 24;      /* raised surface             */
+  --ink-3: 20 26 36;      /* hover / inset surface      */
+  --line: 36 44 58;       /* hairlines                  */
+  --fg: 232 236 243;      /* primary text               */
+  --fg-muted: 148 160 180;/* secondary text             */
+  --fg-faint: 92 104 124; /* labels, axis ticks         */
+
+  --signal: 94 234 212;   /* cyan-teal: data, primary   */
+  --synapse: 167 139 250; /* violet: AI, research       */
+  --ledger: 251 191 36;   /* amber: finance, money      */
+  --alert: 251 113 133;   /* rose: anomalies, risk      */
+
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  background: rgb(var(--ink));
+  color: rgb(var(--fg));
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: rgb(var(--signal) / 0.3); color: rgb(var(--fg)); }
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-fg-faint;
+  }
+  .panel {
+    @apply rounded-2xl border border-line/80 bg-ink-2/80 shadow-card backdrop-blur;
+  }
+  .panel-hover {
+    @apply transition-colors duration-300 hover:border-signal/40 hover:bg-ink-3/80;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 font-mono text-[11px] text-fg-muted;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal/60;
+  }
+  .btn-primary { @apply btn bg-signal text-ink hover:brightness-110 hover:shadow-glow; }
+  .btn-ghost { @apply btn border border-line text-fg hover:border-signal/50 hover:bg-ink-3; }
+  .section { @apply relative py-24 md:py-32; }
+  .h-display { @apply font-display text-4xl font-semibold tracking-tight md:text-6xl; }
+  .h-section { @apply font-display text-3xl font-semibold tracking-tight md:text-5xl; }
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, rgb(var(--signal)), rgb(var(--synapse)) 60%, rgb(var(--ledger)));
+  }
+}
+
+/* Faint data grid behind the whole page */
+.bg-grid {
+  background-image:
+    linear-gradient(rgb(var(--line) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / 0.35) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 20%, transparent 70%);
+}
+
+/* Recharts on dark */
+.recharts-cartesian-axis-tick-value { fill: rgb(var(--fg-faint)); font-family: var(--font-mono); font-size: 11px; }
+.recharts-tooltip-wrapper { outline: none; }
+
+/* Scrollbars */
+* { scrollbar-width: thin; scrollbar-color: rgb(var(--line)) transparent; }

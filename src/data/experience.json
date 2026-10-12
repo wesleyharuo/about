@@ -1,0 +1,140 @@
+[
+  {
+    "id": "nextlens",
+    "company": "NextLens Data Analytics",
+    "role": "Data Analyst",
+    "start": "2025-11",
+    "end": null,
+    "location": "Ontario, Canada",
+    "era": "Automation & AI",
+    "color": "signal",
+    "context": "Data migration, automation and financial reporting for small and mid-sized Ontario businesses moving off spreadsheets and manual bookkeeping.",
+    "highlights": [
+      "Reconciled trial balance, opening balances and AR/AP to the legacy books at cut-over, catching $14,500 in duplicate supplier invoices and mis-mapped GL accounts before sign-off.",
+      "Migrated 3 years of financial history (4,500 transactions) into QuickBooks Online and Xero with chart-of-accounts mappings.",
+      "Power BI dashboards on revenue, opex, cash flow and gross margin cut the owner's month-end reporting from 5 days to 3 hours.",
+      "LLM invoice extraction (120 invoices/month) validated against the chart of accounts before posting; workflows automated with APIs and n8n."
+    ],
+    "metrics": [
+      { "label": "Month-end reporting", "before": 40, "after": 3, "unit": "working hours" },
+      { "label": "Duplicates caught", "value": 14500, "unit": "CAD" }
+    ],
+    "skills": ["Power BI", "DAX", "Power Query", "Python", "SQL", "QuickBooks", "Xero", "n8n", "APIs", "LLM workflows", "Reconciliation"]
+  },
+  {
+    "id": "amazon",
+    "company": "Amazon",
+    "role": "ICQA Associate → Operations Associate (Problem Solve)",
+    "start": "2022-01",
+    "end": null,
+    "location": "Ontario, Canada",
+    "era": "Operations data",
+    "color": "fg",
+    "context": "Root-cause diagnosis inside warehouse management systems at high volume, plus the Amazon Career Choice Data Analytics program.",
+    "highlights": [
+      "Traced units and packages that failed to scan or route through internal systems, corrected the record and cleared the exception.",
+      "Cycle counts and bin audits on automated fulfillment floors, validating physical stock against system logs.",
+      "Completed the Amazon Career Choice Data Analytics program (SQL, Python, R, Tableau) with Correlation One — Honors."
+    ],
+    "metrics": [],
+    "skills": ["Root cause analysis", "SQL", "Python", "R", "Tableau", "Inventory control"]
+  },
+  {
+    "id": "humberview",
+    "company": "The Humberview Group",
+    "role": "Financial Data Analyst",
+    "start": "2020-06",
+    "end": "2022-04",
+    "location": "Ontario, Canada",
+    "era": "Finance",
+    "color": "ledger",
+    "context": "Financial and operational reporting for a 20-store automotive dealer group, serving general managers and head-office finance.",
+    "highlights": [
+      "Power BI dashboards (DAX, Power Query) used by 20 general managers across 20 stores in weekly business reviews.",
+      "Rebuilt Excel models as validated Power Query workflows with SQL and Python over DMS output — monthly compilation from 4 days to 3 hours.",
+      "Reconciled Dealer Management System data to the general ledger across stores and OEM account structures.",
+      "Variance analysis against budget, forecast and prior period, with written commentary for leadership."
+    ],
+    "metrics": [
+      { "label": "Monthly compilation", "before": 32, "after": 3, "unit": "working hours" },
+      { "label": "GMs served", "value": 20, "unit": "managers" }
+    ],
+    "skills": ["Power BI", "DAX", "Power Query", "SQL", "Python", "Excel", "Variance analysis", "Month-end close"]
+  },
+  {
+    "id": "rgis",
+    "company": "RGIS",
+    "role": "Auditor",
+    "start": "2019-01",
+    "end": "2020-06",
+    "location": "Ontario, Canada",
+    "era": "Canada restart",
+    "color": "fg",
+    "context": "A fresh start in Canada that kept the core habit intact: reconcile, document the variance, find the driver.",
+    "highlights": [
+      "Reconciled physical counts to system records across thousands of SKUs, documenting each variance and its driver.",
+      "Validation and compliance checks that flagged inventory anomalies before they reached downstream reporting."
+    ],
+    "metrics": [],
+    "skills": ["Reconciliation", "Data validation", "Inventory control"]
+  },
+  {
+    "id": "cnp",
+    "company": "CNP Assurances",
+    "role": "Financial Data Analyst · FP&A",
+    "start": "2016-11",
+    "end": "2018-10",
+    "location": "Brazil",
+    "era": "Finance",
+    "color": "ledger",
+    "context": "FP&A and finance data for the Brazilian operation of a major French insurer during the launch of its digital subsidiary.",
+    "highlights": [
+      "Monthly budget-vs-actual on opex, project costs and Capex/Opex allocations within the close cycle.",
+      "Validated SAP S/4HANA (FI/CO) against IBM Cognos TM1 to support IFRS 16 lease-accounting readiness.",
+      "Separated and reconciled costs between the parent insurer and the new digital subsidiary.",
+      "Power BI and Cognos dashboards gave 12 project squads in-period visibility into budget consumption."
+    ],
+    "metrics": [{ "label": "Project squads", "value": 12, "unit": "squads" }],
+    "skills": ["FP&A", "SAP FI/CO", "Cognos TM1", "Power BI", "SQL", "Python", "IFRS 16"]
+  },
+  {
+    "id": "postal-saude",
+    "company": "Postal Saúde",
+    "role": "Data Analyst",
+    "start": "2014-12",
+    "end": "2016-10",
+    "location": "Brazil",
+    "era": "Data",
+    "color": "alert",
+    "context": "Health plan for Brazil's national postal service employees; joined at operational launch.",
+    "highlights": [
+      "SQL anomaly checks over claims and eligibility databases flagged duplicate claims, billing anomalies and provider overcharging.",
+      "Consolidated medical and financial data into a unified database during the separation into a new entity.",
+      "KPI dashboards tracking loss ratio, medical cost and provider network utilization."
+    ],
+    "metrics": [],
+    "skills": ["SQL", "Anomaly detection", "Healthcare analytics", "KPI dashboards", "Regulatory reporting"]
+  },
+  {
+    "id": "dasa",
+    "company": "Dasa",
+    "role": "Systems Analyst · Data & Database",
+    "start": "2006-02",
+    "end": "2014-11",
+    "location": "Brazil",
+    "era": "Systems",
+    "color": "synapse",
+    "context": "Brazil's largest medical diagnostics company. Nine years keeping the systems that create the data alive.",
+    "highlights": [
+      "ETL routines for system migrations under data-governance rules, supporting go-lives across ~80 lab units.",
+      "Consolidated data from three legacy platforms into one system after acquisitions.",
+      "Complex SQL and stored procedures over high volumes of clinical and financial transactions.",
+      "Informix databases, Informix 4GL applications and Linux/Unix shell scripts; TISS electronic billing integration."
+    ],
+    "metrics": [
+      { "label": "Lab units taken live", "value": 80, "unit": "units" },
+      { "label": "Legacy platforms merged", "value": 3, "unit": "platforms" }
+    ],
+    "skills": ["SQL", "Stored procedures", "ETL", "Informix", "Shell", "Data governance"]
+  }
+]

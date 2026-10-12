@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inventory and Freight Ops Center</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0A1426}
+a{color:#7FB2FF}a:hover{color:#B5D2FF}
+@keyframes flow{to{stroke-dashoffset:-24}}
+.flow{stroke-dasharray:6 6;animation:flow 1.2s linear infinite}
+.flow-slow{stroke-dasharray:6 6;animation:flow 3.2s linear infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.pulse{animation:pulse 1.6s ease-in-out infinite}
+@keyframes glow{0%{background:#17407A}100%{background:#0B172B}}
+.fresh{animation:glow 1.4s ease-out}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion: reduce){.flow,.flow-slow,.pulse,.fresh{animation:none}}
+</style>
+</helmet>
+
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; align-items: stretch; background: #0A1426; color: #E4ECF7; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.45;">
+
+<!-- ============ LEFT NAVIGATION ============ -->
+<nav aria-label="Primary" style="flex: 1 1 232px; max-width: 100%; box-sizing: border-box; background: #071021; border-right: 1px solid #172A47; padding: 18px 14px; display: flex; flex-direction: column; gap: 22px;">
+  <div style="display: flex; align-items: center; gap: 10px; padding: 2px 6px 8px;">
+    <div style="width: 34px; height: 34px; border-radius: 8px; background: #0E7C86; display: flex; align-items: center; justify-content: center;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"></path><path d="M3 8l9 5 9-5M12 13v8"></path></svg>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <span style="font-weight: 700; font-size: 15px; letter-spacing: 0.2px;">Stockline</span>
+      <span style="font-size: 12px; color: #93A6C4;">Unified Commerce Ops</span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #8296B5; padding: 0 10px 6px;">Operate</span>
+    <a href="#" aria-current="page" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; background: #13305E; color: #FFFFFF; text-decoration: none; font-weight: 500; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>
+      Operations Center</a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 01-14.3 4.9M4 12a8 8 0 0114.3-4.9"></path><path d="M18 3v4h-4M6 21v-4h4"></path></svg>
+      Inventory Sync<span style="margin-left: auto; font-size: 11px; font-family: 'IBM Plex Mono', monospace; background: #4A2A12; color: #FFC08A; padding: 1px 6px; border-radius: 9px;">3</span></a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16l-1.5 12a2 2 0 01-2 1.8H7.5a2 2 0 01-2-1.8z"></path><path d="M9 7V5a3 3 0 016 0v2"></path></svg>
+      Sales Channels<span style="margin-left: auto; font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: #93A6C4;">4</span></a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h11v9H2zM13 10h4l4 3v3h-8z"></path><circle cx="6" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>
+      Freight Quoting</a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h11M9 12h11M9 19h11"></path><path d="M4 5h.01M4 12h.01M4 19h.01"></path></svg>
+      Orders &amp; Fulfillment</a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L3 13V3h10l7.6 7.6a2 2 0 010 2.8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>
+      Pricing &amp; Promotions</a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+      Purchasing</a>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 2px;">
+    <span style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #8296B5; padding: 0 10px 6px;">Monitor</span>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L2 18a2 2 0 001.7 3h16.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"></path></svg>
+      Exceptions</a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg>
+      API Health</a>
+    <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; color: #B7C5DA; text-decoration: none; min-height: 24px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"></path></svg>
+      Allocation Rules</a>
+  </div>
+
+  <div style="margin-top: auto; background: #0D1B33; border: 1px solid #1D3150; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+    <span style="font-size: 12px; color: #93A6C4;">Event bus</span>
+    <span style="display: flex; align-items: center; gap: 8px; font-weight: 600;"><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span>Streaming · lag 220 ms</span>
+    <span style="font-size: 12px; color: #93A6C4;">Since go-live: 41 → 3 oversells/day</span>
+  </div>
+</nav>
+
+<!-- ============ MAIN ============ -->
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column;">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 12px 28px; border-bottom: 1px solid #172A47; background: #0B172C;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #93A6C4;">
+      <span>Cedarline Home &amp; Outdoor</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      <span style="color: #E4ECF7; font-weight: 500;">Operations Center</span>
+    </div>
+    <div style="flex: 1 1 260px; display: flex; justify-content: center;">
+      <label for="sku-search" class="sr">Search SKU, order or shipment</label>
+      <div style="width: 100%; max-width: 440px; display: flex; align-items: center; gap: 8px; background: #0F1E37; border: 1px solid #22395E; border-radius: 8px; padding: 0 12px; height: 38px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#93A6C4" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+        <input id="sku-search" type="search" placeholder="Search SKU, order # or tracking…" style="flex: 1; min-width: 0; background: transparent; border: 0; outline: none; color: #E4ECF7; font: inherit; font-size: 13px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #93A6C4; border: 1px solid #2A436B; border-radius: 4px; padding: 0 5px;">Ctrl K</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: #9BE7C4; background: #0E3027; border: 1px solid #1B5440; border-radius: 6px; padding: 4px 9px;"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #34C38F;"></span>LIVE · {{clock}} EDT</span>
+      <button type="button" aria-label="Notifications, 9 unread" style="position: relative; width: 44px; height: 44px; border-radius: 8px; background: transparent; border: 1px solid #22395E; color: #C9D6E8; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 8a6 6 0 1112 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a2 2 0 003.4 0"></path></svg>
+        <span style="position: absolute; top: 8px; right: 9px; width: 8px; height: 8px; border-radius: 50%; background: #F2994A; border: 2px solid #0B172C;"></span>
+      </button>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 34px; height: 34px; border-radius: 50%; background: #23467F; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600;">OP</div>
+        <div style="display: flex; flex-direction: column; line-height: 1.2;"><span style="font-size: 13px; font-weight: 500;">Ops Lead</span><span style="font-size: 11px; color: #93A6C4;">Commerce Operations</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- incident banner -->
+  <div role="status" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 10px 28px; background: #2C1C0C; border-bottom: 1px solid #5A3B1C; color: #FFD9B3; font-size: 13px;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFB067" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"></path><path d="M10.3 3.9L2 18a2 2 0 001.7 3h16.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"></path></svg>
+    <span style="flex: 1 1 360px;"><strong style="color: #FFE6CC; font-weight: 600;">Amazon SP-API inventory feed throttled (HTTP 429).</strong> Auto-backoff active; 3 SKUs reconciling, safety buffer holding listings. Expected to clear in about 4 min.</span>
+    <a href="#" style="color: #FFD9B3; font-weight: 500; padding: 8px 0;">View incident</a>
+  </div>
+
+  <main style="padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 20px;">
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <h1 style="margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -0.3px;">Real-time Inventory &amp; Freight Command Center</h1>
+        <p style="margin: 0; color: #A9B9D0; font-size: 14px;">Amazon FBA, Shopify and 4 physical nodes on one available-to-promise ledger · 18,420 active SKUs · automated carrier rating</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <button type="button" style="height: 38px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; background: #0F1E37; border: 1px solid #22395E; border-radius: 7px; color: #DCE6F4; font: inherit; font-size: 13px; cursor: pointer;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Last 24 hours
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+        <button type="button" style="height: 38px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; background: #0F1E37; border: 1px solid #22395E; border-radius: 7px; color: #DCE6F4; font: inherit; font-size: 13px; cursor: pointer;">All channels
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+        <button type="button" style="height: 38px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; background: #2563EB; border: 1px solid #2563EB; border-radius: 7px; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 7h11v9H2zM13 10h4l4 3v3h-8z"></path></svg>New freight quote</button>
+      </div>
+    </div>
+
+    <!-- KPI cards -->
+    <section aria-label="Key metrics" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
+
+      <div style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 13px; color: #A9B9D0;">Gross Sales · 24h</span><span style="font-size: 11px; color: #93A6C4; font-family: 'IBM Plex Mono', monospace;">CAD</span></div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px;">$412.8K</span><span style="font-size: 12px; font-weight: 600; color: #5FD9A6;">▲ 18.4%</span></div>
+        <div style="display: flex; height: 8px; border-radius: 4px; overflow: hidden; gap: 2px;" role="img" aria-label="Sales mix: Amazon 48 percent, Shopify 37 percent, wholesale 15 percent"><div style="width: 48%; background: #3D8BFD;"></div><div style="width: 37%; background: #2EC4D6;"></div><div style="width: 15%; background: #A78BFA;"></div></div>
+        <span style="font-size: 12px; color: #93A6C4;">Amazon $198.3K · Shopify $151.6K · B2B $62.9K</span>
+      </div>
+
+      <div style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 13px; color: #A9B9D0;">Sync Latency · p95</span><span style="font-size: 11px; color: #93A6C4; font-family: 'IBM Plex Mono', monospace;">stock → channel</span></div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px;">1.4 s</span><span style="font-size: 12px; color: #A9B9D0;">was 15 min batch</span></div>
+        <svg viewBox="0 0 200 36" width="100%" height="36" preserveAspectRatio="none" role="img" aria-label="Latency steady near one second with a spike during the Amazon throttle"><path d="M0 26 L20 27 L40 25 L60 26 L80 27 L100 25 L120 26 L140 24 L160 26 L172 12 L186 8 L200 22" fill="none" stroke="#2EC4D6" stroke-width="2" vector-effect="non-scaling-stroke"></path><circle cx="186" cy="8" r="3" fill="#F2994A"></circle></svg>
+        <span style="font-size: 12px; color: #93A6C4;">Shopify 0.6 s · WMS 0.9 s · Amazon 4.8 s</span>
+      </div>
+
+      <div style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 13px; color: #A9B9D0;">Cross-channel Accuracy</span><span style="font-size: 11px; color: #9BE7C4; background: #0E3027; border-radius: 4px; padding: 1px 6px;">On target</span></div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px;">99.2%</span><span style="font-size: 12px; font-weight: 600; color: #5FD9A6;">▲ 6.8 pts</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding: 6px 0;">
+          <div style="position: relative; height: 8px; border-radius: 4px; background: #1D3150;"><div style="width: 99.2%; height: 100%; border-radius: 4px; background: #3D8BFD;"></div><div style="position: absolute; left: 99%; top: -4px; width: 2px; height: 16px; background: #E4ECF7;"></div></div>
+          <span style="font-size: 11px; color: #93A6C4; text-align: right;">Target 99.0%</span>
+        </div>
+        <span style="font-size: 12px; color: #93A6C4;">Listed qty vs physical on-hand, all nodes</span>
+      </div>
+
+      <div style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 13px; color: #A9B9D0;">Oversells · 24h</span><span style="font-size: 11px; color: #93A6C4; font-family: 'IBM Plex Mono', monospace;">orders</span></div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px;">3</span><span style="font-size: 12px; font-weight: 600; color: #5FD9A6;">▼ 93% vs pre-launch</span></div>
+        <svg viewBox="0 0 200 36" width="100%" height="36" preserveAspectRatio="none" role="img" aria-label="Daily oversells falling from about 41 to 3 over eight weeks"><rect x="2" y="2" width="20" height="34" rx="2" fill="#5B4A2E"></rect><rect x="27" y="5" width="20" height="31" rx="2" fill="#5B4A2E"></rect><rect x="52" y="4" width="20" height="32" rx="2" fill="#5B4A2E"></rect><rect x="77" y="20" width="20" height="16" rx="2" fill="#2A4A7E"></rect><rect x="102" y="27" width="20" height="9" rx="2" fill="#2A4A7E"></rect><rect x="127" y="30" width="20" height="6" rx="2" fill="#2A4A7E"></rect><rect x="152" y="31" width="20" height="5" rx="2" fill="#2A4A7E"></rect><rect x="177" y="33" width="20" height="3" rx="2" fill="#3D8BFD"></rect></svg>
+        <span style="font-size: 12px; color: #93A6C4;">Avg 41/day before real-time ATP went live</span>
+      </div>
+
+      <div style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 13px; color: #A9B9D0;">Freight Cost / Order</span><span style="font-size: 11px; color: #93A6C4; font-family: 'IBM Plex Mono', monospace;">blended</span></div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 28px; font-weight: 600; letter-spacing: -0.5px;">$8.74</span><span style="font-size: 12px; font-weight: 600; color: #5FD9A6;">▼ 11.3%</span></div>
+        <svg viewBox="0 0 200 36" width="100%" height="36" preserveAspectRatio="none" role="img" aria-label="Freight cost per order falling from 9.85 to 8.74 dollars"><path d="M0 6 L25 7 L50 9 L75 14 L100 18 L125 21 L150 25 L175 27 L200 29" fill="none" stroke="#3D8BFD" stroke-width="2" vector-effect="non-scaling-stroke"></path><circle cx="200" cy="29" r="3" fill="#3D8BFD"></circle></svg>
+        <span style="font-size: 12px; color: #93A6C4;">Saved $5.5K today · $61.9K month to date</span>
+      </div>
+    </section>
+
+    <!-- topology + freight -->
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+
+      <section aria-labelledby="topo-h" style="flex: 2 1 640px; min-width: 0; background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center;">
+          <div style="display: flex; flex-direction: column;">
+            <h2 id="topo-h" style="margin: 0; font-size: 16px; font-weight: 600;">Real-time integration topology</h2>
+            <span style="font-size: 12px; color: #93A6C4;">Every stock movement becomes an event; the ATP engine republishes sellable quantity to each channel</span>
+          </div>
+          <div style="display: flex; gap: 14px; font-size: 12px; color: #A9B9D0; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="width: 16px; height: 2px; background: #3D8BFD;"></span>Streaming</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="width: 16px; height: 2px; background: #F2994A;"></span>Throttled</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #9CC3FF;"></span>Event</span>
+          </div>
+        </div>
+
+        <div style="overflow-x: auto;">
+        <div style="position: relative; min-width: 820px; height: 380px; background: #0B172B; border: 1px solid #172A47; border-radius: 8px;">
+          <svg viewBox="0 0 1000 380" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+            <path d="M260 50 C320 50 320 150 380 150" fill="none" stroke="#F2994A" stroke-width="2" class="flow-slow" vector-effect="non-scaling-stroke"></path>
+            <path d="M260 142 C320 142 320 175 380 175" fill="none" stroke="#3D8BFD" stroke-width="2.5" class="flow" vector-effect="non-scaling-stroke"></path>
+            <path d="M260 234 C320 234 320 205 380 205" fill="none" stroke="#3D8BFD" stroke-width="2.5" class="flow" vector-effect="non-scaling-stroke"></path>
+            <path d="M260 326 C320 326 320 230 380 230" fill="none" stroke="#3D8BFD" stroke-width="2" class="flow" vector-effect="non-scaling-stroke"></path>
+            <path d="M620 160 C680 160 680 68 740 68" fill="none" stroke="#3D8BFD" stroke-width="2" class="flow" vector-effect="non-scaling-stroke"></path>
+            <path d="M620 190 L740 190" fill="none" stroke="#3D8BFD" stroke-width="2.5" class="flow" vector-effect="non-scaling-stroke"></path>
+            <path d="M620 220 C680 220 680 312 740 312" fill="none" stroke="#3D8BFD" stroke-width="2" class="flow" vector-effect="non-scaling-stroke"></path>
+            <g fill="#FFC08A"><circle r="3"><animateMotion dur="4.2s" repeatCount="indefinite" path="M260 50 C320 50 320 150 380 150"></animateMotion></circle></g>
+            <g fill="#9CC3FF">
+              <circle r="3"><animateMotion dur="1.6s" repeatCount="indefinite" path="M260 142 C320 142 320 175 380 175"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite" path="M260 142 C320 142 320 175 380 175"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.4s" repeatCount="indefinite" path="M260 234 C320 234 320 205 380 205"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.4s" begin="0.5s" repeatCount="indefinite" path="M260 234 C320 234 320 205 380 205"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.4s" begin="1s" repeatCount="indefinite" path="M260 234 C320 234 320 205 380 205"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.6s" repeatCount="indefinite" path="M260 326 C320 326 320 230 380 230"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.8s" begin="0.3s" repeatCount="indefinite" path="M620 160 C680 160 680 68 740 68"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.2s" repeatCount="indefinite" path="M620 190 L740 190"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.2s" begin="0.6s" repeatCount="indefinite" path="M620 190 L740 190"></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.2s" begin="0.4s" repeatCount="indefinite" path="M620 220 C680 220 680 312 740 312"></animateMotion></circle>
+            </g>
+          </svg>
+
+          <!-- sources -->
+          <div style="position: absolute; left: 1%; width: 25%; top: 12px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #5A3B1C; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">Amazon FBA + FBM</span><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #F2994A;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">Seller Central CA/US · SP-API</span>
+            <span style="font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: #FFC08A;">429 throttled · backoff 30 s</span>
+          </div>
+          <div style="position: absolute; left: 1%; width: 25%; top: 104px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #22395E; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">Shopify Plus</span><span style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">Webhooks · GraphQL Admin API</span>
+            <span style="font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: #B7C5DA;">1,240 evt/min · 0.6 s</span>
+          </div>
+          <div style="position: absolute; left: 1%; width: 25%; top: 196px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #22395E; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">Owned Warehouses</span><span style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">Toronto DC · Montreal DC · WMS scans</span>
+            <span style="font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: #B7C5DA;">3,880 scans/min · 0.9 s</span>
+          </div>
+          <div style="position: absolute; left: 1%; width: 25%; top: 288px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #22395E; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">Reno 3PL + Stores</span><span style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">EDI 846 / 945 · store POS</span>
+            <span style="font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: #B7C5DA;">Last 846 at 06:58</span>
+          </div>
+
+          <!-- hub -->
+          <div style="position: absolute; left: 38%; width: 24%; top: 98px; height: 184px; box-sizing: border-box; background: #13305E; border: 1px solid #3D6FC4; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 0 0 4px rgba(61,139,253,0.10);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CC3FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v6M12 15v6M3 12h6M15 12h6"></path></svg>
+              <span style="font-weight: 600; font-size: 14px;">ATP Engine &amp; Event Bus</span>
+            </div>
+            <span style="font-size: 11px; color: #B7C5DA;">Kafka · Redis reservations · allocation rules</span>
+            <div style="display: flex; flex-direction: column; background: #0E2449; border-radius: 6px; padding: 6px 8px;">
+              <span style="font-size: 10px; color: #A9B9D0; text-transform: uppercase; letter-spacing: 0.6px;">Events processed today</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 500; color: #FFFFFF;">{{events}}</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 10px;">
+              <div style="display: flex; flex-direction: column;"><span style="font-size: 10px; color: #A9B9D0; text-transform: uppercase; letter-spacing: 0.6px;">Reserved</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">2,114 units</span></div>
+              <div style="display: flex; flex-direction: column;"><span style="font-size: 10px; color: #A9B9D0; text-transform: uppercase; letter-spacing: 0.6px;">Consumer lag</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">220 ms</span></div>
+            </div>
+          </div>
+
+          <!-- targets -->
+          <div style="position: absolute; left: 74%; width: 25%; top: 30px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #22395E; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">ERP · NetSuite</span><span style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">Item master · PO · GL postings</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C5DA;">412 POs open · synced 07:00</span>
+          </div>
+          <div style="position: absolute; left: 74%; width: 25%; top: 152px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #3D6FC4; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">Freight Rating Engine</span><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">5 carriers · parcel + LTL APIs</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C5DA;">{{quotes}} quotes · 2.8 s avg</span>
+          </div>
+          <div style="position: absolute; left: 74%; width: 25%; top: 274px; height: 76px; box-sizing: border-box; background: #102240; border: 1px solid #22395E; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: 600; font-size: 13px;">Analytics</span><span style="width: 8px; height: 8px; border-radius: 50%; background: #34C38F;"></span></div>
+            <span style="font-size: 11px; color: #93A6C4;">Snowflake · Power BI</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B7C5DA;">Margin model refreshed 06:45</span>
+          </div>
+        </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+          <div style="display: flex; flex-direction: column; padding: 8px 10px; background: #0B172B; border-radius: 6px;"><span style="font-size: 11px; color: #93A6C4;">Active SKUs synced</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px;">18,420</span></div>
+          <div style="display: flex; flex-direction: column; padding: 8px 10px; background: #0B172B; border-radius: 6px;"><span style="font-size: 11px; color: #93A6C4;">Safety-buffer holds</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px;">46 SKUs</span></div>
+          <div style="display: flex; flex-direction: column; padding: 8px 10px; background: #0B172B; border-radius: 6px;"><span style="font-size: 11px; color: #93A6C4;">Orders routed today</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px;">4,980</span></div>
+          <div style="display: flex; flex-direction: column; padding: 8px 10px; background: #0B172B; border-radius: 6px;"><span style="font-size: 11px; color: #93A6C4;">Split shipments avoided</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px;">612</span></div>
+        </div>
+      </section>
+
+      <!-- freight panel -->
+      <section aria-labelledby="fr-h" style="flex: 1 1 340px; min-width: 0; background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <div style="display: flex; flex-direction: column;">
+            <h2 id="fr-h" style="margin: 0; font-size: 16px; font-weight: 600;">Automated freight quoting</h2>
+            <span style="font-size: 12px; color: #93A6C4;">Rate-shopped and booked without a human</span>
+          </div>
+          <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; color: #9BE7C4;"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #34C38F;"></span>LIVE</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+          <div style="background: #0B172B; border-radius: 7px; padding: 8px 10px; display: flex; flex-direction: column;"><span style="font-size: 18px; font-weight: 600; font-family: 'IBM Plex Mono', monospace;">{{quotes}}</span><span style="font-size: 11px; color: #A9B9D0;">Quotes today</span></div>
+          <div style="background: #0B172B; border-radius: 7px; padding: 8px 10px; display: flex; flex-direction: column;"><span style="font-size: 18px; font-weight: 600; font-family: 'IBM Plex Mono', monospace;">2.8 s</span><span style="font-size: 11px; color: #A9B9D0;">Avg (was 4 h)</span></div>
+          <div style="background: #0B172B; border-radius: 7px; padding: 8px 10px; display: flex; flex-direction: column;"><span style="font-size: 18px; font-weight: 600; font-family: 'IBM Plex Mono', monospace;">94.1%</span><span style="font-size: 11px; color: #A9B9D0;">Auto-booked</span></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-size: 11px; color: #A9B9D0; text-transform: uppercase; letter-spacing: 0.6px;">Carrier mix · today</span>
+          <div style="display: flex; height: 10px; border-radius: 4px; overflow: hidden; gap: 2px;" role="img" aria-label="Purolator 34, Canada Post 22, UPS 21, FedEx 15, LTL 8 percent"><div style="width: 34%; background: #3D8BFD;"></div><div style="width: 22%; background: #2EC4D6;"></div><div style="width: 21%; background: #A78BFA;"></div><div style="width: 15%; background: #F2994A;"></div><div style="width: 8%; background: #6E83A3;"></div></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; color: #A9B9D0;">
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 2px; background: #3D8BFD;"></span>Purolator 34%</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 2px; background: #2EC4D6;"></span>Canada Post 22%</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 2px; background: #A78BFA;"></span>UPS 21%</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F2994A;"></span>FedEx 15%</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 2px; background: #6E83A3;"></span>LTL 8%</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <sc-for list="{{feed}}" as="q" hint-placeholder-count="5">
+            <article class="{{q.cls}}" style="background: #0B172B; border: 1px solid #1A2E4E; border-radius: 8px; padding: 9px 11px; display: flex; flex-direction: column; gap: 4px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9CC3FF;">{{q.order}}</span>
+                <span style="font-size: 11px; color: #8296B5;">{{q.age}}</span>
+                <span style="margin-left: auto; font-size: 11px; font-weight: 600; border-radius: 4px; padding: 1px 7px; background: {{q.bg}}; color: {{q.fg}};">{{q.status}}</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px;"><span style="color: #E4ECF7;">{{q.route}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 500;">{{q.rate}}</span></div>
+              <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: #A9B9D0;"><span>{{q.spec}} · {{q.carrier}}</span><span style="color: #7FE0B5;">{{q.saved}}</span></div>
+            </article>
+          </sc-for>
+        </div>
+      </section>
+    </div>
+
+    <!-- analytics row -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px;">
+
+      <section aria-labelledby="ev-h" style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap;">
+          <div style="display: flex; flex-direction: column;"><h2 id="ev-h" style="margin: 0; font-size: 15px; font-weight: 600;">Sync events per minute</h2><span style="font-size: 12px; color: #93A6C4;">Last 60 minutes, by source</span></div>
+          <div style="display: flex; gap: 10px; font-size: 11px; color: #A9B9D0;"><span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 10px; height: 2px; background: #A78BFA;"></span>WMS</span><span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 10px; height: 2px; background: #2EC4D6;"></span>Shopify</span><span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 10px; height: 2px; background: #3D8BFD;"></span>Amazon</span></div>
+        </div>
+        <svg viewBox="0 0 480 176" width="100%" role="img" aria-label="Shopify events spike from about 1,300 to 5,200 per minute during a 06:25 flash sale while warehouse events stay near 4,000">
+          <g stroke="#1D3150" stroke-width="1"><line x1="34" y1="10" x2="470" y2="10"></line><line x1="34" y1="56.7" x2="470" y2="56.7"></line><line x1="34" y1="103.3" x2="470" y2="103.3"></line><line x1="34" y1="150" x2="470" y2="150" stroke="#2A436B"></line></g>
+          <g fill="#8296B5" font-size="10" font-family="IBM Plex Mono, monospace" text-anchor="end"><text x="28" y="13">6K</text><text x="28" y="60">4K</text><text x="28" y="106">2K</text><text x="28" y="153">0</text></g>
+          <rect x="198" y="10" width="72" height="140" fill="#3D8BFD" fill-opacity="0.07"></rect>
+          <text x="234" y="22" fill="#A9B9D0" font-size="10" font-family="IBM Plex Sans, sans-serif" text-anchor="middle">Flash sale</text>
+          <polyline points="36,66 72,63.7 108,64.8 144,61.3 180,59 216,57.8 252,54.3 288,49.7 324,52 360,56.7 396,59 432,59.5 468,59.5" fill="none" stroke="#A78BFA" stroke-width="2"></polyline>
+          <polyline points="36,124.3 72,122.5 108,123.2 144,121.1 180,119.7 216,52 252,28.7 288,59 324,101 360,115 396,118.5 432,120.1 468,121.1" fill="none" stroke="#2EC4D6" stroke-width="2"></polyline>
+          <polyline points="36,133.7 72,133.2 108,134.1 144,132.5 180,132.3 216,105.7 252,89.3 288,94 324,115 360,129 396,130.9 432,131.3 468,131.6" fill="none" stroke="#3D8BFD" stroke-width="2"></polyline>
+          <circle cx="252" cy="28.7" r="3.5" fill="#2EC4D6"></circle>
+          <g fill="#8296B5" font-size="10" font-family="IBM Plex Mono, monospace" text-anchor="middle"><text x="36" y="168">06:00</text><text x="144" y="168">06:15</text><text x="252" y="168">06:30</text><text x="360" y="168">06:45</text><text x="460" y="168">07:00</text></g>
+        </svg>
+        <span style="font-size: 12px; color: #A9B9D0;">The 06:25 flash sale pushed Shopify to 5.2K events/min. Stock was reserved in 180 ms and nothing oversold.</span>
+      </section>
+
+      <section aria-labelledby="node-h" style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap;">
+          <div style="display: flex; flex-direction: column;"><h2 id="node-h" style="margin: 0; font-size: 15px; font-weight: 600;">Stock position by node</h2><span style="font-size: 12px; color: #93A6C4;">On-hand units · reserved share · days of cover</span></div>
+          <div style="display: flex; gap: 10px; font-size: 11px; color: #A9B9D0;"><span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 2px; background: #2A5BA8;"></span>Available</span><span style="display: inline-flex; align-items: center; gap: 5px;"><span style="width: 9px; height: 9px; border-radius: 2px; background: #9CC3FF;"></span>Reserved</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <sc-for list="{{nodes}}" as="n" hint-placeholder-count="6">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px;"><span style="color: #DCE6F4;">{{n.name}}</span><span style="font-family: 'IBM Plex Mono', monospace; color: #A9B9D0;">{{n.units}} · <span style="color: {{n.coverColor}};">{{n.cover}}</span></span></div>
+              <div style="height: 8px; border-radius: 4px; background: #1A2E4E; overflow: hidden;"><div style="height: 100%; width: {{n.w}}; display: flex; border-radius: 4px; overflow: hidden;"><div style="height: 100%; width: {{n.avail}}; background: #2A5BA8;"></div><div style="height: 100%; flex: 1; background: #9CC3FF;"></div></div></div>
+            </div>
+          </sc-for>
+        </div>
+        <span style="font-size: 12px; color: #A9B9D0; margin-top: auto;">Retail backrooms are down to 12 days of cover. Transfer of 1,800 units from Toronto DC is suggested.</span>
+      </section>
+
+      <section aria-labelledby="mg-h" style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; flex-direction: column;"><h2 id="mg-h" style="margin: 0; font-size: 15px; font-weight: 600;">Margin after freight by channel</h2><span style="font-size: 12px; color: #93A6C4;">Contribution margin · 24h sales · freight per order</span></div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <sc-for list="{{margins}}" as="m" hint-placeholder-count="4">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px;"><span style="color: #DCE6F4;">{{m.name}} <span style="color: #8296B5; font-family: 'IBM Plex Mono', monospace;">{{m.sales}}</span></span><span style="font-family: 'IBM Plex Mono', monospace; color: #E4ECF7; font-weight: 500;">{{m.pct}}</span></div>
+              <div style="height: 10px; border-radius: 3px; background: #1A2E4E; overflow: hidden;"><div style="height: 100%; border-radius: 3px; width: {{m.w}}; background: {{m.color}};"></div></div>
+              <span style="font-size: 11px; color: #93A6C4;">Freight {{m.freight}} per order</span>
+            </div>
+          </sc-for>
+        </div>
+        <span style="font-size: 12px; color: #A9B9D0; margin-top: auto;">FBM orders lose 6 points to freight. Routing them to Reno 3PL for US addresses would recover about 3.</span>
+      </section>
+    </div>
+
+    <!-- SKU table -->
+    <section aria-labelledby="sku-h" style="background: #0F1D33; border: 1px solid #1D3150; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center;">
+        <div style="display: flex; flex-direction: column;"><h2 id="sku-h" style="margin: 0; font-size: 16px; font-weight: 600;">SKU sync monitor</h2><span style="font-size: 12px; color: #93A6C4;">Sellable quantity published to each channel vs physical stock · top movers</span></div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <button type="button" style="font: inherit; font-size: 12px; padding: 6px 12px; min-height: 32px; border-radius: 6px; background: #13305E; border: 1px solid #3D6FC4; color: #FFFFFF; cursor: pointer;">All</button>
+          <button type="button" style="font: inherit; font-size: 12px; padding: 6px 12px; min-height: 32px; border-radius: 6px; background: transparent; border: 1px solid #22395E; color: #C9D6E8; cursor: pointer;">Drift (2)</button>
+          <button type="button" style="font: inherit; font-size: 12px; padding: 6px 12px; min-height: 32px; border-radius: 6px; background: transparent; border: 1px solid #22395E; color: #C9D6E8; cursor: pointer;">Low stock (1)</button>
+        </div>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; min-width: 940px; border-collapse: collapse; font-size: 13px;">
+          <thead>
+            <tr style="text-align: left; color: #93A6C4; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;">
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600;">SKU / Product</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600; text-align: right;">Amazon FBA</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600; text-align: right;">Shopify</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600; text-align: right;">Toronto DC</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600; text-align: right;">Reno 3PL</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600; text-align: right;">Drift</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600;">Last event</th>
+              <th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #22395E; font-weight: 600;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{skus}}" as="s" hint-placeholder-count="7">
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47;"><div style="display: flex; flex-direction: column;"><span style="font-weight: 500; color: #E4ECF7;">{{s.name}}</span><span style="font-size: 11px; color: #8296B5; font-family: 'IBM Plex Mono', monospace;">{{s.sku}}</span></div></td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9D6E8;">{{s.fba}}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9D6E8;">{{s.shop}}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9D6E8;">{{s.tor}}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9D6E8;">{{s.reno}}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{s.driftColor}};">{{s.drift}}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B9D0;">{{s.last}}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #172A47;"><div style="display: flex; flex-direction: column; gap: 2px;"><span style="display: inline-flex; align-items: center; gap: 6px; width: fit-content; font-size: 12px; font-weight: 500; border-radius: 5px; padding: 2px 8px; background: {{s.bg}}; color: {{s.fg}};"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{s.fg}};"></span>{{s.status}}</span><span style="font-size: 11px; color: #93A6C4;">{{s.note}}</span></div></td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer style="display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; font-size: 11px; color: #8296B5; font-family: 'IBM Plex Mono', monospace; padding-top: 4px;">
+      <span>All times EDT · Sources: SP-API, Shopify Admin API, WMS event stream, EDI 846/945, carrier rate APIs</span>
+      <span>Stockline v2.7.0</span>
+    </footer>
+  </main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1820}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tick: 0 };
+  }
+  componentDidMount() {
+    var self = this;
+    this.timer = setInterval(function () {
+      self.setState({ tick: self.state.tick + 1 });
+    }, 1500);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  renderVals() {
+    var t = this.state.tick || 0;
+    var fmt = function (n) { return Math.round(n).toLocaleString('en-US'); };
+
+    var events = fmt(18240512 + t * 1643 + (t % 3) * 211);
+    var quotes = fmt(6214 + Math.floor(t * 0.67));
+    var mins = 4 + Math.floor(t * 1.5 / 60);
+    var secs = Math.floor((t * 1.5) % 60);
+    var clock = '07:' + (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+
+    var stat = {
+      Booked: { bg: '#0E3027', fg: '#7FE0B5' },
+      Review: { bg: '#3A2410', fg: '#FFC08A' },
+      'LTL quote': { bg: '#15305E', fg: '#B5D2FF' }
+    };
+    var pool = [
+      { order: 'SO-884213', route: 'Toronto, ON → Calgary, AB', spec: '2 pkg · 18.4 kg', carrier: 'Purolator Ground', rate: '$31.60', saved: '−$6.20 vs rate card', status: 'Booked' },
+      { order: 'SO-884214', route: 'Reno, NV → Denver, CO', spec: '1 pkg · 4.2 kg', carrier: 'UPS Ground', rate: '$12.85', saved: '−$2.40', status: 'Booked' },
+      { order: 'B2B-20931', route: 'Toronto, ON → Halifax, NS', spec: '3 pallets · 610 kg', carrier: 'LTL · 4 bids', rate: '$684.00', saved: '−$141.00', status: 'LTL quote' },
+      { order: 'SO-884215', route: 'Montreal, QC → Ottawa, ON', spec: '1 pkg · 1.1 kg', carrier: 'Canada Post Expedited', rate: '$9.40', saved: '−$1.15', status: 'Booked' },
+      { order: 'SO-884216', route: 'Toronto, ON → Whitehorse, YT', spec: '1 pkg · 22.0 kg', carrier: 'Canada Post Regular', rate: '$88.10', saved: 'Over $60 rule', status: 'Review' },
+      { order: 'SO-884217', route: 'Reno, NV → Seattle, WA', spec: '2 pkg · 9.8 kg', carrier: 'FedEx Home', rate: '$19.30', saved: '−$3.05', status: 'Booked' },
+      { order: 'SO-884218', route: 'Toronto, ON → Vancouver, BC', spec: '1 pkg · 6.5 kg', carrier: 'Purolator Ground', rate: '$24.75', saved: '−$4.10', status: 'Booked' },
+      { order: 'SO-884219', route: 'Montreal, QC → Quebec, QC', spec: '1 pkg · 2.3 kg', carrier: 'Purolator Express', rate: '$11.20', saved: '−$1.90', status: 'Booked' },
+      { order: 'SO-884220', route: 'Reno, NV → Phoenix, AZ', spec: '1 pkg · 3.0 kg', carrier: 'UPS Ground', rate: '$10.95', saved: '−$1.70', status: 'Booked' }
+    ];
+    var ages = ['just now', '4 s ago', '9 s ago', '16 s ago', '24 s ago'];
+    var shift = Math.floor(t / 2);
+    var feed = [];
+    for (var i = 0; i < 5; i++) {
+      var q = pool[(pool.length - (shift % pool.length) + i) % pool.length];
+      feed.push(Object.assign({}, q, stat[q.status], { age: ages[i], cls: i === 0 && t % 2 === 0 ? 'fresh' : '' }));
+    }
+
+    var maxU = 48400;
+    var nodes = [
+      { name: 'Toronto DC', u: 48400, r: 9, d: 41 },
+      { name: 'Reno 3PL', u: 26330, r: 7, d: 28 },
+      { name: 'Amazon FBA · US', u: 21860, r: 14, d: 19 },
+      { name: 'Montreal DC', u: 17950, r: 6, d: 37 },
+      { name: 'Amazon FBA · CA', u: 14210, r: 11, d: 23 },
+      { name: 'Retail backrooms', u: 3120, r: 18, d: 12 }
+    ].map(function (n) {
+      return { name: n.name, units: fmt(n.u), w: (n.u / maxU * 100).toFixed(1) + '%', avail: (100 - n.r) + '%', cover: n.d + ' days', coverColor: n.d < 15 ? '#FFC08A' : '#A9B9D0' };
+    });
+
+    var margins = [
+      { name: 'Shopify (DTC)', sales: '$151.6K', p: 42.8, freight: '$7.90' },
+      { name: 'B2B Wholesale', sales: '$62.9K', p: 27.5, freight: '$41.20' },
+      { name: 'Amazon FBA', sales: '$161.0K', p: 24.1, freight: 'incl. in fees' },
+      { name: 'Amazon FBM', sales: '$37.3K', p: 18.6, freight: '$11.65' }
+    ].map(function (m) {
+      return Object.assign({}, m, { pct: m.p + '%', w: (m.p / 50 * 100).toFixed(1) + '%', color: m.p >= 20 ? '#3D8BFD' : '#F2994A' });
+    });
+
+    var st = {
+      'In sync': { bg: '#0E3027', fg: '#7FE0B5' },
+      'Reconciling': { bg: '#12305C', fg: '#9CC3FF' },
+      'Review': { bg: '#3A2410', fg: '#FFC08A' },
+      'Low stock': { bg: '#4D1620', fg: '#FFA6AC' }
+    };
+    var skus = [
+      { name: 'Ridgeback 4-Person Tent, Moss', sku: 'CED-TNT-4P-MOS', fba: '312', shop: '186', tor: '540', reno: '220', drift: '0', last: '0.4 s ago', status: 'In sync', note: 'Sold 1 on Shopify' },
+      { name: '45 Qt Hard Cooler, Sand', sku: 'CED-COOL-45-SND', fba: '42', shop: '18', tor: '0', reno: '96', drift: '−6', last: '38 s ago', status: 'Reconciling', note: 'Amazon feed throttled' },
+      { name: 'Ultralight Camp Chair, Black', sku: 'CED-CHR-ULT-BLK', fba: '1,204', shop: '640', tor: '2,310', reno: '880', drift: '0', last: '1.1 s ago', status: 'In sync', note: 'FBA inbound 600 units' },
+      { name: 'Titanium 2-Burner Stove', sku: 'CED-STV-2B-TI', fba: '88', shop: '54', tor: '130', reno: '61', drift: '+3', last: '6 min ago', status: 'Review', note: '3PL 846 ≠ transfer receipt' },
+      { name: 'Solar Lantern, 2-Pack', sku: 'CED-LMP-SOL-2', fba: '0', shop: '12', tor: '4', reno: '0', drift: '0', last: '12 s ago', status: 'Low stock', note: 'Amazon listing paused by buffer' },
+      { name: 'Double Hammock, Navy', sku: 'CED-HMK-DBL-NVY', fba: '466', shop: '298', tor: '1,020', reno: '410', drift: '0', last: '2.7 s ago', status: 'In sync', note: 'Promo price live' },
+      { name: '30 L Dry Bag, Rust', sku: 'CED-BAG-30L-RST', fba: '738', shop: '415', tor: '1,480', reno: '602', drift: '0', last: '0.9 s ago', status: 'In sync', note: '—' }
+    ].map(function (s) {
+      return Object.assign({}, s, st[s.status], { driftColor: s.drift === '0' ? '#8296B5' : '#FFC08A' });
+    });
+
+    return { events: events, quotes: quotes, clock: clock, feed: feed, nodes: nodes, margins: margins, skus: skus };
+  }
+}
+</script>
+</body>
+</html>

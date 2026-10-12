@@ -1,0 +1,726 @@
+[
+  {
+    "id": "about",
+    "repo": "about",
+    "title": "about",
+    "language": "HTML",
+    "stars": 1,
+    "url": "https://github.com/wesleyharuo/about",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "ai-fraud-detection-canada",
+    "repo": "AI-Fraud-Detection-Canada",
+    "title": "Fraud detection for Canada",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/AI-Fraud-Detection-Canada",
+    "description": "End-to-end fraud detection design for Canadian banks, credit unions and fintechs, ending in a traceable decision with monitoring and bilingual support.",
+    "category": "ml",
+    "tech": [
+      "Python",
+      "Ensembles",
+      "Microservices",
+      "FINTRAC",
+      "PIPEDA"
+    ],
+    "featured": true
+  },
+  {
+    "id": "ai-hub",
+    "repo": "AI-hub",
+    "title": "AI hub",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/AI-hub",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "aplication-new",
+    "repo": "Aplication-new",
+    "title": "Aplication new",
+    "language": "TypeScript",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Aplication-new",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "TypeScript"
+    ],
+    "featured": false
+  },
+  {
+    "id": "calc-vector",
+    "repo": "Calc_Vector",
+    "title": "Calc Vector",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Calc_Vector",
+    "description": "Streamlit app for visual vector analysis with real-time calculations and academic rounding — built for students, engineers, and educators.",
+    "category": "apps",
+    "tech": [
+      "Python",
+      "Streamlit"
+    ],
+    "featured": false
+  },
+  {
+    "id": "cardguard",
+    "repo": "CardGuard-",
+    "title": "CardGuard",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/CardGuard-",
+    "description": "Credit card fraud detection rebuilt as software, not a notebook: PR-AUC evaluation, PSI/KS drift monitoring and a CLI for train, evaluate and infer.",
+    "category": "ml",
+    "tech": [
+      "Python",
+      "LightGBM",
+      "XGBoost",
+      "Optuna",
+      "MLflow",
+      "Docker"
+    ],
+    "featured": true
+  },
+  {
+    "id": "cop",
+    "repo": "cop",
+    "title": "cop",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/cop",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "dash-flash-module",
+    "repo": "Dash_flash_module",
+    "title": "Dash flash module",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Dash_flash_module",
+    "description": null,
+    "category": "analytics",
+    "tech": [
+      "Python"
+    ],
+    "featured": false
+  },
+  {
+    "id": "data-driven-station-placement-for-network-expansion",
+    "repo": "Data-Driven-Station-Placement-for-Network-Expansion",
+    "title": "Station Placement for Network Expansion",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Data-Driven-Station-Placement-for-Network-Expansion",
+    "description": "This project builds a multi-criteria scoring model that evaluates 150 candidate locations against five weighted factors, selects 15 new sites with a geographic-diversity constraint, forecasts year-1 ridership, and tests the robustness of the recommendation through sensitivity analysis.",
+    "category": "analytics",
+    "tech": [
+      "Python",
+      "Multi-criteria scoring",
+      "Sensitivity analysis"
+    ],
+    "featured": false
+  },
+  {
+    "id": "data-insurance-ia-ml-insurance",
+    "repo": "Data_insurance_IA_ML_Insurance",
+    "title": "Insurance ML",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Data_insurance_IA_ML_Insurance",
+    "description": "Machine learning applied to insurance data.",
+    "category": "ml",
+    "tech": [
+      "Python",
+      "Machine learning"
+    ],
+    "featured": false
+  },
+  {
+    "id": "digital-transformation",
+    "repo": "Digital-Transformation",
+    "title": "Digital Transformation",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Digital-Transformation",
+    "description": null,
+    "category": "analytics",
+    "tech": [
+      "Python"
+    ],
+    "featured": false
+  },
+  {
+    "id": "digitalmarketingapi",
+    "repo": "DigitalMarketingApi",
+    "title": "DigitalMarketingApi",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/DigitalMarketingApi",
+    "description": null,
+    "category": "analytics",
+    "tech": [
+      "Python"
+    ],
+    "featured": false
+  },
+  {
+    "id": "digitalmenuhub",
+    "repo": "DigitalMenuHub",
+    "title": "DigitalMenuHub",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/DigitalMenuHub",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "document-intelligence-legal-financial-etl-platform",
+    "repo": "Document-Intelligence-Legal-Financial-ETL-Platform",
+    "title": "Document Intelligence ETL",
+    "language": null,
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Document-Intelligence-Legal-Financial-ETL-Platform",
+    "description": "Development of an automated ingestion and processing engine designed for unstructured financial and legal documents, including invoices, receipts, and reports. The solution eliminates manual bottlenecks in data extraction, ensuring accounting compliance and accelerating financial closing cycles.",
+    "category": "engineering",
+    "tech": [
+      "LLM extraction",
+      "ETL",
+      "Validation"
+    ],
+    "featured": true
+  },
+  {
+    "id": "easylink",
+    "repo": "Easylink",
+    "title": "Easylink",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Easylink",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "financial-analysis-dashboard",
+    "repo": "Financial-Analysis-Dashboard",
+    "title": "Financial Analysis Dashboard",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Financial-Analysis-Dashboard",
+    "description": "This dashboard pulls live financial data from Yahoo Finance and delivers a full analysis across seven modules",
+    "category": "finance",
+    "tech": [
+      "Python",
+      "yfinance",
+      "Plotly"
+    ],
+    "featured": false
+  },
+  {
+    "id": "financial-etl-reconciliation-engine",
+    "repo": "financial-etl-reconciliation-engine",
+    "title": "Financial ETL Reconciliation Engine",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/financial-etl-reconciliation-engine",
+    "description": "An ETL engine that reconciles financial extracts after every load and reports the exceptions, the way a migration sign-off should work.",
+    "category": "finance",
+    "tech": [
+      "Python",
+      "pandas",
+      "SQL"
+    ],
+    "featured": false
+  },
+  {
+    "id": "fleet-rebalancing-station-availability-analysis",
+    "repo": "Fleet-Rebalancing-Station-Availability-Analysis",
+    "title": "Fleet Rebalancing & Station Availability",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Fleet-Rebalancing-Station-Availability-Analysis",
+    "description": "Operations Analytics Case Study",
+    "category": "analytics",
+    "tech": [
+      "Python",
+      "Operations analytics"
+    ],
+    "featured": false
+  },
+  {
+    "id": "froud-dectction-data",
+    "repo": "Froud_dectction_data-",
+    "title": "Froud dectction data",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Froud_dectction_data-",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "gl-reconciliation-snowflake-dbt",
+    "repo": "gl-reconciliation-snowflake-dbt",
+    "title": "GL Reconciliation on Snowflake + dbt",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/gl-reconciliation-snowflake-dbt",
+    "description": "General-ledger reconciliation modelled in dbt on Snowflake: the same tie-out discipline as a month-end close, written as tested SQL models.",
+    "category": "finance",
+    "tech": [
+      "Snowflake",
+      "dbt",
+      "SQL",
+      "Python"
+    ],
+    "featured": true
+  },
+  {
+    "id": "gta-rental-market",
+    "repo": "gta-rental-market",
+    "title": "GTA Rental Market",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/gta-rental-market",
+    "description": "Geospatial and statistical analysis of 5400+ rental listings across 10 GTA neighborhoods",
+    "category": "analytics",
+    "tech": [
+      "Python",
+      "Geospatial",
+      "Statistics"
+    ],
+    "featured": false
+  },
+  {
+    "id": "kw-risk",
+    "repo": "KW_Risk",
+    "title": "KW Risk",
+    "language": "JavaScript",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/KW_Risk",
+    "description": "Insurance claims triage: OCR + NLP read the documents, a rules engine and ML anomaly model flag suspicious claims, and a confidence score decides who decides.",
+    "category": "ml",
+    "tech": [
+      "React",
+      "FastAPI",
+      "OCR",
+      "NLP",
+      "Rules engine"
+    ],
+    "featured": true
+  },
+  {
+    "id": "lex",
+    "repo": "lex",
+    "title": "lex",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/lex",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "loading-bar",
+    "repo": "Loading-Bar",
+    "title": "Loading Bar",
+    "language": "JavaScript",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Loading-Bar",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "JavaScript"
+    ],
+    "featured": false
+  },
+  {
+    "id": "login-matrix",
+    "repo": "Login_Matrix",
+    "title": "Login Matrix",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Login_Matrix",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "logistics-distribution-e-commerce",
+    "repo": "Logistics-Distribution-E-commerce",
+    "title": "Inventory & Freight Integration",
+    "language": null,
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Logistics-Distribution-E-commerce",
+    "description": "Design and implementation of a real-time data integration architecture focused on multichannel inventory synchronization (spanning Amazon FBA, Shopify, and physical warehouses) alongside automated freight quoting and commercial operations.",
+    "category": "engineering",
+    "tech": [
+      "APIs",
+      "Amazon FBA",
+      "Shopify",
+      "ETL"
+    ],
+    "featured": false
+  },
+  {
+    "id": "machinel-note-authentication",
+    "repo": "MachineL.-Note-Authentication",
+    "title": "Canadian Banknote Authentication",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/MachineL.-Note-Authentication",
+    "description": "Canadian Banknote Authentication",
+    "category": "ml",
+    "tech": [
+      "Python",
+      "scikit-learn"
+    ],
+    "featured": false
+  },
+  {
+    "id": "manufacturing-retail-m-a-data-integration-engine-legacy-systems-governance",
+    "repo": "Manufacturing-Retail-M-A-Data-Integration-Engine-Legacy-Systems-Governance",
+    "title": "M&A Data Integration Engine",
+    "language": null,
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Manufacturing-Retail-M-A-Data-Integration-Engine-Legacy-Systems-Governance",
+    "description": "Implementation of a robust middleware and ETL integration layer to unify legacy systems, enterprise resource planning platforms (such as SAP and Microsoft Dynamics 365 Business Central), and commercial front-ends, ensuring data integrity across sales, inventory, and finance.",
+    "category": "engineering",
+    "tech": [
+      "SAP",
+      "Dynamics 365 BC",
+      "Middleware",
+      "ETL"
+    ],
+    "featured": false
+  },
+  {
+    "id": "maple-cafe-sales",
+    "repo": "maple-cafe-sales",
+    "title": "Maple Café Sales",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/maple-cafe-sales",
+    "description": "Sales analytics of 46K+ POS transactions across 3 GTA cafe locations",
+    "category": "analytics",
+    "tech": [
+      "Python",
+      "pandas"
+    ],
+    "featured": false
+  },
+  {
+    "id": "maple-outfitters",
+    "repo": "maple-outfitters",
+    "title": "Maple Outfitters Funnel",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/maple-outfitters",
+    "description": "Full-funnel analysis of 9800+ orders across 5 sales channels for a Canadian outdoor retail brand",
+    "category": "analytics",
+    "tech": [
+      "Python",
+      "pandas"
+    ],
+    "featured": false
+  },
+  {
+    "id": "medic-system",
+    "repo": "Medic-System",
+    "title": "Medic System",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Medic-System",
+    "description": null,
+    "category": "analytics",
+    "tech": [
+      "Python"
+    ],
+    "featured": false
+  },
+  {
+    "id": "midia-menu",
+    "repo": "Midia_menu",
+    "title": "Midia menu",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Midia_menu",
+    "description": "Code for social media menu. code created in HTML, CSS, JavaScript",
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "model-dig-mkt",
+    "repo": "Model_Dig_MKT",
+    "title": "Model Dig MKT",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Model_Dig_MKT",
+    "description": null,
+    "category": "analytics",
+    "tech": [
+      "Python"
+    ],
+    "featured": false
+  },
+  {
+    "id": "pdf-to-word",
+    "repo": "PDF_To_Word",
+    "title": "PDF To Word",
+    "language": "PowerShell",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/PDF_To_Word",
+    "description": "Converso PDF",
+    "category": "apps",
+    "tech": [
+      "PowerShell"
+    ],
+    "featured": false
+  },
+  {
+    "id": "portfolio-",
+    "repo": "Portfolio_",
+    "title": "Portfolio",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Portfolio_",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "predicta-suite",
+    "repo": "Predicta_Suite",
+    "title": "Predicta Suite",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Predicta_Suite",
+    "description": "Model Sales Analysis Forecasting",
+    "category": "ml",
+    "tech": [
+      "Python",
+      "Forecasting"
+    ],
+    "featured": false
+  },
+  {
+    "id": "predict-sales",
+    "repo": "Predict_Sales",
+    "title": "Sales Forecasting Dashboard",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Predict_Sales",
+    "description": "The Sales Forecasting Dashboard is a machine learning project designed to predict future sales",
+    "category": "ml",
+    "tech": [
+      "Python",
+      "Machine learning"
+    ],
+    "featured": false
+  },
+  {
+    "id": "process-improvemen",
+    "repo": "Process-Improvemen",
+    "title": "Process Improvemen",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Process-Improvemen",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "HTML"
+    ],
+    "featured": false
+  },
+  {
+    "id": "process-improvement-data-analytics-platform",
+    "repo": "Process-Improvement-Data-Analytics-Platform",
+    "title": "Process Improvement Analytics Platform",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Process-Improvement-Data-Analytics-Platform",
+    "description": "Three Streamlit dashboards (retail, supply chain, support) fed by one pipeline where bad records stop at validation instead of reaching a chart.",
+    "category": "analytics",
+    "tech": [
+      "Python",
+      "Streamlit",
+      "pandas",
+      "Plotly",
+      "SQL"
+    ],
+    "featured": true
+  },
+  {
+    "id": "quickstats-web",
+    "repo": "QuickStats-Web",
+    "title": "QuickStats Web",
+    "language": "HTML",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/QuickStats-Web",
+    "description": "Project is being developed to create a service website that creates simple statistics",
+    "category": "apps",
+    "tech": [
+      "HTML",
+      "JavaScript",
+      "Statistics"
+    ],
+    "featured": false
+  },
+  {
+    "id": "real-estate-tenant-lifecycle-automation-pipeline",
+    "repo": "Real-Estate-Tenant-Lifecycle-Automation-Pipeline",
+    "title": "Tenant Lifecycle Automation",
+    "language": null,
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Real-Estate-Tenant-Lifecycle-Automation-Pipeline",
+    "description": "Creation of an end-to-end integrated system for customer lifecycle management in the real estate sector, covering everything from initial lead qualification to the digital onboarding of new tenants.",
+    "category": "engineering",
+    "tech": [
+      "n8n",
+      "APIs",
+      "CRM"
+    ],
+    "featured": false
+  },
+  {
+    "id": "statistic",
+    "repo": "Statistic",
+    "title": "Statistic",
+    "language": "JavaScript",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Statistic",
+    "description": null,
+    "category": "apps",
+    "tech": [
+      "JavaScript"
+    ],
+    "featured": false
+  },
+  {
+    "id": "superclient",
+    "repo": "superClient",
+    "title": "SuperClient for Ollama",
+    "language": null,
+    "stars": 1,
+    "url": "https://github.com/wesleyharuo/superClient",
+    "description": "Secure, local-first SuperClient for Ollama (hardened)",
+    "category": "apps",
+    "tech": [
+      "Local LLM",
+      "Ollama",
+      "Security"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tsx-recovery-screener",
+    "repo": "tsx-recovery-screener",
+    "title": "TSX Recovery Screener",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/tsx-recovery-screener",
+    "description": "A screener over TSX-listed equities looking for recovery patterns after drawdowns.",
+    "category": "finance",
+    "tech": [
+      "Python",
+      "pandas"
+    ],
+    "featured": false
+  },
+  {
+    "id": "unit-economics-investment-analysis",
+    "repo": "Unit-Economics-Investment-Analysis",
+    "title": "Unit Economics & Investment Analysis",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Unit-Economics-Investment-Analysis",
+    "description": "This project builds a unit-economics model for both bike types, then simulates three capital-allocation scenarios to identify the option that maximises year-1 profit while managing downside risk.",
+    "category": "finance",
+    "tech": [
+      "Python",
+      "Scenario modelling"
+    ],
+    "featured": false
+  },
+  {
+    "id": "web-analytics-auditoria-de-funil-de-convers-o-ga4-gtm",
+    "repo": "Web-Analytics-Auditoria-de-Funil-de-Convers-o-GA4-GTM-",
+    "title": "GA4 / GTM Conversion Funnel Audit",
+    "language": null,
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/Web-Analytics-Auditoria-de-Funil-de-Convers-o-GA4-GTM-",
+    "description": "Audit of a conversion funnel instrumented with Google Analytics 4 and Google Tag Manager.",
+    "category": "analytics",
+    "tech": [
+      "GA4",
+      "GTM",
+      "Web analytics"
+    ],
+    "featured": false
+  },
+  {
+    "id": "web-analytics",
+    "repo": "web_analytics",
+    "title": "web analytics",
+    "language": "Python",
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/web_analytics",
+    "description": null,
+    "category": "analytics",
+    "tech": [
+      "Python"
+    ],
+    "featured": false
+  },
+  {
+    "id": "wesleyharuo",
+    "repo": "wesleyharuo",
+    "title": "wesleyharuo",
+    "language": null,
+    "stars": 0,
+    "url": "https://github.com/wesleyharuo/wesleyharuo",
+    "description": null,
+    "category": "apps",
+    "tech": [],
+    "featured": false
+  }
+]

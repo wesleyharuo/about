@@ -1,0 +1,293 @@
+[
+  {
+    "id": "tab-borealis-executive-pnl",
+    "platform": "tableau",
+    "series": "Borealis finance suite",
+    "title": "Executive P&L — Canada",
+    "subtitle": "Borealis Industrial Supply (fictional)",
+    "description": "Income statement year to date vs budget with EBITDA by month and revenue variance by branch. Every account rolls into its subtotal, so gross profit, EBITDA, EBIT and net income stay correct under any branch or cost-centre filter.",
+    "domain": "P&L",
+    "tags": [
+      "Tableau",
+      "ASPE",
+      "Variance analysis",
+      "Fictional data"
+    ],
+    "screenshots": [
+      "/tableau/borealis/executive-pnl.webp"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tab-borealis-cash-flow",
+    "platform": "tableau",
+    "series": "Borealis finance suite",
+    "title": "Cash Flow & Liquidity",
+    "subtitle": "Borealis Industrial Supply (fictional)",
+    "description": "Treasury view for the CFO and the bank: indirect-method cash flow statement, opening-to-closing cash waterfall, 13-week cash forecast against a minimum cash policy, and covenant tests (FCCR, debt/EBITDA, current ratio).",
+    "domain": "Treasury",
+    "tags": [
+      "Tableau",
+      "Cash forecast",
+      "Bank covenants",
+      "Fictional data"
+    ],
+    "screenshots": [
+      "/tableau/borealis/cash-flow.webp"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tab-borealis-fpa-budget",
+    "platform": "tableau",
+    "series": "Borealis finance suite",
+    "title": "Budget vs Actual & Forecast (FP&A)",
+    "subtitle": "Borealis Industrial Supply (fictional)",
+    "description": "Monthly variance review: EBITDA bridge from budget to actual by volume, mix, price, unit cost and opex, P&L variance with explain/watch flags, and a run-rate full-year EBITDA outlook.",
+    "domain": "FP&A",
+    "tags": [
+      "Tableau",
+      "EBITDA bridge",
+      "Forecasting",
+      "Fictional data"
+    ],
+    "screenshots": [
+      "/tableau/borealis/fpa-budget.webp"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tab-borealis-balance-sheet",
+    "platform": "tableau",
+    "series": "Borealis finance suite",
+    "title": "Balance Sheet & Financial Ratios",
+    "subtitle": "Borealis Industrial Supply (fictional)",
+    "description": "Classified ASPE balance sheet vs fiscal year-end, assets vs funding, DuPont breakdown of return on equity, and a ratio scorecard for liquidity, leverage, efficiency and profitability against benchmarks.",
+    "domain": "Balance sheet",
+    "tags": [
+      "Tableau",
+      "DuPont",
+      "Ratio analysis",
+      "Fictional data"
+    ],
+    "screenshots": [
+      "/tableau/borealis/balance-sheet.webp"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tab-borealis-working-capital",
+    "platform": "tableau",
+    "series": "Borealis finance suite",
+    "title": "Working Capital: Receivables, Payables & Remittances",
+    "subtitle": "Borealis Industrial Supply (fictional)",
+    "description": "Weekly credit & collections view: AR aging by branch, DSO/DIO/DPO trend, a top-10 over-60-days worklist with hold/agency actions, and CRA, Revenu Québec and BC PST remittances due next month.",
+    "domain": "Working capital",
+    "tags": [
+      "Tableau",
+      "AR aging",
+      "Sales tax & payroll",
+      "Fictional data"
+    ],
+    "screenshots": [
+      "/tableau/borealis/working-capital.webp"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tab-canada-econ",
+    "platform": "tableau",
+    "title": "Canada Economic Indicators 2000–2024",
+    "subtitle": "Indicadores Económicos Canadá",
+    "description": "Twenty-four years of Canadian macro indicators on one dashboard — the context behind every budget and forecast conversation.",
+    "domain": "Economics",
+    "tags": [
+      "Tableau Public",
+      "Time series",
+      "Canada"
+    ],
+    "workbook": "IndicadoresEconomicosCanada2000-2024",
+    "view": "Dashboard1",
+    "featured": true
+  },
+  {
+    "id": "tab-creating-dashboard",
+    "platform": "tableau",
+    "title": "Creating the Dashboard",
+    "description": "A full dashboard build: KPI layout, filters and drill paths designed for a business reader.",
+    "domain": "BI design",
+    "tags": [
+      "Tableau Public",
+      "Dashboard design"
+    ],
+    "workbook": "Creatingthedashboard",
+    "view": "Dashboard2",
+    "featured": true
+  },
+  {
+    "id": "tab-student-count",
+    "platform": "tableau",
+    "title": "Student Count",
+    "description": "Enrolment counts broken down for quick comparison across segments.",
+    "domain": "Education",
+    "tags": [
+      "Tableau Public"
+    ],
+    "workbook": "Studentcount_17807893308000",
+    "view": "Dashboard2",
+    "featured": false
+  },
+  {
+    "id": "tab-average-gpa",
+    "platform": "tableau",
+    "title": "Average GPA",
+    "description": "Average GPA distribution with segment comparison.",
+    "domain": "Education",
+    "tags": [
+      "Tableau Public"
+    ],
+    "workbook": "Exercise8_17800009534510",
+    "view": "Dashboard1",
+    "featured": false
+  },
+  {
+    "id": "pbi-statcan-dashboard",
+    "platform": "powerbi",
+    "title": "StatCan Executive Dashboard",
+    "description": "Entry point of the Statistics Canada series: the headline indicators on one auto-refreshing page.",
+    "domain": "Public data",
+    "tags": [
+      "Power BI",
+      "Statistics Canada",
+      "Auto-refresh"
+    ],
+    "pbip": "STATCAN_Dashboard.pbip",
+    "embedUrl": "",
+    "screenshots": [],
+    "featured": true
+  },
+  {
+    "id": "pbi-statcan-demographic",
+    "platform": "powerbi",
+    "title": "Demographic Shock",
+    "description": "How population growth and its composition shifted, and what that does to demand for housing and services.",
+    "domain": "Demographics",
+    "tags": [
+      "Power BI",
+      "Statistics Canada",
+      "DAX"
+    ],
+    "pbip": "STATCAN_Demographic_Shock.pbip",
+    "embedUrl": "",
+    "screenshots": [],
+    "featured": true
+  },
+  {
+    "id": "pbi-statcan-gta",
+    "platform": "powerbi",
+    "title": "GTA Expansion",
+    "description": "Where the Greater Toronto Area is growing, framed as a site-expansion question.",
+    "domain": "Geospatial",
+    "tags": [
+      "Power BI",
+      "Statistics Canada",
+      "GTA"
+    ],
+    "pbip": "STATCAN_GTA_Expansion.pbip",
+    "embedUrl": "",
+    "screenshots": [],
+    "featured": true
+  },
+  {
+    "id": "pbi-statcan-housing",
+    "platform": "powerbi",
+    "title": "Housing",
+    "description": "Housing starts, prices and affordability pressure from Statistics Canada / CMHC tables.",
+    "domain": "Housing",
+    "tags": [
+      "Power BI",
+      "Statistics Canada",
+      "CMHC"
+    ],
+    "pbip": "STATCAN_Housing.pbip",
+    "embedUrl": "",
+    "screenshots": [],
+    "featured": false
+  },
+  {
+    "id": "pbi-statcan-ops",
+    "platform": "powerbi",
+    "title": "Operational Efficiency",
+    "description": "Productivity and operating-efficiency indicators, built the way an operations review reads them.",
+    "domain": "Operations",
+    "tags": [
+      "Power BI",
+      "Statistics Canada",
+      "KPIs"
+    ],
+    "pbip": "STATCAN_Ops_Efficiency.pbip",
+    "embedUrl": "",
+    "screenshots": [],
+    "featured": false
+  },
+  {
+    "id": "app-doc-intel",
+    "platform": "prototype",
+    "title": "Document Intelligence Console",
+    "description": "Invoice and legal-document ingestion: extraction confidence, validation exceptions and the human-review queue.",
+    "domain": "Finance automation",
+    "tags": [
+      "Interactive prototype",
+      "LLM extraction",
+      "Validation"
+    ],
+    "src": "/lab/document-intelligence/Main.dc.html",
+    "repo": "https://github.com/wesleyharuo/Document-Intelligence-Legal-Financial-ETL-Platform",
+    "featured": true
+  },
+  {
+    "id": "app-integration",
+    "platform": "prototype",
+    "title": "Integration Command Center",
+    "description": "M&A data integration across SAP, Dynamics 365 Business Central and commercial front-ends, with sync health and data-integrity checks.",
+    "domain": "Data integration",
+    "tags": [
+      "Interactive prototype",
+      "ERP",
+      "Governance"
+    ],
+    "src": "/lab/integration/Main.dc.html",
+    "repo": "https://github.com/wesleyharuo/Manufacturing-Retail-M-A-Data-Integration-Engine-Legacy-Systems-Governance",
+    "featured": true
+  },
+  {
+    "id": "app-inventory",
+    "platform": "prototype",
+    "title": "Inventory & Freight Ops Center",
+    "description": "Multichannel inventory sync (Amazon FBA, Shopify, warehouse) and automated freight quoting in one operations view.",
+    "domain": "Logistics",
+    "tags": [
+      "Interactive prototype",
+      "Inventory",
+      "APIs"
+    ],
+    "src": "/lab/inventory-freight/Main.dc.html",
+    "repo": "https://github.com/wesleyharuo/Logistics-Distribution-E-commerce",
+    "featured": true
+  },
+  {
+    "id": "app-tenant",
+    "platform": "prototype",
+    "title": "Tenant Lifecycle Command Center",
+    "description": "Real-estate lead-to-onboarding pipeline: qualification, documents, approvals and move-in, automated end to end.",
+    "domain": "Real estate",
+    "tags": [
+      "Interactive prototype",
+      "Automation",
+      "CRM"
+    ],
+    "src": "/lab/tenant-lifecycle/Main.dc.html",
+    "repo": "https://github.com/wesleyharuo/Real-Estate-Tenant-Lifecycle-Automation-Pipeline",
+    "featured": true
+  }
+]
