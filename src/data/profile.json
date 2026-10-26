@@ -4,9 +4,9 @@
   "title": "Data Engineer",
   "headline": "Financial Data Engineering · SQL, Python, dbt & Snowflake",
   "location": "Greater Toronto Area, Canada",
-  "mission": "A wrong total is never the error itself. The real problem is the duplicate credit note, the account mapped to the wrong ledger, or the join that silently dropped a row.",
-  "summary": "A software and data engineer with two decades building systems, pipelines, and financial controls across transactional databases, production code, and balance sheets. SQL since 2006, software development across modern data stacks, and corporate finance across Brazil and Canada.",
-  "signature": "I fix the failure at the root of the pipeline before it reaches the dashboard.",
+  "mission": "A wrong total is never the error itself. The real failure is the duplicate credit note, the account mapped to the wrong ledger, or the join that silently dropped a row.",
+  "summary": "A software and data engineer with two decades of experience building systems, pipelines, and financial controls across transactional databases, production code, and balance sheets. SQL since 2006, modern data architecture, and corporate finance across Brazil and Canada.",
+  "signature": "I fix the failure at the source of the pipeline before it reaches the dashboard.",
   "availability": "Open to roles in financial data engineering, analytics engineering, BI and AI risk — on-site, hybrid or remote across the GTA.",
   "status": "Canadian citizen",
   "languages": [
