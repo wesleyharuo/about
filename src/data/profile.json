@@ -1,25 +1,24 @@
 {
   "name": "Wesley Haruo Kurosawa da Silva",
   "shortName": "Wesley Kurosawa",
-  "title": "Data Analyst",
-  "headline": "Business Intelligence & Financial Analytics · Power BI, SQL & Python",
-  "location": "Greater Toronto Area, Canada",
-  "mission": "I make sure the numbers agree before anyone decides on them.",
-  "summary": "A data analyst who started out building the systems that produce data. Nine years inside clinical databases, then the finance teams that read the reports, now migrating, reconciling and validating financial data across two countries and many systems.",
-  "signature": "When finance and operations bring two different numbers to the same meeting, I'm the one who finds out which is right and fixes the pipeline so it doesn't happen again.",
-  "availability": "Open to roles in financial data automation, analytics engineering, BI and AI risk — on-site, hybrid or remote across the GTA.",
-  "status": "Canadian citizen",
+  "title": "Data & Analytics Engineer",
+  "headline": "Data Analyst | Financial Analytics & Reporting | SQL, Python, Power BI, Tableau | ETL & Data Visualization",
+  "location": "Ontario, Canada",
+  "mission": "Bridging data engineering and financial rigor to make numbers undeniable.",
+  "summary": "A data engineer and developer with 20 years bridging transactional databases and financial ledgers. From mission-critical systems and healthcare pipelines in Brazil to data reconciliation, dbt, Snowflake, and financial automation in Canada.",
+  "signature": "When finance and operations bring conflicting numbers to the review deck, I trace the root cause, fix the pipeline at the source, and ensure the books align before anyone decides.",
+  "availability": "Open to roles in data engineering, financial data automation, analytics engineering, and AI risk — hybrid or remote across the GTA.",
+  "status": "Canadian citizen"
   "languages": [
     { "name": "Portuguese", "level": "Native" },
     { "name": "English", "level": "Full professional" }
   ],
   "contact": {
-    "email": "wesley_haruo@hotmail.com",
+    "email": "wesleykurosawa@gmail.com",
     "linkedin": "https://www.linkedin.com/in/wesleyharuo",
     "github": "https://github.com/wesleyharuo",
     "orcid": "https://orcid.org/0009-0002-1368-2250",
     "tableau": "https://public.tableau.com/app/profile/wesleyharuo/vizzes",
-    "resume": "/resume.pdf"
   },
   "stats": {
     "careerStartYear": 2006,
@@ -30,9 +29,9 @@
     "publicDashboards": 13
   },
   "headlineImpact": [
-    { "value": "4 days → 3 h", "label": "Monthly financial model compilation", "context": "The Humberview Group · SQL, Python, Power Query" },
-    { "value": "20", "label": "General managers on one Power BI view", "context": "20 dealerships, weekly business reviews" },
-    { "value": "$14.5K", "label": "Duplicate invoices caught before sign-off", "context": "NextLens Data · cut-over reconciliation" },
-    { "value": "75K", "label": "Records migrated and reconciled", "context": "Finance data migrations with business sign-off" }
+    { "value": "4 days → 3 h", "label": "Monthly financial model compilation", "context": "Automated ETL pipelines · SQL, Python, Power Query" },
+    { "value": "20", "label": "General managers on one Power BI view", "context": "Multi-location enterprise dashboards · weekly reviews" },
+    { "value": "$14.5K", "label": "Duplicate invoices caught before sign-off", "context": "Cut-over reconciliation & anomaly detection" },
+    { "value": "75K", "label": "Records migrated and reconciled", "context": "Large-scale finance data migrations with business sign-off" }
   ]
 }
