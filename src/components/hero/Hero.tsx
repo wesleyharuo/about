@@ -62,7 +62,7 @@ export function Hero() {
           </motion.p>
 
           <p className="eyebrow mb-4">Inside Wesley&apos;s data architecture</p>
-          <h1 className="h-display text-balance !leading-[1.02] md:!text-7xl">
+          <h1 className="h-display text-balance !leading-[0.96] text-5xl md:!text-6xl lg:!text-7xl">
             {words.map((w, i) => (
               <motion.span
                 key={i}
@@ -80,7 +80,7 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
-            className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-fg-muted"
+            className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-fg-muted md:text-lg"
           >
             {profile.name}. {k.years} years between the database and the balance sheet — SQL in production since 2006, financial controls and data engineering in motion.
           </motion.p>
