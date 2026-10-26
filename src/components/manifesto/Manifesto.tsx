@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { useRef } from "react";
 
 const LINES = [
-  "A wrong total is never the problem.",
-  "It's the credit note entered twice, the account mapped to the wrong line, the join that dropped a row.",
-  "So I fix errors where they start, not where they show up.",
-  "I build pipelines around what correct books look like.",
-  "I use AI every day — and I audit it in the same workflow.",
+  "A wrong total is never the error itself.",
+  "The real failure is the duplicate credit note, the account mapped to the wrong ledger, or the join that silently dropped a row.",
+  "That is why I fix the fault at the source of the pipeline, before it reaches the dashboard.",
+  "I design data systems around what a correct ledger should look like.",
+  "I use AI every day — and I audit it the same way I audit the general ledger.",
   "The report is the last step, not the first.",
   "Numbers should agree before anyone decides on them.",
 ];
