@@ -16,8 +16,8 @@ const BrainScene = dynamic(() => import("./BrainScene"), { ssr: false });
 const BOOT = [
   "> mounting /career  ......... 7 roles · 2 countries",
   "> indexing /projects ........ 48 repositories",
-  "> loading /dashboards ....... power bi · tableau · prototypes",
-  "> reconciling totals ........ ✓ all numbers tie out",
+  "> loading /dashboards ....... dbt · snowflake · python",
+  "> tracing ledger drift ....... ✓ controls in place",
 ];
 
 export function Hero() {
@@ -61,12 +61,12 @@ export function Hero() {
             <LiveDot /> {profile.title} · {profile.location} · open to roles
           </motion.p>
 
-          <p className="eyebrow mb-4">Inside Wesley&apos;s data brain</p>
+          <p className="eyebrow mb-4">Inside Wesley&apos;s data architecture</p>
           <h1 className="h-display text-balance !leading-[1.02] md:!text-7xl">
             {words.map((w, i) => (
               <motion.span
                 key={i}
-                className={`inline-block pr-[0.25em] ${/agree/.test(w) ? "text-gradient" : ""}`}
+                className={`inline-block pr-[0.25em] ${/error|ledger|row/.test(w) ? "text-gradient" : ""}`}
                 initial={reduce ? false : { opacity: 0, y: 30, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ delay: 0.15 + i * 0.06, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -82,8 +82,7 @@ export function Hero() {
             transition={{ delay: 0.9 }}
             className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-fg-muted"
           >
-            {profile.name}. {k.years} years between the database and the balance sheet — SQL in production since 2006, finance since 2016,
-            automation and AI today.
+            {profile.name}. {k.years} years between the database and the balance sheet — SQL in production since 2006, financial controls and data engineering in motion.
           </motion.p>
 
           <motion.div initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }} className="mt-8 flex flex-wrap gap-3">
