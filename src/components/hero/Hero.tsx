@@ -14,10 +14,10 @@ import { asset } from "@/lib/utils";
 const BrainScene = dynamic(() => import("./BrainScene"), { ssr: false });
 
 const BOOT = [
-  "> mounting /career  ......... 7 roles · 2 countries",
-  "> indexing /projects ........ 48 repositories",
-  "> loading /dashboards ....... dbt · snowflake · python",
-  "> tracing ledger drift ....... ✓ controls in place",
+  "> mounting /career         ......... 7 roles · 2 countries",
+  "> indexing /projects       ......... 48 public repositories",
+  "> loading /stack           ......... dbt · Snowflake · Python · SQL",
+  "> tracing ledger drift     ......... ✓ financial controls active",
 ];
 
 export function Hero() {
@@ -82,7 +82,7 @@ export function Hero() {
             transition={{ delay: 0.9 }}
             className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-fg-muted md:text-lg"
           >
-            {profile.name}. {k.years} years between the database and the balance sheet — SQL in production since 2006, financial controls and data engineering in motion.
+            {profile.name}. {k.years} Years bridging databases, modern data stacks, and balance sheets — production SQL, Python, dbt, financial controls, and data engineering in motion.
           </motion.p>
 
           <motion.div initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }} className="mt-8 flex flex-wrap gap-3">
@@ -93,7 +93,7 @@ export function Hero() {
               <Sparkles className="h-4 w-4 text-synapse" /> Ask Wesley AI
             </button>
             <a href={asset(profile.contact.resume)} className="btn-ghost" target="_blank" rel="noreferrer">
-              <FileText className="h-4 w-4" /> Résumé
+              <FileText className="h-4 w-4" />
             </a>
           </motion.div>
 
