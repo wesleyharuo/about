@@ -5,20 +5,19 @@
   "headline": "Data Analyst | Financial Analytics & Reporting | SQL, Python, Power BI, Tableau | ETL & Data Visualization",
   "location": "Ontario, Canada",
   "mission": "Bridging data engineering and financial rigor to make numbers undeniable.",
-  "summary": "A data engineer and developer with 20 years bridging transactional databases and financial ledgers. From mission-critical systems and healthcare pipelines in Brazil to data reconciliation, dbt, Snowflake, and financial automation in Canada.",
+  "summary": "Data Analyst professional with hands-on experience building data pipelines, analytical solutions, and automation tools across the Financial Services, Healthcare, and Insurance sectors[cite: 1]. Specialized in end-to-end analytical workflows from data ingestion and ETL to interactive dashboards[cite: 1].",
   "signature": "When finance and operations bring conflicting numbers to the review deck, I trace the root cause, fix the pipeline at the source, and ensure the books align before anyone decides.",
   "availability": "Open to roles in data engineering, financial data automation, analytics engineering, and AI risk — hybrid or remote across the GTA.",
-  "status": "Canadian citizen"
+  "status": "Canadian citizen",
   "languages": [
     { "name": "Portuguese", "level": "Native" },
     { "name": "English", "level": "Full professional" }
   ],
   "contact": {
-    "email": "wesleykurosawa@gmail.com",
+    "email": "wesley_haruo@hotmail.com",
     "linkedin": "https://www.linkedin.com/in/wesleyharuo",
     "github": "https://github.com/wesleyharuo",
-    "orcid": "https://orcid.org/0009-0002-1368-2250",
-    "tableau": "https://public.tableau.com/app/profile/wesleyharuo/vizzes",
+    "orcid": "https://orcid.org/0009-0002-1368-2250"
   },
   "stats": {
     "careerStartYear": 2006,
