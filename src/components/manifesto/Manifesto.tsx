@@ -4,9 +4,9 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { useRef } from "react";
 
 const LINES = [
-  "The error starts at the pipeline source, not the dashboard."
-  "Backed by two decades in databases and financial controls, I ensure data integrity from ingestion to reporting."
-  "I audit AI like a general ledger: numbers must agree before any decision is made.".",
+  "The error starts at the pipeline source, not the dashboard.",
+  "Backed by two decades in databases and financial controls, I ensure data integrity from ingestion to reporting.",
+  "I audit AI like a general ledger: numbers must agree before any decision is made.",
 ];
 
 export function Manifesto() {
