@@ -31,12 +31,12 @@ export function ContactHub() {
   )}`;
 
   const links = [
-    { icon: Linkedin, label: "LinkedIn", sub: "linkedin.com/in/wesleyharuo", href: profile.contact.linkedin },
-    { icon: Github, label: "GitHub", sub: `${profile.stats.publicRepos} public repos`, href: profile.contact.github },
-    { icon: BarChart3, label: "Tableau Public", sub: "public.tableau.com/wesleyharuo", href: profile.contact.tableau },
-    { icon: BookOpen, label: "ORCID", sub: "0009-0002-1368-2250", href: profile.contact.orcid },
-    { icon: FileText, label: "Résumé", sub: "PDF", href: asset(profile.contact.resume) },
-  ];
+    { icon: Linkedin, label: "LinkedIn", sub: "linkedin.com/in/wesleyharuo", href: profile.contact.linkedin || "" },
+    { icon: Github, label: "GitHub", sub: `${profile.stats.publicRepos} public repos`, href: profile.contact.github || "" },
+    { icon: BarChart3, label: "Tableau Public", sub: "public.tableau.com/wesleyharuo", href: profile.contact.tableau || "" },
+    { icon: BookOpen, label: "ORCID", sub: "0009-0002-1368-2250", href: profile.contact.orcid || "" },
+    { icon: FileText, label: "Résumé", sub: "PDF", href: asset(profile.contact.resume) || "" },
+  ].filter((link) => Boolean(link.href));
 
   return (
     <section id="contact" className="section scroll-mt-16">
@@ -64,9 +64,9 @@ export function ContactHub() {
               </div>
               <div className="mt-6 grid gap-3">
                 <label className="sr-only" htmlFor="c-name">Your name</label>
-                <input id="c-name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name / company" className="rounded-xl border border-line bg-ink px-4 py-3 text-sm outline-none transition placeholder:text-fg-faint focus:border-signal/60" />
+                <input id="c-name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name / company" className="rounded-xl border border-line bg-ink px-4 py-3 text-sm outline-none ring-0 placeholder:text-fg-faint focus:border-signal/60" />
                 <label className="sr-only" htmlFor="c-msg">Message</label>
-                <textarea id="c-msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows={4} placeholder="A sentence about the problem…" className="resize-none rounded-xl border border-line bg-ink px-4 py-3 text-sm outline-none transition placeholder:text-fg-faint focus:border-signal/60" />
+                <textarea id="c-msg" value={msg} onChange={(e) => setMsg(e.target.value)} rows={4} placeholder="A sentence about the problem…" className="resize-none rounded-xl border border-line bg-ink px-4 py-3 text-sm outline-none placeholder:text-fg-faint focus:border-signal/60" />
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
                 <a href={mailto} className="btn-primary"><Send className="h-4 w-4" /> Compose email</a>
