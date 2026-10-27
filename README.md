@@ -23,3 +23,5 @@ npm run build    # → ./out (static)
 Live at **https://wesleyharuo.github.io/about/** (the previous portfolio stays at `/about/classic/`).
 
 Deploy: push to `main`. One-time setup: **Settings → Pages → Build and deployment → Source → GitHub Actions**. Full plan, design system and architecture: [ARCHITECTURE.md](./ARCHITECTURE.md).
+
+Deployment refresh: 2026-10-27 — content and build fixes have been applied, and the site is scheduled to redeploy from GitHub Actions.
