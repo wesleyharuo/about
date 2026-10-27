@@ -17,7 +17,6 @@ export function Manifesto() {
     <section id="manifesto" ref={ref} className="section scroll-mt-16 overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgb(167_139_250/0.10),transparent_60%)]" />
       <div className="container relative max-w-4xl">
-        <p className="eyebrow mb-10 flex items-center gap-3"><span className="text-signal">09</span><span className="h-px w-8 bg-line" />Personal manifesto</p>
         <div className="space-y-6">
           {LINES.map((l, i) => (
             <ManifestoLine key={i} text={l} index={i} total={LINES.length} progress={scrollYProgress} />
