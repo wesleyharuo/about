@@ -9,9 +9,6 @@ export function Footer() {
           © {new Date().getFullYear()} {profile.name} · {profile.location} ·{" "}
           <a href={asset("/classic/")} className="underline decoration-line underline-offset-4 hover:text-fg">Previous portfolio</a>
         </p>
-        <p className="font-mono text-xs">
-          Built with Next.js, React Three Fiber &amp; Recharts · every number on this page is computed from <span className="text-fg-muted">/src/data</span>
-        </p>
       </div>
     </footer>
   );
