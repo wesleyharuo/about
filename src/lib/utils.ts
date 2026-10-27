@@ -7,11 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /** Prefix a /public asset with the GitHub Pages base path. next/link does this for routes, but not for raw src/href. */
-export function asset(path: string) {
+export function asset(path?: string | null) {
+  if (!path) return "";
   if (/^https?:\/\//.test(path)) return path;
   // NEXT_PUBLIC_ASSET_BASE only exists for relative-path preview builds; production uses the base path.
   const base = process.env.NEXT_PUBLIC_ASSET_BASE ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${normalized}`;
 }
 
 export const accentText: Record<Accent, string> = {
